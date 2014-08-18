@@ -1,0 +1,26 @@
+/**
+ * Layout
+ * --------------------------------------------------------------------------- */
+ #main {
+	.wrap {
+		@include grid-row();
+	}
+
+	.layout-2c-l & {
+		#content {
+			@include large-column(8);
+		}
+		#sidebar-primary {
+			@include large-column(4);
+		}
+	}
+
+	.layout-2c-r & {
+		#content {
+			@include large-column(8, $push: 4);
+		}
+		#sidebar-primary {
+			@include large-column(4, $pull: 8);
+		}
+	}
+ }

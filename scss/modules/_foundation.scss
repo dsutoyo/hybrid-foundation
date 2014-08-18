@@ -1,0 +1,48 @@
+/**
+ * Foundation Setup
+ * --------------------------------------------------------------------------- */
+
+/* Foundation line heights are missing some elements */
+body,
+address,
+code,
+pre {
+	line-height: $paragraph-line-height;
+}
+
+address {
+	font-style: normal;
+}
+
+/* Foundation sizes abbr at 90%. Undo that */
+abbr {
+	font-size: 100%;
+}
+
+/* Undo styles for breadcrumbs */
+.breadcrumbs > *:before {
+	content: none;
+}
+
+/* Undo styles for vcard */
+.vcard {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	border: transparent none;
+	a, .fn {
+		font-size: 100%;
+		font-weight: normal;
+	}
+	cite {
+		font-style: normal;
+	}
+}
+
+.comment-list {
+	margin-left: 0;
+	list-style-type: none;
+	.children {
+		list-style-type: none;
+	}
+}

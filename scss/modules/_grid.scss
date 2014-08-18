@@ -1,0 +1,99 @@
+@mixin small-column(
+	$columns:false,
+	$last-column:false,
+	$center:false,
+	$offset:false,
+	$push:false,
+	$pull:false,
+	$collapse:false,
+	$float:true,
+	$position:false) {
+
+	@media only screen {
+		@include grid-column(
+			$columns,
+			$last-column,
+			$center,
+			$offset,
+			$push,
+			$pull,
+			$collapse,
+			$float,
+			$position);
+	}
+}
+
+@mixin medium-column(
+	$columns:false,
+	$last-column:false,
+	$center:false,
+	$offset:false,
+	$push:false,
+	$pull:false,
+	$collapse:false,
+	$float:true,
+	$position:false) {
+
+	@media #{$medium-up} {
+		@include grid-column(
+			$columns,
+			$last-column,
+			$center,
+			$offset,
+			$push,
+			$pull,
+			$collapse,
+			$float,
+			$position);
+	}
+}
+
+@mixin large-column(
+	$columns:false,
+	$last-column:false,
+	$center:false,
+	$offset:false,
+	$push:false,
+	$pull:false,
+	$collapse:false,
+	$float:true,
+	$position:false) {
+
+	@media #{$large-up} {
+		@include grid-column(
+			$columns,
+			$last-column,
+			$center,
+			$offset,
+			$push,
+			$pull,
+			$collapse,
+			$float,
+			$position);
+	}
+}
+
+@mixin xlarge-column(
+	$columns:false,
+	$last-column:false,
+	$center:false,
+	$offset:false,
+	$push:false,
+	$pull:false,
+	$collapse:false,
+	$float:true,
+	$position:false) {
+
+	@media #{$xlarge-up} {
+		@include grid-column(
+			$columns,
+			$last-column,
+			$center,
+			$offset,
+			$push,
+			$pull,
+			$collapse,
+			$float,
+			$position);
+	}
+}

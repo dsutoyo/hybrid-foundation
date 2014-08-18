@@ -1,5 +1,7 @@
 			<?php hybrid_get_sidebar( 'primary' ); // Loads the sidebar/primary.php template. ?>
 
+			</div>
+
 		</div><!-- #main -->
 
 		<?php hybrid_get_sidebar( 'subsidiary' ); // Loads the sidebar/subsidiary.php template. ?>
@@ -8,6 +10,8 @@
 
 		<footer <?php hybrid_attr( 'footer' ); ?>>
 
+			<div class="wrap">
+
 			<p class="credit">
 				<?php printf(
 					/* Translators: 1 is current year, 2 is site name/link, 3 is WordPress name/link, and 4 is theme name/link. */
@@ -15,6 +19,8 @@
 					date_i18n( 'Y' ), hybrid_get_site_link(), hybrid_get_wp_link(), hybrid_get_theme_link()
 				); ?>
 			</p><!-- .credit -->
+
+			</div>
 
 		</footer><!-- #footer -->
 
