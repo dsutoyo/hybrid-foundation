@@ -29,7 +29,7 @@
 /**
  * Fonts
  * --------------------------------------------------------------------------- */
-@import "vendor/font-awesome/font-awesome";
+@import "vendor/fontawesome/font-awesome";
 
 /**
  * Foundation Components
@@ -75,6 +75,8 @@
 
 @import "modules/foundation";
 @import "modules/grid";
+@import "modules/wordpress";
 
 @import "partials/layout";
 @import "partials/content";
+@import "partials/footer";

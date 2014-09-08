@@ -1,5 +1,7 @@
 <?php if ( has_nav_menu( 'primary' ) ) : // Check if there's a menu assigned to the 'primary' location. ?>
 
+	<section class="menu-primary top-bar-section">
+
 	<nav <?php hybrid_attr( 'menu', 'primary' ); ?>>
 
 		<?php wp_nav_menu(
@@ -9,10 +11,17 @@
 				'menu_id'         => 'menu-primary-items',
 				'menu_class'      => 'menu-items',
 				'fallback_cb'     => '',
-				'items_wrap'      => '<div class="wrap"><ul id="%s" class="%s">%s</ul></div>'
+				'items_wrap'      => '<ul class="right sf-menu">%3$s</ul>',
+				'walker' => new Foundationalize_Walker( array(
+					'in_top_bar' => true,
+					'item_type' => 'li',
+					'has_dropdown_marker' => $marker
+				)),
 			)
 		); ?>
 
 	</nav><!-- #menu-primary -->
+
+	</section>
 
 <?php endif; // End check for menu. ?>

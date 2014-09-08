@@ -7390,10 +7390,6 @@ address {
 abbr {
   font-size: 100%; }
 
-/* Undo styles for breadcrumbs */
-.breadcrumbs > *:before {
-  content: none; }
-
 /* Undo styles for vcard */
 .vcard {
   display: inline;
@@ -7413,6 +7409,119 @@ abbr {
     list-style-type: none; }
 
 /**
+ * WordPress Specific Styles
+ * --------------------------------------------------------------------------- */
+/* Gallery
+   ======================================= */
+.gallery .gallery-row {
+  width: auto;
+  margin-left: -0.9375rem;
+  margin-right: -0.9375rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none; }
+  .gallery .gallery-row:before, .gallery .gallery-row:after {
+    content: " ";
+    display: table; }
+  .gallery .gallery-row:after {
+    clear: both; }
+.gallery .col-3 {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 33.33333%;
+  float: left; }
+.gallery .gallery-item .gallery-icon {
+  margin: 0 0 0.9375rem; }
+  .gallery .gallery-item .gallery-icon img {
+    border: 0.9375rem solid white !important; }
+.gallery .gallery-item .gallery-caption {
+  font-style: italic; }
+
+/* Image Alignment
+   ======================================= */
+.alignnone {
+  margin: 0.9375rem 1.875rem 1.875rem 0; }
+
+.aligncenter, div.aligncenter {
+  display: block;
+  margin: 0 auto 0.9375rem auto; }
+
+.alignright {
+  float: right;
+  margin: 0 0 1.875rem 1.875rem; }
+
+.alignleft {
+  float: left;
+  margin: 0 1.875rem 1.875rem 0; }
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 0.9375rem auto; }
+
+a img.alignright {
+  float: right;
+  margin: 0 0 1.875rem 1.875rem; }
+
+a img.alignnone {
+  margin: 0 1.875rem 1.875rem 0; }
+
+a img.alignleft {
+  float: left;
+  margin: 0 1.875rem 1.875rem 0; }
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.bypostauthor {
+  visibility: inherit; }
+
+img.alignnone,
+img.alignright,
+img.alignleft,
+img.aligncenter {
+  max-width: 100%;
+  height: auto; }
+
+.sticky {
+  visibility: inherit; }
+
+.wp-caption {
+  background: #fff;
+  max-width: 96%;
+  /* Image does not overflow the content area */
+  padding: 0.9375rem;
+  text-align: center; }
+
+.wp-caption.alignnone {
+  margin: 0 1.875rem 1.875rem 0; }
+
+.wp-caption.alignleft {
+  margin: 0 1.875rem 1.875rem 0; }
+
+.wp-caption.alignright {
+  margin: 0 0 1.875rem 1.875rem; }
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto; }
+
+.wp-caption p.wp-caption-text {
+  font-size: 85%;
+  margin: 0;
+  padding: 0 0.46875rem 0.9375rem; }
+
+/* Admin Bar
+   ======================================= */
+@media screen and (max-width: 600px) {
+  #wpadminbar {
+    position: fixed; } }
+/**
  * Layout
  * --------------------------------------------------------------------------- */
 #main .wrap {
@@ -7427,17 +7536,68 @@ abbr {
     display: table; }
   #main .wrap:after {
     clear: both; }
-@media only screen and (min-width: 64.063em) {
+@media only screen {
+  .layout-1c #main #content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; } }
+@media only screen {
+  .layout-1c #main #sidebar-primary {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; } }
+@media only screen {
+  .layout-2c-l #main #content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; } }
+@media only screen and (min-width: 40.063em) {
   .layout-2c-l #main #content {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     width: 66.66667%;
     float: left; } }
 @media only screen and (min-width: 64.063em) {
+  .layout-2c-l #main #content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 66.66667%;
+    float: left; } }
+@media only screen {
   .layout-2c-l #main #sidebar-primary {
     padding-left: 0.9375rem;
     padding-right: 0.9375rem;
     width: 33.33333%;
+    float: left; } }
+@media only screen and (min-width: 40.063em) {
+  .layout-2c-l #main #sidebar-primary {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left; } }
+@media only screen and (min-width: 64.063em) {
+  .layout-2c-l #main #sidebar-primary {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    float: left; } }
+@media only screen {
+  .layout-2c-r #main #content {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; } }
+@media only screen and (min-width: 40.063em) {
+  .layout-2c-r #main #content {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 66.66667%;
+    left: 33.33333%;
+    right: auto;
     float: left; } }
 @media only screen and (min-width: 64.063em) {
   .layout-2c-r #main #content {
@@ -7447,6 +7607,21 @@ abbr {
     width: 66.66667%;
     left: 33.33333%;
     right: auto;
+    float: left; } }
+@media only screen {
+  .layout-2c-r #main #sidebar-primary {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; } }
+@media only screen and (min-width: 40.063em) {
+  .layout-2c-r #main #sidebar-primary {
+    position: relative;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 33.33333%;
+    right: 66.66667%;
+    left: auto;
     float: left; } }
 @media only screen and (min-width: 64.063em) {
   .layout-2c-r #main #sidebar-primary {
@@ -7458,6 +7633,38 @@ abbr {
     left: auto;
     float: left; } }
 
+@media only screen {
+  #sidebar-subsidiary,
+  #footer {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; } }
+@media only screen and (min-width: 40.063em) {
+  #sidebar-subsidiary,
+  #footer {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; } }
+@media only screen and (min-width: 64.063em) {
+  #sidebar-subsidiary,
+  #footer {
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    width: 100%;
+    float: left; } }
+
+li.description {
+  display: none; }
+
 /* ====== BREADCRUMBS ====== */
+.breadcrumbs > *:before {
+  content: none; }
+
 .breadcrumb-trail .sep {
   margin: 0 0.625rem; }
+
+/**
+ * Footer
+ * --------------------------------------------------------------------------- */

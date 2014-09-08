@@ -2,25 +2,49 @@
  * Layout
  * --------------------------------------------------------------------------- */
  #main {
-	.wrap {
+	> .wrap {
 		@include grid-row();
+	}
+
+	.layout-1c & {
+		#content {
+			@include small-column(12);
+		}
+		#sidebar-primary {
+			@include small-column(12);
+		}
 	}
 
 	.layout-2c-l & {
 		#content {
+			@include small-column(12);
+			@include medium-column(8);
 			@include large-column(8);
 		}
 		#sidebar-primary {
+			@include small-column(4);
+			@include medium-column(4);
 			@include large-column(4);
 		}
 	}
 
 	.layout-2c-r & {
 		#content {
+			@include small-column(12);
+			@include medium-column(8, $push: 4);
 			@include large-column(8, $push: 4);
 		}
 		#sidebar-primary {
+			@include small-column(12);
+			@include medium-column(4, $pull: 8);
 			@include large-column(4, $pull: 8);
 		}
 	}
- }
+}
+
+#sidebar-subsidiary,
+#footer {
+	@include small-column(12);
+	@include medium-column(12);
+	@include large-column(12);
+}

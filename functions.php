@@ -37,6 +37,7 @@ require_once( $hybrid_base_dir . 'library/hybrid.php'        );
 require_once( $hybrid_base_dir . 'inc/custom-background.php' );
 require_once( $hybrid_base_dir . 'inc/custom-header.php'     );
 require_once( $hybrid_base_dir . 'inc/theme.php'             );
+require_once( $hybrid_base_dir . 'inc/walker.php'             );
 
 /* Launch the Hybrid Core framework. */
 new Hybrid();
@@ -98,6 +99,39 @@ function hybrid_base_theme_setup() {
 		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' ) 
 	);
 
+	add_theme_support( 'foundation-base' );
+	add_theme_support( 'foundation-topbar' );
+	add_theme_support( 'foundation-offcanvas' );
+
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 1280 );
+
+	add_filter( 'hybrid_attr_branding', 'hybrid_base_attr_branding', 6 );
+
+
+	// ===== Foundation
+	if ( current_theme_supports( 'foundation-base' ) ) {
+		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/js/foundation/foundation.js', 'jquery', FOUNDATION_VERSION, true );
+	}
+
+	// ===== Load Foundation components if supported by the theme
+	$foundation_components = array(
+		'abide', 'accordion', 'alert', 'clearing', 'dropdown', 'equalizer', 'interchange', 'joyride', 'magellan', 'offcanvas', 'orbit', 'reveal', 'slider', 'tab', 'tooltip', 'topbar'
+	);
+
+	foreach ( $foundation_components as $component ) {	
+		if ( current_theme_supports( 'foundation-' . $component ) ) {
+			wp_enqueue_script( 'foundation-' . $component, get_stylesheet_directory_uri() . '/js/foundation/foundation.' . $component . '.js', array( 'jquery' ), FOUNDATION_VERSION, true );
+		}
+	}
+
+	// ===== Initialize Foundation
+	if ( current_theme_supports( 'foundation-base' ) ) {
+		wp_enqueue_script( 'foundation-init', get_stylesheet_directory_uri() . '/js/foundation.init.js', array( 'jquery' ), FOUNDATION_VERSION, true );
+	}
+}
+
+function hybrid_base_attr_branding( $attr ) {
+	$attr['class'] = 'title-area';
+	return $attr;
 }

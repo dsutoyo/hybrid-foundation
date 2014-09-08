@@ -19,11 +19,6 @@ abbr {
 	font-size: 100%;
 }
 
-/* Undo styles for breadcrumbs */
-.breadcrumbs > *:before {
-	content: none;
-}
-
 /* Undo styles for vcard */
 .vcard {
 	display: inline;

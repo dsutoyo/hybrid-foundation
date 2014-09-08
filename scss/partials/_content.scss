@@ -1,4 +1,11 @@
+li.description {
+	display: none;
+}
+
 /* ====== BREADCRUMBS ====== */
+.breadcrumbs > *:before {
+	content: none;
+}
 
 .breadcrumb-trail {
 
