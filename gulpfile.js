@@ -4,7 +4,7 @@ var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 
 gulp.task('styles', function () {
-	return gulp.src('./assets/scss/*.scss')
+	return gulp.src('./assets/scss/**/*.scss')
 		.pipe(sass({
 			outputStyle: 'expanded',
 			errLogToConsole: true
@@ -21,7 +21,7 @@ gulp.task('styles', function () {
 gulp.task('build', ['styles']);
 
 gulp.task('watch', ['build'], function() {
-	gulp.watch('./assets/scss/*.scss', ['styles']);
+	gulp.watch('./assets/scss/**/*.scss', ['styles']);
 })
 
 gulp.task('default', ['build']);

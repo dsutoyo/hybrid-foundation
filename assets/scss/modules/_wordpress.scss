@@ -31,6 +31,16 @@
 
 }
 
+/* Comments
+   ======================================= */
+.comment-list {
+	margin-left: 0;
+	list-style-type: none;
+	.children {
+		list-style-type: none;
+	}
+}
+
 /* Image Alignment
    ======================================= */
 .alignnone {

@@ -7,7 +7,7 @@ body,
 address,
 code,
 pre {
-	line-height: $paragraph-line-height;
+	//line-height: $paragraph-line-height;
 }
 
 address {
@@ -31,13 +31,5 @@ abbr {
 	}
 	cite {
 		font-style: normal;
-	}
-}
-
-.comment-list {
-	margin-left: 0;
-	list-style-type: none;
-	.children {
-		list-style-type: none;
 	}
 }

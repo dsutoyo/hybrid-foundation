@@ -335,7 +335,7 @@ td, th {
  * Fonts
  * --------------------------------------------------------------------------- */
 /*!
- *  Font Awesome 4.0.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
@@ -7415,9 +7415,6 @@ th.hide-for-touch {
  * Foundation Setup
  * --------------------------------------------------------------------------- */
 /* Foundation line heights are missing some elements */
-body, address, code, pre {
-  line-height: 1.6; }
-
 address {
   font-style: normal; }
 
@@ -7436,12 +7433,6 @@ abbr {
     font-weight: normal; }
   .vcard cite {
     font-style: normal; }
-
-.comment-list {
-  margin-left: 0;
-  list-style-type: none; }
-  .comment-list .children {
-    list-style-type: none; }
 
 /**
  * WordPress Specific Styles
@@ -7471,6 +7462,14 @@ abbr {
     border: 0.9375rem solid #fff !important; }
 .gallery .gallery-item .gallery-caption {
   font-style: italic; }
+
+/* Comments
+   ======================================= */
+.comment-list {
+  margin-left: 0;
+  list-style-type: none; }
+  .comment-list .children {
+    list-style-type: none; }
 
 /* Image Alignment
    ======================================= */
