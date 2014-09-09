@@ -1,0 +1,8 @@
+{
+	"name": "hybrid-base",
+	"devDependencies": {
+		"gulp": "~3.8.8",
+		"gulp-rename": "~1.2.0",
+		"gulp-sass": "~0.7.1"
+	}
+}

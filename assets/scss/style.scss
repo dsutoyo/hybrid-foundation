@@ -1,0 +1,82 @@
+/**
+ * Theme Name:  Hybrid Base Foundation
+ * Theme URI:   http://themehybrid.com/themes/hybrid-base
+ * Description: A starter theme from Theme Hybrid. Please fork this.
+ * Version:     1.0.0
+ * Author:      Justin Tadlock
+ * Author URI:  http://justintadlock.com
+ * Tags:        one-column, two-columns, custom-background, custom-header, custom-menu, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready
+ * Text Domain: hybrid-base
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+@charset "UTF-8";
+// Foundation by ZURB
+// foundation.zurb.com
+// Licensed under MIT Open Source
+// Version 5.3.3
+
+// Global Foundation Settings
+@import "settings";
+
+// Make sure the charset is set appropriately
+
+@import "normalize";
+
+//@import "compass/css3";
+
+/**
+ * Fonts
+ * --------------------------------------------------------------------------- */
+@import "vendor/fontawesome/font-awesome";
+
+/**
+ * Foundation Components
+ * --------------------------------------------------------------------------- */
+// Behold, here are all the Foundation components.
+@import "vendor/foundation/components/grid";
+@import "vendor/foundation/components/accordion";
+@import "vendor/foundation/components/alert-boxes";
+@import "vendor/foundation/components/block-grid";
+@import "vendor/foundation/components/breadcrumbs";
+@import "vendor/foundation/components/button-groups";
+@import "vendor/foundation/components/buttons";
+@import "vendor/foundation/components/clearing";
+@import "vendor/foundation/components/dropdown";
+@import "vendor/foundation/components/dropdown-buttons";
+@import "vendor/foundation/components/flex-video";
+@import "vendor/foundation/components/forms";
+@import "vendor/foundation/components/icon-bar";
+@import "vendor/foundation/components/inline-lists";
+@import "vendor/foundation/components/joyride";
+@import "vendor/foundation/components/keystrokes";
+@import "vendor/foundation/components/labels";
+@import "vendor/foundation/components/magellan";
+@import "vendor/foundation/components/orbit";
+@import "vendor/foundation/components/pagination";
+@import "vendor/foundation/components/panels";
+@import "vendor/foundation/components/pricing-tables";
+@import "vendor/foundation/components/progress-bars";
+@import "vendor/foundation/components/range-slider";
+@import "vendor/foundation/components/reveal";
+@import "vendor/foundation/components/side-nav";
+@import "vendor/foundation/components/split-buttons";
+@import "vendor/foundation/components/sub-nav";
+@import "vendor/foundation/components/switches";
+@import "vendor/foundation/components/tables";
+@import "vendor/foundation/components/tabs";
+@import "vendor/foundation/components/thumbs";
+@import "vendor/foundation/components/tooltips";
+@import "vendor/foundation/components/top-bar";
+@import "vendor/foundation/components/type";
+@import "vendor/foundation/components/offcanvas";
+@import "vendor/foundation/components/visibility";
+
+@import "modules/foundation";
+@import "modules/grid";
+@import "modules/wordpress";
+
+@import "partials/layout";
+@import "partials/content";
+@import "partials/footer";

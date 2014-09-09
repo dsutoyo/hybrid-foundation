@@ -1,2 +1,4 @@
-.sass-cache/
 config.rb
+.DS_Store
+.sass-cache
+node_modules
