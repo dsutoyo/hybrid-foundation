@@ -46,7 +46,7 @@ class Foundationalize_Walker extends Walker_Nav_Menu {
 
 		// Reset the classes if this is an offcanvas menu
 		if ( $this->nav_bar['offcanvas'] == true ) {
-			$classes[] = array();
+			$classes = array();
 		}
 		else {
 			$classes = empty( $item->classes ) ? array() : (array) $item->classes;

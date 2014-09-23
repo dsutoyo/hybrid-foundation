@@ -2,3 +2,4 @@ config.rb
 .DS_Store
 .sass-cache
 node_modules
+library/.DS_Store
