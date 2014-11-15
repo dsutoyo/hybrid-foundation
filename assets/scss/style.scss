@@ -1,10 +1,10 @@
 /**
  * Theme Name:  Hybrid Base Foundation
- * Theme URI:   http://themehybrid.com/themes/hybrid-base
- * Description: A starter theme from Theme Hybrid. Please fork this.
- * Version:     1.0.0
- * Author:      Justin Tadlock
- * Author URI:  http://justintadlock.com
+ * Theme URI:   http://github.com/dsutoyo/hybrid-base
+ * Description: A fork of Hybrid Base, integrated with Zurb Foundation
+ * Version:     0.1
+ * Author:      David Sutoyo
+ * Author URI:  http://davidsutoyo.com
  * Tags:        one-column, two-columns, custom-background, custom-header, custom-menu, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready
  * Text Domain: hybrid-base
  * License:     GNU General Public License v2.0 or later
@@ -22,9 +22,10 @@
 
 // Make sure the charset is set appropriately
 
+/**
+ * Normalize
+ * --------------------------------------------------------------------------- */
 @import "normalize";
-
-//@import "compass/css3";
 
 /**
  * Fonts
