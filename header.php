@@ -20,7 +20,12 @@
 		<header <?php hybrid_attr( 'header' ); ?>>
 
 			<nav class="tab-bar show-for-small">
-				<a class="left-off-canvas-toggle menu-icon"><span><?php bloginfo( 'name' ); ?></span></a>
+				<section class="left-small">
+					<a class="left-off-canvas-toggle menu-icon"><span></span></a>
+				</section>
+				<section class="middle tab-bar-section">
+					<?php bloginfo( 'name' ); ?>
+				</section>
 			</nav>
 
 			<nav class="top-bar hide-for-small" data-topbar>
