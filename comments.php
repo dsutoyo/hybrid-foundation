@@ -30,6 +30,12 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 
 	<?php locate_template( array( 'misc/comments-error.php' ), true ); // Loads the misc/comments-error.php template. ?>
 
+	<?php
+		$comment_args = array(
+			'comment_notes_after' => ''
+		);
+	?>
+
 	<?php comment_form(); // Loads the comment form. ?>
 
 </section><!-- #comments-template -->
