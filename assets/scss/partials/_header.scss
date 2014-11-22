@@ -1,3 +1,28 @@
 /**
  * Header
  * --------------------------------------------------------------------------- */
+// Top menu link
+.top-bar-section ul li {
+	&:not(.has-form) > a {
+
+	}
+	&:hover:not(.has-form) > a {
+
+	}
+}
+
+// Dropdown triangle color (use border-color)
+.top-bar-section .has-dropdown > a:after {
+
+}
+
+// Dropdown links
+.top-bar-section .dropdown li:not(.has-form):not(.active) {
+	> a:not(.button) {
+
+	}
+
+	&:hover > a:not(.button) {
+
+	}
+}
