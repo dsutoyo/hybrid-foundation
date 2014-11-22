@@ -1,7 +1,7 @@
 <?php if ( has_nav_menu( 'primary' ) ) : ?>
 
 	<!-- Off Canvas Menu -->
-	<aside class="left-off-canvas-menu">
+	<aside class="left-off-canvas-menu off-canvas-menu">
 
 		<?php wp_nav_menu(
 			array(
