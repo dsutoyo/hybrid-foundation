@@ -36,6 +36,6 @@ if ( post_password_required() || ( !have_comments() && !comments_open() && !ping
 		);
 	?>
 
-	<?php comment_form(); // Loads the comment form. ?>
+	<?php comment_form( $comment_args ); // Loads the comment form. ?>
 
 </section><!-- #comments-template -->
