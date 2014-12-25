@@ -1934,7 +1934,7 @@ td, th {
  * Foundation Components
  * --------------------------------------------------------------------------- */
 meta.foundation-version {
-  font-family: "/{{VERSION}}/"; }
+  font-family: "/5.4.7/"; }
 
 meta.foundation-mq-small {
   font-family: "/only screen/";
@@ -7764,6 +7764,17 @@ img.alignnone, img.alignright, img.alignleft, img.aligncenter {
     width: 100%;
     float: left; } }
 
+/**
+ * Header
+ * --------------------------------------------------------------------------- */
+.off-canvas-menu ul {
+  margin-left: 0; }
+  .off-canvas-menu ul li {
+    list-style-type: none; }
+    .off-canvas-menu ul li a {
+      display: block;
+      padding: 10px 5px; }
+
 li.description {
   display: none; }
 
@@ -7774,6 +7785,9 @@ li.description {
 .breadcrumb-trail .sep {
   margin: 0 0.625rem; }
 
+/**
+ * Sidebars and Widgets
+ * --------------------------------------------------------------------------- */
 /**
  * Footer
  * --------------------------------------------------------------------------- */

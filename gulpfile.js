@@ -3,7 +3,14 @@ var rename = require('gulp-rename');
 var sass = require('gulp-sass');
 var watch = require('gulp-watch');
 
-gulp.task('styles', function () {
+gulp.task('foundation', function() {
+	gulp.src('./bower_components/foundation/scss/**/*.*')
+		.pipe(gulp.dest('./assets/scss/'));
+	gulp.src('./bower_components/foundation/js/**/*.*')
+		.pipe(gulp.dest('./assets/javascripts/'));
+});
+
+gulp.task('styles', function() {
 	return gulp.src('./assets/scss/**/*.scss')
 		.pipe(sass({
 			outputStyle: 'expanded',
@@ -15,7 +22,7 @@ gulp.task('styles', function () {
 			errLogToConsole: true
 		}))
 		.pipe(rename("style.min.css"))
-		.pipe(gulp.dest('./'))
+		.pipe(gulp.dest('./'));
 });
 
 gulp.task('build', ['styles']);
