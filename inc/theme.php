@@ -110,7 +110,7 @@ function hybrid_base_enqueue_styles() {
 	$suffix = hybrid_get_min_suffix();
 
 	/* Load one-five base style. */
-	wp_enqueue_style( 'one-five', trailingslashit( HYBRID_CSS ) . "one-five{$suffix}.css" );
+	// wp_enqueue_style( 'one-five', trailingslashit( HYBRID_CSS ) . "one-five{$suffix}.css" );
 
 	/* Load gallery style if 'cleaner-gallery' is active. */
 	if ( current_theme_supports( 'cleaner-gallery' ) ) {
