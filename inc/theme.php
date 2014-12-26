@@ -75,6 +75,26 @@ function hybrid_base_register_sidebars() {
  * @return void
  */
 function hybrid_base_enqueue_scripts() {
+	// ===== Foundation
+	if ( current_theme_supports( 'foundation-base' ) ) {
+		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/assets/javascripts/foundation/foundation.js', 'jquery', FOUNDATION_VERSION, true );
+	}
+
+	// ===== Load Foundation components if supported by the theme
+	$foundation_components = array(
+		'abide', 'accordion', 'alert', 'clearing', 'dropdown', 'equalizer', 'interchange', 'joyride', 'magellan', 'offcanvas', 'orbit', 'reveal', 'slider', 'tab', 'tooltip', 'topbar'
+	);
+
+	foreach ( $foundation_components as $component ) {	
+		if ( current_theme_supports( 'foundation-' . $component ) ) {
+			wp_enqueue_script( 'foundation-' . $component, get_stylesheet_directory_uri() . '/assets/javascripts/foundation/foundation.' . $component . '.js', array( 'jquery' ), FOUNDATION_VERSION, true );
+		}
+	}
+
+	// ===== Initialize Foundation
+	if ( current_theme_supports( 'foundation-base' ) ) {
+		wp_enqueue_script( 'foundation-init', get_stylesheet_directory_uri() . '/assets/javascripts/foundation.init.js', array( 'jquery' ), FOUNDATION_VERSION, true );
+	}
 }
 
 /**
