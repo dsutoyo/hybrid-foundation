@@ -36,7 +36,6 @@
  * Foundation Components
  * --------------------------------------------------------------------------- */
 // Behold, here are all the Foundation components.
-@import "foundation/components/grid";
 @import "foundation/components/accordion";
 @import "foundation/components/alert-boxes";
 @import "foundation/components/block-grid";
@@ -44,16 +43,19 @@
 @import "foundation/components/button-groups";
 @import "foundation/components/buttons";
 @import "foundation/components/clearing";
-@import "foundation/components/dropdown";
 @import "foundation/components/dropdown-buttons";
+@import "foundation/components/dropdown";
 @import "foundation/components/flex-video";
 @import "foundation/components/forms";
+@import "foundation/components/global";
+@import "foundation/components/grid";
 @import "foundation/components/icon-bar";
 @import "foundation/components/inline-lists";
 @import "foundation/components/joyride";
 @import "foundation/components/keystrokes";
 @import "foundation/components/labels";
 @import "foundation/components/magellan";
+@import "foundation/components/offcanvas";
 @import "foundation/components/orbit";
 @import "foundation/components/pagination";
 @import "foundation/components/panels";
@@ -71,7 +73,6 @@
 @import "foundation/components/tooltips";
 @import "foundation/components/top-bar";
 @import "foundation/components/type";
-@import "foundation/components/offcanvas";
 @import "foundation/components/visibility";
 
 @import "modules/foundation";
