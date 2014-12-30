@@ -94,13 +94,10 @@ function hybrid_base_theme_setup() {
 	add_theme_support( 'foundation-topbar' );
 	add_theme_support( 'foundation-offcanvas' );
 
+	/* Editor styles. */
+	add_editor_style( hybrid_base_get_editor_styles() );
+
 	/* Handle content width for embeds and images. */
 	hybrid_set_content_width( 1280 );
 
-	add_filter( 'hybrid_attr_branding', 'hybrid_base_attr_branding', 6 );
-}
-
-function hybrid_base_attr_branding( $attr ) {
-	$attr['class'] = 'title-area';
-	return $attr;
 }

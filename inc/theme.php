@@ -15,6 +15,9 @@ add_action( 'wp_enqueue_scripts', 'hybrid_base_enqueue_scripts', 5 );
 /* Add custom styles. */
 add_action( 'wp_enqueue_scripts', 'hybrid_base_enqueue_styles', 5 );
 
+/* Add a class to the header */
+add_filter( 'hybrid_attr_branding', 'hybrid_base_attr_branding', 6 );
+
 /**
  * Registers custom image sizes for the theme. 
  *
@@ -124,4 +127,45 @@ function hybrid_base_enqueue_styles() {
 
 	/* Load active theme stylesheet. */
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+}
+
+/**
+ * Filter the branding attributes.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return array
+ */
+function hybrid_base_attr_branding( $attr ) {
+	$attr['class'] = 'title-area';
+	return $attr;
+}
+
+/**
+ * Callback function for adding editor styles.  Use along with the add_editor_style() function.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return array
+ */
+function hybrid_base_get_editor_styles() {
+
+	/* Set up an array for the styles. */
+	$editor_styles = array();
+
+	/* Add the theme's editor styles. */
+	$editor_styles[] = trailingslashit( get_template_directory_uri() ) . 'css/editor-style.css';
+
+	/* If a child theme, add its editor styles. Note: WP checks whether the file exists before using it. */
+	if ( is_child_theme() && file_exists( trailingslashit( get_stylesheet_directory() ) . 'css/editor-style.css' ) )
+		$editor_styles[] = trailingslashit( get_stylesheet_directory_uri() ) . 'css/editor-style.css';
+
+	/* Add the locale stylesheet. */
+	$editor_styles[] = get_locale_stylesheet_uri();
+
+	/* Uses Ajax to display custom theme styles added via the Theme Mods API. */
+	$editor_styles[] = add_query_arg( 'action', 'hybrid_base_editor_styles', admin_url( 'admin-ajax.php' ) );
+
+	/* Return the styles. */
+	return $editor_styles;
 }
