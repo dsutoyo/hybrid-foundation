@@ -2,6 +2,12 @@
  * WordPress Specific Styles
  * --------------------------------------------------------------------------- */
 
+/* Hybrid skip link
+   ======================================= */
+.skip-link {
+	display: none;
+}
+
 /* Gallery
    ======================================= */
 .gallery {
@@ -17,7 +23,7 @@
 	.gallery-item {
 
 		.gallery-icon {
-			margin: 0 0 $column-gutter/2;
+			margin: 0;
 
 			img {
 				border: $column-gutter/2 solid #fff !important;

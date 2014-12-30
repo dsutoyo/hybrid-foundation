@@ -1,0 +1,93 @@
+/**
+ * Comments Template
+ * --------------------------------------------------------------------------- */
+
+#comments-template {}
+
+/* ====== COMMENTS ======= */
+
+#comments {}
+
+	#comments-number {}
+
+	/* === Comments closed message === */
+
+	.comments-closed {}
+
+	.comments-closed.pings-open {}
+
+	/* === Comment list === */
+
+	ol.comment-list {
+
+		ol.children {}
+
+	}
+
+		/* === Individual comments */
+
+		li.comment {}
+
+		li.ping {}
+
+		li.bypostauthor {}
+
+			/* === Avatars === */
+
+			.comment-list .avatar {}
+
+			/* === Meta === */
+
+			.comment-meta {
+
+				.published {}
+			}
+
+			.comment-author {
+
+				cite {}
+
+			}
+
+			/* === Comment text/content === */
+
+			.comment-content {}
+
+
+			/* === Reply link === */
+
+			.comment-reply-link {}
+			.comment-reply-link:hover {}
+
+
+/* ====== RESPOND (COMMENT FORM) ====== */
+
+#respond {
+
+	.log-in-out {}
+
+	label {
+		.required {}
+	}
+
+	input[type="text"] {}
+	input[type="text"]:focus {}
+
+	input[type="url"] {}
+	input[type="url"]:focus {}
+
+	input[type="email"] {}
+	input[type="email"]:focus {}
+
+	input[type="submit"] {}
+	input[type="submit"]:focus {}
+	input[type="submit"]:hover {}
+
+	textarea {}
+	textarea:focus {}
+}
+
+#reply-title {
+	small {}
+}
+

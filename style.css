@@ -7517,6 +7517,11 @@ abbr {
 /**
  * WordPress Specific Styles
  * --------------------------------------------------------------------------- */
+/* Hybrid skip link
+   ======================================= */
+.skip-link {
+  display: none; }
+
 /* Gallery
    ======================================= */
 .gallery .gallery-row {
@@ -7552,7 +7557,7 @@ abbr {
   width: 25%;
   float: left; }
 .gallery .gallery-item .gallery-icon {
-  margin: 0 0 0.9375rem; }
+  margin: 0; }
   .gallery .gallery-item .gallery-icon img {
     border: 0.9375rem solid #fff !important; }
 .gallery .gallery-item .gallery-caption {
@@ -7782,6 +7787,9 @@ img.alignnone, img.alignright, img.alignleft, img.aligncenter {
 /**
  * Header
  * --------------------------------------------------------------------------- */
+li.description {
+  display: none; }
+
 .off-canvas-menu ul {
   margin-left: 0; }
   .off-canvas-menu ul li {
@@ -7790,9 +7798,9 @@ img.alignnone, img.alignright, img.alignleft, img.aligncenter {
       display: block;
       padding: 10px 5px; }
 
-li.description {
-  display: none; }
-
+/**
+ * Content
+ * --------------------------------------------------------------------------- */
 /* ====== BREADCRUMBS ====== */
 .breadcrumbs > *:before {
   content: none; }
@@ -7800,6 +7808,17 @@ li.description {
 .breadcrumb-trail .sep {
   margin: 0 0.625rem; }
 
+/* ====== POSTS ====== */
+/* === Post Header === */
+/* === Post content and excerpts === */
+/* === Post Footer === */
+/* === Asides === */
+/* === Chats === */
+/* === Links === */
+/* === Galleries === */
+/* === Quotes === */
+/* === Status updates === */
+/* === Audio and Video === */
 /**
  * Sidebars and Widgets
  * --------------------------------------------------------------------------- */
