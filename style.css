@@ -7531,10 +7531,25 @@ abbr {
     display: table; }
   .gallery .gallery-row:after {
     clear: both; }
+.gallery .col-1 {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 100%;
+  float: left; }
+.gallery .col-2 {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 50%;
+  float: left; }
 .gallery .col-3 {
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   width: 33.33333%;
+  float: left; }
+.gallery .col-4 {
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  width: 25%;
   float: left; }
 .gallery .gallery-item .gallery-icon {
   margin: 0 0 0.9375rem; }
@@ -7625,7 +7640,7 @@ img.alignnone, img.alignright, img.alignleft, img.aligncenter {
 .wp-caption p.wp-caption-text {
   font-size: 85%;
   margin: 0;
-  padding: 0 0.46875rem 0.9375rem; }
+  padding: 0 0.9375rem; }
 
 /* Admin Bar
    ======================================= */

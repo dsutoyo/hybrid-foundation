@@ -8,17 +8,19 @@
 	.gallery-row {
 		@include grid-row($behavior: nest);
 	}
-	.col-3 {
-		@include grid-column($total-columns/3, $float: left);
+	@for $i from 1 through 4 {
+		.col-#{$i} {
+			@include grid-column($total-columns/$i, $float: left);
+		}
 	}
 
 	.gallery-item {
 
 		.gallery-icon {
-			margin: 0 0 $column-gutter / 2;
+			margin: 0 0 $column-gutter/2;
 
 			img {
-				border: $column-gutter / 2 solid #fff !important;
+				border: $column-gutter/2 solid #fff !important;
 			}
 
 		}
@@ -44,12 +46,12 @@
 /* Image Alignment
    ======================================= */
 .alignnone {
-	margin: $column-gutter / 2 $column-gutter $column-gutter 0;
+	margin: $column-gutter/2 $column-gutter $column-gutter 0;
 }
 
 .aligncenter, div.aligncenter {
 	display: block;
-	margin: 0 auto $column-gutter / 2 auto;
+	margin: 0 auto $column-gutter/2 auto;
 }
 
 .alignright {
@@ -64,7 +66,7 @@
 
 .aligncenter {
 	display: block;
-	margin: 0 auto $column-gutter / 2 auto;
+	margin: 0 auto $column-gutter/2 auto;
 }
 
 a img.alignright {
@@ -106,7 +108,7 @@ img.aligncenter {
 .wp-caption {
 	background: #fff;
 	max-width: 96%; /* Image does not overflow the content area */
-	padding: $column-gutter / 2;
+	padding: $column-gutter/2;
 	text-align: center;
 }
 
@@ -134,7 +136,7 @@ img.aligncenter {
 .wp-caption p.wp-caption-text {
 	font-size: 85%;
 	margin: 0;
-	padding: 0 $column-gutter / 2 / 2 $column-gutter / 2;
+	padding: 0 $column-gutter/2;
 }
 
 /* Admin Bar
