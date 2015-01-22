@@ -2,7 +2,9 @@ var gulp      = require('gulp');
 var rename    = require('gulp-rename');
 var sass      = require('gulp-sass');
 var watch     = require('gulp-watch');
+var zip       = require('gulp-zip');
 
+// Moving dependencies into place
 gulp.task('foundation', function() {
 	gulp.src('./bower_components/foundation/scss/**/*.*')
 		.pipe(gulp.dest('./assets/scss/'));
@@ -10,6 +12,7 @@ gulp.task('foundation', function() {
 		.pipe(gulp.dest('./assets/javascripts/'));
 });
 
+// Compile our stylesheets
 gulp.task('styles', function() {
 	gulp.src('./assets/scss/editor-style.scss')
 		.pipe(sass({
