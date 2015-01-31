@@ -15,7 +15,7 @@
 				'walker' => new Foundationalize_Walker( array(
 					'in_top_bar' => true,
 					'item_type' => 'li',
-					'has_dropdown_marker' => $marker
+					'has_dropdown_marker' => true
 				)),
 			)
 		); ?>
