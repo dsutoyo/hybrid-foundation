@@ -5,6 +5,7 @@ var watch     = require('gulp-watch');
 var zip       = require('gulp-zip');
 
 // Moving dependencies into place
+// =========================================================
 gulp.task('foundation', function() {
 	gulp.src('./bower_components/foundation/scss/**/*.*')
 		.pipe(gulp.dest('./assets/scss/'));
@@ -13,6 +14,7 @@ gulp.task('foundation', function() {
 });
 
 // Compile our stylesheets
+// =========================================================
 gulp.task('styles', function() {
 	gulp.src('./assets/scss/editor-style.scss')
 		.pipe(sass({
@@ -33,10 +35,24 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest('./'));
 });
 
-gulp.task('build', ['styles']);
-
+// Watch function
+// =========================================================
 gulp.task('watch', ['build'], function() {
 	gulp.watch('./assets/scss/**/*.scss', ['styles']);
 })
 
-gulp.task('default', ['build']);
+// Package it up for distribution
+// =========================================================
+gulp.task('package', function() {
+	return gulp.src(['./*', './+(assets|comment|content|inc|languages|library|menu|misc|sidebar)/**/*'], {base: "."})
+		.pipe(zip('archive.zip'))
+		.pipe(gulp.dest('./'));
+});
+
+// Build an updated package
+// =========================================================
+gulp.task('build', ['styles', 'package']);
+
+// Default task
+// =========================================================
+gulp.task('default', ['watch']);
