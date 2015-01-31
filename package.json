@@ -1,6 +1,7 @@
 {
 	"name": "hybrid-foundation",
 	"devDependencies": {
+		"browser-sync": "2.0.0-rc2",
 		"gulp": "~3.8.8",
 		"gulp-rename": "~1.2.0",
 		"gulp-sass": "~0.7.1",

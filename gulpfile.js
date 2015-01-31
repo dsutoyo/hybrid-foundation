@@ -1,8 +1,21 @@
-var gulp      = require('gulp');
-var rename    = require('gulp-rename');
-var sass      = require('gulp-sass');
-var watch     = require('gulp-watch');
-var zip       = require('gulp-zip');
+var gulp        = require('gulp');
+var rename      = require('gulp-rename');
+var sass        = require('gulp-sass');
+var watch       = require('gulp-watch');
+var zip         = require('gulp-zip');
+var browserSync = require('browser-sync');
+var reload      = browserSync.reload;
+
+// Browser sync
+// =========================================================
+var config = {
+	proxy: "wordpress.dev",
+	browser: ["google chrome", "safari"]
+}
+
+gulp.task('browser-sync', function() {
+	browserSync(config);
+});
 
 // Moving dependencies into place
 // =========================================================
@@ -32,12 +45,13 @@ gulp.task('styles', function() {
 			errLogToConsole: true
 		}))
 		.pipe(rename("style.min.css"))
-		.pipe(gulp.dest('./'));
+		.pipe(gulp.dest('./'))
+		.pipe(reload({stream:true}));
 });
 
 // Watch function
 // =========================================================
-gulp.task('watch', ['build'], function() {
+gulp.task('watch', ['styles', 'browser-sync'], function() {
 	gulp.watch('./assets/scss/**/*.scss', ['styles']);
 })
 

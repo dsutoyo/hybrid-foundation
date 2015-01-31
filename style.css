@@ -7588,10 +7588,6 @@ abbr {
   float: left;
   margin: 0 1.875rem 1.875rem 0; }
 
-.aligncenter {
-  display: block;
-  margin: 0 auto 0.9375rem auto; }
-
 a img.alignright {
   float: right;
   margin: 0 0 1.875rem 1.875rem; }
