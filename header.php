@@ -19,7 +19,7 @@
 
 		<header <?php hybrid_attr( 'header' ); ?>>
 
-			<nav class="tab-bar show-for-small">
+			<nav class="tab-bar show-for-small" data-topbar>
 				<section class="left-small">
 					<a class="left-off-canvas-toggle menu-icon" href="#off-canvas-navigation" role="button"><span></span></a>
 				</section>
