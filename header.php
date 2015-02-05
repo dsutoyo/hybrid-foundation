@@ -21,7 +21,7 @@
 
 			<nav class="tab-bar show-for-small">
 				<section class="left-small">
-					<a class="left-off-canvas-toggle menu-icon"><span></span></a>
+					<a class="left-off-canvas-toggle menu-icon" href="#off-canvas-navigation" role="button"><span></span></a>
 				</section>
 				<section class="middle tab-bar-section">
 					<?php bloginfo( 'name' ); ?>
