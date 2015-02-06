@@ -9,11 +9,6 @@
 				'depth' => 0,
 				'items_wrap' => '<ul>%3$s</ul>',
 				'container' => false,
-				'walker' => new Foundationalize_Walker( array(
-					'in_top_bar' => false,
-					'item_type' => 'li',
-					'offcanvas' => true
-				)),
 			)
 		);?>
 
