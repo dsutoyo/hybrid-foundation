@@ -9,9 +9,13 @@
 	.layout-1c & {
 		#content {
 			@include small-column(12);
+			@include medium-column(12);
+			@include large-column(12);
 		}
 		#sidebar-primary {
 			@include small-column(12);
+			@include medium-column(12);
+			@include large-column(12);
 		}
 	}
 
