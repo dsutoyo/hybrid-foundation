@@ -24,7 +24,7 @@
 
 		</footer><!-- #footer -->
 
-		</div><!-- .off-canvas-wrap -->
+		</div><!-- .inner-wrap -->
 
 	</div><!-- #container -->
 
