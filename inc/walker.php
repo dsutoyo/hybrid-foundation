@@ -56,8 +56,6 @@ class Foundationalize_Walker extends Walker_Nav_Menu {
 		// Additional Class cleanup, as found in Roots_Nav_Walker - Roots Theme lib/nav.php
 		// see http://roots.io/ and https://github.com/roots/roots
 		$slug = sanitize_title($item->title);
-		$classes = preg_replace('/(current(-menu-|[-_]page[-_])(item|parent|ancestor))/', '', $classes);
-		$classes = preg_replace('/^((menu|page)[-_\w+]+)+/', '', $classes);
 
 		if ( array_key_exists( 'menu_type', $this->nav_bar ) ) {
 			$menu_type = $this->nav_bar['menu_type'];
