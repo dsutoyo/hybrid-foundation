@@ -18,6 +18,9 @@ add_action( 'wp_enqueue_scripts', 'hybrid_base_enqueue_styles', 5 );
 /* Add a class to the header */
 add_filter( 'hybrid_attr_branding', 'hybrid_base_attr_branding', 6 );
 
+/* Filter the theme layout class */
+add_filter( 'theme_mod_theme_layout', 'hybrid_base_theme_layout', 5 );
+
 /**
  * Registers custom image sizes for the theme. 
  *
@@ -140,6 +143,43 @@ function hybrid_base_enqueue_styles() {
 function hybrid_base_attr_branding( $attr ) {
 	$attr['class'] = 'title-area';
 	return $attr;
+}
+
+/**
+ * Filters the default theme layout. Metaboxes options should still be able
+ * to override these.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return array
+ */
+function hybrid_base_theme_layout( $theme_layout ) {
+
+	/* If viewing a singular post, get the post layout. */
+	if ( is_singular() )
+		$layout = get_post_layout( get_queried_object_id() );
+
+	/* If viewing an author archive, get the user layout. */
+	elseif ( is_author() )
+		$layout = get_user_layout( get_queried_object_id() );
+
+	/* If a layout was found, set it. */
+	if ( !empty( $layout ) && 'default' !== $layout ) {
+		$theme_layout = $layout;
+	}
+
+	else {
+		if ( is_front_page() ) {
+			$theme_layout = '1c';
+		}
+
+		else {
+			$args = theme_layouts_get_args();
+			$theme_layout = $args['default'];
+		}
+	}
+
+	return $theme_layout;
 }
 
 /**
