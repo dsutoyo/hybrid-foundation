@@ -21,6 +21,9 @@ add_filter( 'hybrid_attr_branding', 'hybrid_base_attr_branding', 6 );
 /* Filter the theme layout class */
 add_filter( 'theme_mod_theme_layout', 'hybrid_base_theme_layout', 5 );
 
+/* Filter the default form options */
+add_filter( 'comment_form_defaults', 'hybrid_base_comment_form_defaults' );
+
 /**
  * Registers custom image sizes for the theme. 
  *
@@ -180,6 +183,21 @@ function hybrid_base_theme_layout( $theme_layout ) {
 	}
 
 	return $theme_layout;
+}
+
+/**
+ * Filters the default comment form options.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return array
+ */
+function hybrid_base_comment_form_defaults( $defaults ) {
+	
+	/* Change the defaults depending on your requirements */
+	//$defaults['title_reply'] = __( 'Submit a Comment', 'hybrid-base' );
+
+	return $defaults;
 }
 
 /**
