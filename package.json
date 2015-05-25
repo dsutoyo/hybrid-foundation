@@ -4,7 +4,7 @@
 		"browser-sync": "2.0.0-rc2",
 		"gulp": "~3.8.8",
 		"gulp-rename": "~1.2.0",
-		"gulp-sass": "~0.7.1",
+		"gulp-sass": "~2.0.1",
 		"gulp-watch": "~0.6.2",
 		"gulp-zip": "~2.0.2"
 	}
