@@ -2,7 +2,7 @@
  * Theme Name:  Hybrid Foundation
  * Theme URI:   http://github.com/dsutoyo/hybrid-foundation
  * Description: A fork of Hybrid Base, integrated with Zurb Foundation
- * Version:     0.1
+ * Version:     1.1.0
  * Author:      David Sutoyo
  * Author URI:  http://davidsutoyo.com
  * Tags:        one-column, two-columns, custom-background, custom-header, custom-menu, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready
@@ -17,6 +17,9 @@
 // Licensed under MIT Open Source
 // Version 5.5.2
 
+// Our own custom mixins
+@import "global/mixins";
+
 // Global Foundation Settings
 @import "settings";
 
@@ -25,59 +28,59 @@
 /**
  * Normalize
  * --------------------------------------------------------------------------- */
-@import "normalize";
+@import "../vendor/foundation/scss/normalize";
 
 /**
  * Fonts
  * --------------------------------------------------------------------------- */
-@import "vendor/fontawesome/font-awesome";
+@import "../vendor/font-awesome/scss/font-awesome";
 
 /**
  * Foundation Components
  * --------------------------------------------------------------------------- */
 // Behold, here are all the Foundation components.
-@import "foundation/components/accordion";
-@import "foundation/components/alert-boxes";
-@import "foundation/components/block-grid";
-@import "foundation/components/breadcrumbs";
-@import "foundation/components/button-groups";
-@import "foundation/components/buttons";
-@import "foundation/components/clearing";
-@import "foundation/components/dropdown-buttons";
-@import "foundation/components/dropdown";
-@import "foundation/components/flex-video";
-@import "foundation/components/forms";
-@import "foundation/components/global";
-@import "foundation/components/grid";
-@import "foundation/components/icon-bar";
-@import "foundation/components/inline-lists";
-@import "foundation/components/joyride";
-@import "foundation/components/keystrokes";
-@import "foundation/components/labels";
-@import "foundation/components/magellan";
-@import "foundation/components/offcanvas";
-@import "foundation/components/orbit";
-@import "foundation/components/pagination";
-@import "foundation/components/panels";
-@import "foundation/components/pricing-tables";
-@import "foundation/components/progress-bars";
-@import "foundation/components/range-slider";
-@import "foundation/components/reveal";
-@import "foundation/components/side-nav";
-@import "foundation/components/split-buttons";
-@import "foundation/components/sub-nav";
-@import "foundation/components/switches";
-@import "foundation/components/tables";
-@import "foundation/components/tabs";
-@import "foundation/components/thumbs";
-@import "foundation/components/tooltips";
-@import "foundation/components/top-bar";
-@import "foundation/components/type";
-@import "foundation/components/visibility";
+@import "../vendor/foundation/scss/foundation/components/accordion";
+@import "../vendor/foundation/scss/foundation/components/alert-boxes";
+@import "../vendor/foundation/scss/foundation/components/block-grid";
+@import "../vendor/foundation/scss/foundation/components/breadcrumbs";
+@import "../vendor/foundation/scss/foundation/components/button-groups";
+@import "../vendor/foundation/scss/foundation/components/buttons";
+@import "../vendor/foundation/scss/foundation/components/clearing";
+@import "../vendor/foundation/scss/foundation/components/dropdown-buttons";
+@import "../vendor/foundation/scss/foundation/components/dropdown";
+@import "../vendor/foundation/scss/foundation/components/flex-video";
+@import "../vendor/foundation/scss/foundation/components/forms";
+@import "../vendor/foundation/scss/foundation/components/global";
+@import "../vendor/foundation/scss/foundation/components/grid";
+@import "../vendor/foundation/scss/foundation/components/icon-bar";
+@import "../vendor/foundation/scss/foundation/components/inline-lists";
+@import "../vendor/foundation/scss/foundation/components/joyride";
+@import "../vendor/foundation/scss/foundation/components/keystrokes";
+@import "../vendor/foundation/scss/foundation/components/labels";
+@import "../vendor/foundation/scss/foundation/components/magellan";
+@import "../vendor/foundation/scss/foundation/components/offcanvas";
+@import "../vendor/foundation/scss/foundation/components/orbit";
+@import "../vendor/foundation/scss/foundation/components/pagination";
+@import "../vendor/foundation/scss/foundation/components/panels";
+@import "../vendor/foundation/scss/foundation/components/pricing-tables";
+@import "../vendor/foundation/scss/foundation/components/progress-bars";
+@import "../vendor/foundation/scss/foundation/components/range-slider";
+@import "../vendor/foundation/scss/foundation/components/reveal";
+@import "../vendor/foundation/scss/foundation/components/side-nav";
+@import "../vendor/foundation/scss/foundation/components/split-buttons";
+@import "../vendor/foundation/scss/foundation/components/sub-nav";
+@import "../vendor/foundation/scss/foundation/components/switches";
+@import "../vendor/foundation/scss/foundation/components/tables";
+@import "../vendor/foundation/scss/foundation/components/tabs";
+@import "../vendor/foundation/scss/foundation/components/thumbs";
+@import "../vendor/foundation/scss/foundation/components/tooltips";
+@import "../vendor/foundation/scss/foundation/components/top-bar";
+@import "../vendor/foundation/scss/foundation/components/type";
+@import "../vendor/foundation/scss/foundation/components/visibility";
 
-@import "modules/foundation";
-@import "modules/grid";
-@import "modules/wordpress";
+@import "global/foundation";
+@import "global/grid";
+@import "global/wordpress";
 
 @import "partials/layout";
 @import "partials/header";

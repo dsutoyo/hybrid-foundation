@@ -20,10 +20,15 @@ gulp.task('browser-sync', function() {
 // Moving dependencies into place
 // =========================================================
 gulp.task('foundation', function() {
-	gulp.src('./bower_components/foundation/scss/**/*.*')
-		.pipe(gulp.dest('./assets/scss/'));
-	gulp.src('./bower_components/foundation/js/**/*.*')
-		.pipe(gulp.dest('./assets/javascripts/'));
+	gulp.src('./bower_components/foundation/**/*.*')
+		.pipe(gulp.dest('./assets/vendor/foundation'));
+});
+
+gulp.task('font-awesome', function() {
+	gulp.src('./bower_components/components-font-awesome/**/*.*')
+		.pipe(gulp.dest('./assets/vendor/font-awesome'));
+	gulp.src('./bower_components/components-font-awesome/fonts/**/*.*')
+		.pipe(gulp.dest('./assets/fonts'));
 });
 
 // Compile our stylesheets

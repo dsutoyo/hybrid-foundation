@@ -1,0 +1,17 @@
+@mixin font-face($name, $slug, $weight: normal, $style: normal) {
+	font-family: $name;
+	src: url($slug + '.eot');
+	src: url($slug + '.eot?#iefix') format('embedded-opentype'),
+		 url($slug + '.woff2') format('woff2'),
+		 url($slug + '.woff') format('woff'),
+		 url($slug + '.ttf')  format('truetype'),
+		 url($slug + '.svg#svgFontName') format('svg');
+	font-weight: $weight;
+	font-style: $style;
+}
+
+@mixin hide-text() {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
