@@ -1,5 +1,8 @@
 {
 	"name": "hybrid-foundation",
+	"version": "1.0.0",
+	"author": "David Sutoyo",
+	"description": "Hybrid Foundation starter theme",
 	"devDependencies": {
 		"browser-sync": "2.0.0-rc2",
 		"gulp": "~3.8.8",
