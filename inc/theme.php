@@ -176,6 +176,10 @@ function hybrid_base_theme_layout( $theme_layout ) {
 			$theme_layout = '1c';
 		}
 
+		elseif ( is_page_template( 'template-builder.php' ) ) {
+			$theme_layout = '1c';
+		}
+
 		else {
 			$args = theme_layouts_get_args();
 			$theme_layout = $args['default'];
