@@ -31,6 +31,18 @@ require_once( $hybrid_base_dir . 'inc/theme.php' );
 require_once( $hybrid_base_dir . 'inc/walker.php' );
 require_once( $hybrid_base_dir . 'inc/class-tgm-plugin-activation.php');
 
+if ( file_exists ( $hybrid_base_dir . 'inc/customizer-library/customizer-library.php' ) ) :
+	// Helper library for the theme customizer.
+	require_once( $hybrid_base_dir . '/inc/customizer-library/customizer-library.php' );
+	// Define options for the theme customizer.
+	require_once( $hybrid_base_dir . '/inc/customizer-options.php' );
+	// Output inline styles based on theme customizer selections.
+	require_once( $hybrid_base_dir . '/inc/styles.php' );
+	// Additional filters and actions based on theme customizer selections.
+	require_once( $hybrid_base_dir . '/inc/mods.php' );
+endif;
+
+
 /* Launch the Hybrid Core framework. */
 new Hybrid();
 
