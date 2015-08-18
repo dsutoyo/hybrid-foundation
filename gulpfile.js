@@ -42,12 +42,16 @@ gulp.task('styles', function() {
 	return gulp.src(['./assets/scss/**/*.scss', '!./assets/scss/foundation.scss', '!./assets/scss/editor-style.scss'])
 		.pipe(sass({
 			outputStyle: 'expanded',
-			errLogToConsole: true
+		}).on('error', function (err) {
+			sass.logError(err);
+			this.emit('end');
 		}))
 		.pipe(gulp.dest('./'))
 		.pipe(sass({
 			outputStyle: 'compressed',
-			errLogToConsole: true
+		}).on('error', function (err) {
+			sass.logError(err);
+			this.emit('end');
 		}))
 		.pipe(rename("style.min.css"))
 		.pipe(gulp.dest('./'))
