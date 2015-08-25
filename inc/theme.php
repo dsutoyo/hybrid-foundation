@@ -85,7 +85,7 @@ function hybrid_base_register_sidebars() {
  */
 function hybrid_base_enqueue_scripts() {
 	// ===== Foundation
-	if ( current_theme_supports( 'foundation-base' ) ) {
+	if ( current_theme_supports( 'foundation', 'base' ) ) {
 		wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/vendor/modernizr.js', 'jquery', '2.8.3', true );
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/foundation.js', 'jquery', FOUNDATION_VERSION, true );
 	}
@@ -96,13 +96,13 @@ function hybrid_base_enqueue_scripts() {
 	);
 
 	foreach ( $foundation_components as $component ) {	
-		if ( current_theme_supports( 'foundation-' . $component ) ) {
+		if ( current_theme_supports( 'foundation', $component ) ) {
 			wp_enqueue_script( 'foundation-' . $component, get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/foundation/foundation.' . $component . '.js', array( 'jquery' ), FOUNDATION_VERSION, true );
 		}
 	}
 
 	// ===== Initialize Foundation
-	if ( current_theme_supports( 'foundation-base' ) ) {
+	if ( current_theme_supports( 'foundation', 'base' ) ) {
 		wp_enqueue_script( 'foundation-init', get_stylesheet_directory_uri() . '/assets/javascripts/foundation.init.js', array( 'jquery' ), FOUNDATION_VERSION, true );
 	}
 }

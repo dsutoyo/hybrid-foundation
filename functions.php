@@ -13,7 +13,7 @@
  *
  * @package    HybridFoundation
  * @subpackage Functions
- * @version    0.1
+ * @version    1.1.0
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2013 - 2014, David Sutoyo
  * @link       https://github.com/dsutoyo/hybrid-base
@@ -48,7 +48,7 @@ new Hybrid();
 
 /* Define Constants. */
 // Theme Version
-define( 'THEME_VERSION', '0.1' );
+define( 'THEME_VERSION', '1.1.0' );
 // Specify our Foundation version
 define( 'FOUNDATION_VERSION', '5.5.2');
 
@@ -106,9 +106,11 @@ function hybrid_base_theme_setup() {
 		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' ) 
 	);
 
-	add_theme_support( 'foundation-base' );
-	add_theme_support( 'foundation-topbar' );
-	add_theme_support( 'foundation-offcanvas' );
+	/* Foundation components. */
+	add_theme_support( 
+		'foundation', 
+		array( 'base', 'topbar', 'offcanvas' ) 
+	);
 
 	/* Editor styles. */
 	add_editor_style( hybrid_base_get_editor_styles() );
