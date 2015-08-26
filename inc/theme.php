@@ -154,6 +154,10 @@ function hybrid_base_attr_body( $attr ) {
 	if ( current_theme_supports( 'popup-navigation' ) ) {
 		$attr['class'] .= ' popup-navigation';
 	}
+
+	else {
+		$attr['class'] .= ' offcanvas-navigation';
+	}
 	return $attr;
 }
 
