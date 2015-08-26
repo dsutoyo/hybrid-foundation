@@ -19,6 +19,12 @@
 
 		<header <?php hybrid_attr( 'header' ); ?>>
 
+			<?php if ( current_theme_supports( 'popup-navigation' ) ) : ?>
+
+			<a class="popup-navigation-trigger" href="#">Menu</a>
+
+			<?php else : ?>
+
 			<nav class="tab-bar" data-topbar>
 				<section class="left-small">
 					<a class="left-off-canvas-toggle menu-icon" href="#off-canvas-navigation" role="button"><span></span></a>
@@ -27,6 +33,8 @@
 					<?php bloginfo( 'name' ); ?>
 				</section>
 			</nav>
+
+			<?php endif; ?>
 
 			<nav class="top-bar" data-topbar>
 

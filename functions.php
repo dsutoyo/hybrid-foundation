@@ -109,7 +109,7 @@ function hybrid_base_theme_setup() {
 	/* Foundation components. */
 	add_theme_support( 
 		'foundation', 
-		array( 'base', 'topbar', 'offcanvas' ) 
+		array( 'topbar', 'offcanvas' ) 
 	);
 
 	//add_theme_support( 'popup-navigation' );

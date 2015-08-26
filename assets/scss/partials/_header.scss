@@ -22,6 +22,39 @@
 	}
 }
 
+.popup-navigation {
+	.off-canvas-menu {
+		transform: none;
+		opacity: 0;
+		width: 100vw;
+		height: 0;
+		-webkit-transition: opacity 0.25s ease-in-out;
+		-moz-transition: opacity 0.25s ease-in-out;
+		-o-transition: opacity 0.25s ease-in-out;
+		transition: opacity 0.25s ease-in-out;
+	}
+}
+
+.popup-active {
+	height: 100vh;
+	overflow: hidden;
+
+	.off-canvas-menu {
+		position: absolute;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		background: #000;
+		opacity: 0.9;
+		-webkit-transition: opacity 0.25s ease-in-out;
+		-moz-transition: opacity 0.25s ease-in-out;
+		-o-transition: opacity 0.25s ease-in-out;
+		transition: opacity 0.25s ease-in-out;
+		overflow: auto;
+		transform: none;
+	}
+}
+
 // Top menu link
 .top-bar-section ul li {
 	&:not(.has-form) > a {

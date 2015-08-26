@@ -3,6 +3,12 @@
 	<!-- Off Canvas Menu -->
 	<aside class="left-off-canvas-menu off-canvas-menu">
 
+		<?php if ( current_theme_supports( 'popup-navigation' ) ) : ?>
+
+			<a class="popup-navigation-close" href="#">Close</a>
+
+		<?php endif; ?>
+
 		<?php wp_nav_menu(
 			array(
 				'theme_location' => 'primary',
