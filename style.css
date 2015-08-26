@@ -11743,6 +11743,23 @@ img.aligncenter {
 /**
  * Header
  * --------------------------------------------------------------------------- */
+.offcanvas-navigation .tab-bar {
+  display: block;
+}
+
+.offcanvas-navigation .top-bar {
+  display: none;
+}
+
+@media only screen and (min-width: 40.0625em) {
+  .offcanvas-navigation .tab-bar {
+    display: none;
+  }
+  .offcanvas-navigation .top-bar {
+    display: block;
+  }
+}
+
 li.description {
   display: none;
 }

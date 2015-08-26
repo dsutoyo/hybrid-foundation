@@ -15,8 +15,11 @@ add_action( 'wp_enqueue_scripts', 'hybrid_base_enqueue_scripts', 5 );
 /* Add custom styles. */
 add_action( 'wp_enqueue_scripts', 'hybrid_base_enqueue_styles', 5 );
 
-/* Add a class to the header */
+/* Add a class to the branding */
 add_filter( 'hybrid_attr_branding', 'hybrid_base_attr_branding', 6 );
+
+/* Add a class to the header */
+add_filter( 'hybrid_attr_header', 'hybrid_base_attr_header', 6 );
 
 /* Filter the theme layout class */
 add_filter( 'theme_mod_theme_layout', 'hybrid_base_theme_layout', 5 );
@@ -145,6 +148,25 @@ function hybrid_base_enqueue_styles() {
  */
 function hybrid_base_attr_branding( $attr ) {
 	$attr['class'] = 'title-area';
+	return $attr;
+}
+
+/**
+ * Filter the header attributes.
+ *
+ * @since  1.1.0
+ * @access public
+ * @return array
+ */
+function hybrid_base_attr_header( $attr ) {
+	if ( current_theme_supports( 'popup-navigation' ) ) {
+		$attr['class'] = 'popup-navigation';
+	}
+
+	else {
+		$attr['class'] = 'offcanvas-navigation';
+	}
+
 	return $attr;
 }
 

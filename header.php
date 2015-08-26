@@ -19,7 +19,7 @@
 
 		<header <?php hybrid_attr( 'header' ); ?>>
 
-			<nav class="tab-bar show-for-small" data-topbar>
+			<nav class="tab-bar" data-topbar>
 				<section class="left-small">
 					<a class="left-off-canvas-toggle menu-icon" href="#off-canvas-navigation" role="button"><span></span></a>
 				</section>
@@ -28,7 +28,7 @@
 				</section>
 			</nav>
 
-			<nav class="top-bar hide-for-small" data-topbar>
+			<nav class="top-bar" data-topbar>
 
 			<ul <?php hybrid_attr( 'branding' ); ?>>
 			<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
