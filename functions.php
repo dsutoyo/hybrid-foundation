@@ -112,7 +112,7 @@ function hybrid_base_theme_setup() {
 		array( 'topbar', 'offcanvas' ) 
 	);
 
-	//add_theme_support( 'popup-navigation' );
+	add_theme_support( 'popup-navigation' );
 
 	/* Editor styles. */
 	add_editor_style( hybrid_base_get_editor_styles() );

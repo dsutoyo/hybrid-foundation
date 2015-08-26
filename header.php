@@ -19,11 +19,7 @@
 
 		<header <?php hybrid_attr( 'header' ); ?>>
 
-			<?php if ( current_theme_supports( 'popup-navigation' ) ) : ?>
-
-			<a class="popup-navigation-trigger" href="#">Menu</a>
-
-			<?php else : ?>
+			<?php if ( !current_theme_supports( 'popup-navigation' ) ) : ?>
 
 			<nav class="tab-bar" data-topbar>
 				<section class="left-small">
@@ -59,6 +55,12 @@
 			<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
 
 			</nav>
+
+			<?php if ( current_theme_supports( 'popup-navigation' ) ) : ?>
+
+			<a class="popup-navigation-trigger" href="#">Menu</a>
+
+			<?php endif; ?>
 
 		</header><!-- #header -->
 

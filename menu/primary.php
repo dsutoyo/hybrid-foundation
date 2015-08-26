@@ -2,12 +2,6 @@
 
 	<section class="menu-primary top-bar-section">
 
-	<?php if ( current_theme_supports( 'popup-navigation' ) ) : ?>
-
-		<a class="popup-navigation-close" href="#">Close</a>
-
-	<?php endif; ?>
-
 	<nav <?php hybrid_attr( 'menu', 'primary' ); ?>>
 
 		<?php wp_nav_menu(
