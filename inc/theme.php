@@ -1,30 +1,31 @@
 <?php
 
-/* Register custom image sizes. */
+# Register custom image sizes.
 add_action( 'init', 'hybrid_base_register_image_sizes', 5 );
 
-/* Register custom menus. */
+# Register custom menus.
 add_action( 'init', 'hybrid_base_register_menus', 5 );
 
-/* Register sidebars. */
+# Register custom layouts.
+add_action( 'hybrid_register_layouts', 'hybrid_base_register_layouts' );
+
+# Register sidebars.
 add_action( 'widgets_init', 'hybrid_base_register_sidebars', 5 );
 
-/* Add custom scripts. */
+# Add custom scripts and styles
 add_action( 'wp_enqueue_scripts', 'hybrid_base_enqueue_scripts', 5 );
-
-/* Add custom styles. */
 add_action( 'wp_enqueue_scripts', 'hybrid_base_enqueue_styles', 5 );
 
-/* Add a class to the body */
+# Add a class to the body
 add_filter( 'hybrid_attr_body', 'hybrid_base_attr_body', 6 );
 
-/* Add a class to the branding */
+# Add a class to the branding
 add_filter( 'hybrid_attr_branding', 'hybrid_base_attr_branding', 6 );
 
-/* Filter the theme layout class */
+# Filter the theme layout class
 add_filter( 'theme_mod_theme_layout', 'hybrid_base_theme_layout', 5 );
 
-/* Filter the default form options */
+# Filter the default form options
 add_filter( 'comment_form_defaults', 'hybrid_base_comment_form_defaults' );
 
 /**
@@ -48,9 +49,23 @@ function hybrid_base_register_image_sizes() {
  * @return void
  */
 function hybrid_base_register_menus() {
-	register_nav_menu( 'primary',    _x( 'Primary',    'nav menu location', 'hybrid-base' ) );
-	register_nav_menu( 'secondary',  _x( 'Secondary',  'nav menu location', 'hybrid-base' ) );
-	register_nav_menu( 'subsidiary', _x( 'Subsidiary', 'nav menu location', 'hybrid-base' ) );
+	register_nav_menu( 'primary',    esc_html_x( 'Primary',    'nav menu location', 'hybrid-base' ) );
+	register_nav_menu( 'secondary',  esc_html_x( 'Secondary',  'nav menu location', 'hybrid-base' ) );
+	register_nav_menu( 'subsidiary', esc_html_x( 'Subsidiary', 'nav menu location', 'hybrid-base' ) );
+}
+
+/**
+ * Registers layouts.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function hybrid_base_register_layouts() {
+
+	hybrid_register_layout( '1c',   array( 'label' => esc_html__( '1 Column',                     'hybrid-base' ), 'image' => '%s/assets/images/layouts/1c.png'   ) );
+	hybrid_register_layout( '2c-l', array( 'label' => esc_html__( '2 Columns: Content / Sidebar', 'hybrid-base' ), 'image' => '%s/assets/images/layouts/2c-l.png' ) );
+	hybrid_register_layout( '2c-r', array( 'label' => esc_html__( '2 Columns: Sidebar / Content', 'hybrid-base' ), 'image' => '%s/assets/images/layouts/2c-r.png' ) );
 }
 
 /**
@@ -65,16 +80,16 @@ function hybrid_base_register_sidebars() {
 	hybrid_register_sidebar(
 		array(
 			'id'          => 'primary',
-			'name'        => _x( 'Primary', 'sidebar', 'hybrid-base' ),
-			'description' => __( 'Add sidebar description.', 'hybrid-base' )
+			'name'        => esc_html_x( 'Primary', 'sidebar', 'hybrid-base' ),
+			'description' => esc_html__( 'Add sidebar description.', 'hybrid-base' )
 		)
 	);
 
 	hybrid_register_sidebar(
 		array(
 			'id'          => 'subsidiary',
-			'name'        => _x( 'Subsidiary', 'sidebar', 'hybrid-base' ),
-			'description' => __( 'Add sidebar description.', 'hybrid-base' )
+			'name'        => esc_html_x( 'Subsidiary', 'sidebar', 'hybrid-base' ),
+			'description' => esc_html__( 'Add sidebar description.', 'hybrid-base' )
 		)
 	);
 }
@@ -185,11 +200,11 @@ function hybrid_base_theme_layout( $theme_layout ) {
 
 	/* If viewing a singular post, get the post layout. */
 	if ( is_singular() )
-		$layout = get_post_layout( get_queried_object_id() );
+		$layout = hybrid_get_post_layout( get_queried_object_id() );
 
 	/* If viewing an author archive, get the user layout. */
 	elseif ( is_author() )
-		$layout = get_user_layout( get_queried_object_id() );
+		$layout = hybrid_get_user_layout( get_queried_object_id() );
 
 	/* If a layout was found, set it. */
 	if ( !empty( $layout ) && 'default' !== $layout ) {
@@ -206,8 +221,7 @@ function hybrid_base_theme_layout( $theme_layout ) {
 		}
 
 		else {
-			$args = theme_layouts_get_args();
-			$theme_layout = $args['default'];
+			$theme_layout = hybrid_get_default_layout();
 		}
 	}
 

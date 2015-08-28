@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html <?php language_attributes( 'html' ); ?>>
 
-<head>
+<head <?php hybrid_attr( 'head' ); ?>>
 <?php wp_head(); // Hook required for scripts, styles, and other <head> items. ?>
 </head>
 
@@ -14,7 +14,7 @@
 		<?php hybrid_get_menu( 'mobile' ); ?>
 
 		<div class="skip-link">
-			<a href="#content" class="screen-reader-text"><?php _e( 'Skip to content', 'hybrid-base' ); ?></a>
+			<a href="#content" class="screen-reader-text"><?php esc_html_e( 'Skip to content', 'hybrid-base' ); ?></a>
 		</div><!-- .skip-link -->
 
 		<header <?php hybrid_attr( 'header' ); ?>>
@@ -42,7 +42,7 @@
 
 			<?php elseif ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
 
-				<li class="name"><a href="<?php echo home_url(); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a></li>
+				<li class="name"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="" /></a></li>
 
 			<?php elseif ( get_header_image() ) : // If there's a header image. ?>
 

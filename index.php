@@ -2,9 +2,9 @@
 
 <main <?php hybrid_attr( 'content' ); ?>>
 
-	<?php if ( !is_front_page() && !is_singular() && !is_404() ) : // If viewing a multi-post page ?>
+	<?php if ( !is_front_page() && hybrid_is_plural() ) : // If viewing a multi-post page ?>
 
-		<?php locate_template( array( 'misc/loop-meta.php' ), true ); // Loads the misc/loop-meta.php template. ?>
+		<?php locate_template( array( 'misc/archive-header.php' ), true ); // Loads the misc/loop-meta.php template. ?>
 
 	<?php endif; // End check for multi-post page. ?>
 

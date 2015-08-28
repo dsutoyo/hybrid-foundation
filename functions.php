@@ -13,17 +13,17 @@
  *
  * @package    HybridFoundation
  * @subpackage Functions
- * @version    1.2.0
+ * @version    2.0.0
  * @author     David Sutoyo <david@smallharbor.com>
- * @copyright  Copyright (c) 2013 - 2014, David Sutoyo
- * @link       https://github.com/dsutoyo/hybrid-base
+ * @copyright  Copyright (c) 2013 - 2015, David Sutoyo
+ * @link       https://github.com/dsutoyo/hybrid-foundation
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
-/* Get the template directory and make sure it has a trailing slash. */
+// Get the template directory and make sure it has a trailing slash.
 $hybrid_base_dir = trailingslashit( get_template_directory() );
 
-/* Load the Hybrid Core framework and theme files. */
+// Load the Hybrid Core framework and theme files.
 require_once( $hybrid_base_dir . 'library/hybrid.php' );
 require_once( $hybrid_base_dir . 'inc/custom-background.php' );
 require_once( $hybrid_base_dir . 'inc/custom-header.php' );
@@ -43,12 +43,12 @@ if ( file_exists ( $hybrid_base_dir . 'inc/customizer-library/customizer-library
 endif;
 
 
-/* Launch the Hybrid Core framework. */
+// Launch the Hybrid Core framework.
 new Hybrid();
 
 /* Define Constants. */
 // Theme Version
-define( 'THEME_VERSION', '1.2.0' );
+define( 'THEME_VERSION', '2.0.0' );
 // Specify our Foundation version
 define( 'FOUNDATION_VERSION', '5.5.2');
 
@@ -68,56 +68,43 @@ add_action( 'tgmpa_register', 'hybrid_base_register_required_plugins' );
  */
 function hybrid_base_theme_setup() {
 
-	/* Theme layouts. */
-	add_theme_support( 
-		'theme-layouts', 
-		array(
-			'1c'        => __( '1 Column',                     'hybrid-base' ),
-			'2c-l'      => __( '2 Columns: Content / Sidebar', 'hybrid-base' ),
-			'2c-r'      => __( '2 Columns: Sidebar / Content', 'hybrid-base' )
-		),
-		array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) 
-	);
+	// Theme layouts.
+	add_theme_support( 'theme-layouts', array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) );
 
-	/* Enable custom template hierarchy. */
+	// Enable custom template hierarchy.
 	add_theme_support( 'hybrid-core-template-hierarchy' );
 
-	/* The best thumbnail/image script ever. */
+	// The best thumbnail/image script ever.
 	add_theme_support( 'get-the-image' );
 
-	/* Breadcrumbs. Yay! */
+	// Breadcrumbs. Yay!
 	add_theme_support( 'breadcrumb-trail' );
 
-	/* Pagination. */
-	add_theme_support( 'loop-pagination' );
-
-	/* Nicer [gallery] shortcode implementation. */
+	// Nicer [gallery] shortcode implementation.
 	add_theme_support( 'cleaner-gallery' );
 
-	/* Better captions for themes to style. */
-	add_theme_support( 'cleaner-caption' );
-
-	/* Automatically add feed links to <head>. */
+	// Automatically add feed links to <head>.
 	add_theme_support( 'automatic-feed-links' );
 
-	/* Post formats. */
+	// Post formats.
 	add_theme_support( 
 		'post-formats', 
 		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' ) 
 	);
 
-	/* Foundation components. */
+	// Foundation components.
 	add_theme_support( 
 		'foundation', 
 		array( 'topbar', 'offcanvas' ) 
 	);
 
+	// Popup menu navigation.
 	add_theme_support( 'popup-navigation' );
 
-	/* Editor styles. */
+	// Editor styles.
 	add_editor_style( hybrid_base_get_editor_styles() );
 
-	/* Handle content width for embeds and images. */
+	// Handle content width for embeds and images.
 	hybrid_set_content_width( 1280 );
 
 }
