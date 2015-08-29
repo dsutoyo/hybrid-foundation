@@ -1,7 +1,6 @@
 var gulp        = require('gulp');
 var rename      = require('gulp-rename');
 var sass        = require('gulp-sass');
-var watch       = require('gulp-watch');
 var zip         = require('gulp-zip');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
