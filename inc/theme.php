@@ -107,6 +107,7 @@ function hybrid_base_enqueue_scripts() {
 	// ===== Foundation
 	if ( current_theme_supports( 'foundation' ) ) {
 		wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/vendor/modernizr.js', 'jquery', '2.8.3', true );
+		wp_enqueue_script( 'fastclick', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/vendor/fastclick.js', 'jquery', '1.0.6', true );
 		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/foundation.js', 'jquery', FOUNDATION_VERSION, true );
 	}
 
