@@ -8,13 +8,14 @@ var reload      = browserSync.reload;
 
 // Browser sync
 // =========================================================
-var config = {
-	proxy: "wordpress.dev",
-	browser: ["google chrome", "safari"]
-}
-
 gulp.task('browser-sync', function() {
-	browserSync(config);
+	var files = [
+		'**/*.php'
+	];
+
+	browserSync.init(files, {
+		proxy: 'wordpress.dev/'
+	});
 });
 
 // Moving dependencies into place
@@ -60,7 +61,7 @@ gulp.task('styles', function() {
 
 // Watch function
 // =========================================================
-gulp.task('watch', ['styles'], function() {
+gulp.task('watch', function() {
 	gulp.watch('./assets/scss/**/*.scss', ['styles']);
 })
 
@@ -78,4 +79,4 @@ gulp.task('build', ['styles', 'package']);
 
 // Default task
 // =========================================================
-gulp.task('default', ['watch']);
+gulp.task('default', ['watch', 'browser-sync']);
