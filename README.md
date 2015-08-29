@@ -28,7 +28,7 @@ $ bower install
 
 #### 2. Copy dependencies
 
-We don't need everything in bower_components, so we're going to copy some of them over to our `assets/vendor` directory.
+We don't need everything in `bower_components`, so we're going to copy some of them over to our `assets/vendor` directory.
 
 Copy Foundation
 
@@ -44,7 +44,7 @@ $ gulp font-awesome
 
 #### 3. Edit gulpfile.js
 
-Change `proxy: 'wordpress.dev/'` to `proxy: 'my-site.dev/'` in gulpfile.js, where 'my-site' is your local domain
+Change `proxy: 'wordpress.dev/'` to `proxy: 'my-site.dev/'` in gulpfile.js, where `'my-site'` is your local domain
 
 #### 4. Run Gulp
 

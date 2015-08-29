@@ -49,13 +49,14 @@ new Hybrid();
 /* Define Constants. */
 // Theme Version
 define( 'THEME_VERSION', '2.0.0' );
+
 // Specify our Foundation version
 define( 'FOUNDATION_VERSION', '5.5.2');
 
-/* Do theme setup on the 'after_setup_theme' hook. */
+// Do theme setup on the 'after_setup_theme' hook.
 add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );
 
-/* Register the required plugins */
+// Register the required plugins
 add_action( 'tgmpa_register', 'hybrid_base_register_required_plugins' );
 
 /**
