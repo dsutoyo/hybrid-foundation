@@ -2,7 +2,7 @@
 
 A starter theme based on <a href="http://http://themehybrid.com/hybrid-core/">Hybrid Core</a> and Foundation 5.5.2.
 
-## How to get started
+## Getting Started
 ### Prerequisites
 
 You only need to do this once on your development machine.
@@ -12,7 +12,7 @@ You only need to do this once on your development machine.
 * Install Bower - from Terminal or Command Prompt run `npm install --g bower`
 * Install Gulp.js - from Terminal or Command Prompt run `npm install --global gulp`
 
-### Installation
+### Project Setup
 
 #### 1. Clone the repository
 
@@ -26,8 +26,26 @@ $ npm install
 $ bower install
 ```
 
-#### 2. Run the watch task
+#### 2. Copy dependencies
+
+We don't need everything in bower_components, so we're going to copy some of them over to our `assets/vendor` directory.
+
+Copy Foundation
 
 ```
-$ gulp watch
+$ gulp foundation
+```
+
+Copy Font Awesome (optional)
+
+```
+$ gulp font-awesome
+```
+
+#### 3. Run Gulp
+
+The default gulp task compiles Sass and automatically refreshes your browser everytime you update your files.
+
+```
+$ gulp
 ```
