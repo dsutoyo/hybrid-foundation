@@ -42,7 +42,11 @@ Copy Font Awesome (optional)
 $ gulp font-awesome
 ```
 
-#### 3. Run Gulp
+#### 3. Edit gulpfile.js
+
+Change `proxy: 'wordpress.dev/'` to `proxy: 'my-site.dev/'` in gulpfile.js, where 'my-site' is your local domain
+
+#### 4. Run Gulp
 
 The default gulp task compiles Sass and automatically refreshes your browser everytime you update your files.
 
