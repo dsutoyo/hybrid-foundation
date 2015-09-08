@@ -18,7 +18,7 @@ You only need to do this once on your development machine.
 
 ```
 $ cd my-wordpress-folder/wp-content/themes/
-$ git clone --recursive git@github.com:dsutoyo/hybrid-foundation.git
+$ git clone git@github.com:dsutoyo/hybrid-foundation.git
 $ mv hybrid-foundation your-theme-name
 $ cd your-theme-name
 

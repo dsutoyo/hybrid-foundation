@@ -39,7 +39,7 @@ gulp.task('styles', function() {
 			outputStyle: 'expanded'
 		}))
 		.pipe(gulp.dest('./assets/stylesheets/'));
-	return gulp.src(['./assets/scss/**/*.scss', '!./assets/scss/foundation.scss', '!./assets/scss/editor-style.scss'])
+	return gulp.src('./assets/scss/style.scss')
 		.pipe(sass({
 			outputStyle: 'expanded',
 		}).on('error', function (err) {
