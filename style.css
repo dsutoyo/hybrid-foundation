@@ -11884,6 +11884,73 @@ li.description {
 /**
  * Footer
  * --------------------------------------------------------------------------- */
+.trail-items li {
+  color: #008CBA;
+  float: left;
+  font-size: 0.6875rem;
+  line-height: 0.6875rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.trail-items li:hover a, .trail-items li:focus a {
+  text-decoration: underline;
+}
+
+.trail-items li a {
+  color: #008CBA;
+}
+
+.trail-items li.current {
+  color: #333333;
+  cursor: default;
+}
+
+.trail-items li.current a {
+  color: #333333;
+  cursor: default;
+}
+
+.trail-items li.current:hover, .trail-items li.current:hover a,
+.trail-items li.current:focus, .trail-items li.current:focus a {
+  text-decoration: none;
+}
+
+.trail-items li.unavailable {
+  color: #999999;
+}
+
+.trail-items li.unavailable a {
+  color: #999999;
+}
+
+.trail-items li.unavailable:hover,
+.trail-items li.unavailable:hover a,
+.trail-items li.unavailable:focus,
+.trail-items li.unavailable a:focus {
+  color: #999999;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+.trail-items li:before {
+  color: #AAAAAA;
+  content: "/";
+  margin: 0 0.75rem;
+  position: relative;
+  top: 1px;
+}
+
+.trail-items li:first-child:before {
+  content: " ";
+  margin: 0;
+}
+
+.trail-items li:first-of-type:before {
+  content: " ";
+  margin: 0;
+}
+
 .builder-section-content {
   margin: 0 -0.9375rem;
   max-width: none;

@@ -28,6 +28,10 @@ add_filter( 'theme_mod_theme_layout', 'hybrid_base_theme_layout', 5 );
 # Filter the default form options
 add_filter( 'comment_form_defaults', 'hybrid_base_comment_form_defaults' );
 
+# Add support for breadcrumbs
+add_filter( 'breadcrumb_trail_args', 'hybrid_base_breadcrumb_trail_args' );
+add_filter( 'breadcrumb_trail', 'hybrid_base_breadcrumb_trail', 5, 2 );
+
 /**
  * Registers custom image sizes for the theme. 
  *
@@ -271,4 +275,29 @@ function hybrid_base_get_editor_styles() {
 
 	/* Return the styles. */
 	return $editor_styles;
+}
+
+/**
+ * Adjust the args for breadcrumbs
+ *
+ * @since  2.0.0
+ * @access public
+ * @return array
+ */
+function hybrid_base_breadcrumb_trail_args( $args ) {
+	$args['show_browse'] = false;
+	return $args;
+}
+
+/**
+ * Filter the class names for the breadcrumbs
+ *
+ * @since  2.0.0
+ * @access public
+ * @return array
+ */
+function hybrid_base_breadcrumb_trail( $breadcrumb, $args ) {
+	$breadcrumb = str_replace( 'breadcrumb-trail breadcrumbs', 'breadcrumb-trail', $breadcrumb );
+	$breadcrumb = str_replace( 'ul class="trail-items"', 'ul class="breadcrumbs trail-items', $breadcrumb );
+	return $breadcrumb;
 }
