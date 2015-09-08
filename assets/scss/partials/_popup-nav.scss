@@ -1,0 +1,5 @@
+.popup-navigation-trigger {
+	@media #{$medium-up} {
+		display: none;
+	}
+}

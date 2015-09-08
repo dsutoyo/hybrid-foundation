@@ -11855,6 +11855,12 @@ li.description {
   padding-left: 15px;
 }
 
+@media only screen and (min-width: 40.0625em) {
+  .popup-navigation-trigger {
+    display: none;
+  }
+}
+
 /**
  * Content
  * --------------------------------------------------------------------------- */
