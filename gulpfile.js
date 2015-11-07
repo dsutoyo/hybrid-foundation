@@ -1,5 +1,6 @@
 var gulp        = require('gulp');
 var rename      = require('gulp-rename');
+var notify      = require('gulp-notify');
 var sass        = require('gulp-sass');
 var zip         = require('gulp-zip');
 var browserSync = require('browser-sync');
@@ -42,16 +43,12 @@ gulp.task('styles', function() {
 	return gulp.src('./assets/scss/style.scss')
 		.pipe(sass({
 			outputStyle: 'expanded',
-		}).on('error', function (err) {
-			sass.logError(err);
-			this.emit('end');
-		}))
+		}).on('error', notify.onError(function(error) {
+			return "Error: " + error.message;
+		})))
 		.pipe(gulp.dest('./'))
 		.pipe(sass({
 			outputStyle: 'compressed',
-		}).on('error', function (err) {
-			sass.logError(err);
-			this.emit('end');
 		}))
 		.pipe(rename("style.min.css"))
 		.pipe(gulp.dest('./'))
@@ -60,7 +57,7 @@ gulp.task('styles', function() {
 
 // Watch function
 // =========================================================
-gulp.task('watch', function() {
+gulp.task('watch', ['styles'], function() {
 	gulp.watch('./assets/scss/**/*.scss', ['styles']);
 })
 
