@@ -1,9 +1,9 @@
 {
     "name": "hybrid-foundation",
-    "version": "2.0.0",
+    "version": "2.0.2",
     "description": "WordPress starter theme",
     "dependencies": {
-       "foundation": "5.5.2",
-       "components-font-awesome": "4.3.0"
+       "foundation": "5.5.3",
+       "components-font-awesome": "4.4.0"
     }
 }

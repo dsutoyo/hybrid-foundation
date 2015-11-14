@@ -13,7 +13,7 @@
  *
  * @package    HybridFoundation
  * @subpackage Functions
- * @version    2.0.0
+ * @version    2.0.2
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2013 - 2015, David Sutoyo
  * @link       https://github.com/dsutoyo/hybrid-foundation
@@ -48,7 +48,7 @@ new Hybrid();
 
 /* Define Constants. */
 // Theme Version
-define( 'THEME_VERSION', '2.0.0' );
+define( 'THEME_VERSION', '2.0.2' );
 
 // Specify our Foundation version
 define( 'FOUNDATION_VERSION', '5.5.2');
