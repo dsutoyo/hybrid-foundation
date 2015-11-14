@@ -96,7 +96,7 @@ function hybrid_base_theme_setup() {
 	// Foundation components.
 	add_theme_support( 
 		'foundation', 
-		array( 'topbar', 'offcanvas' ) 
+		array( 'all' ) 
 	);
 
 	// Popup menu navigation.

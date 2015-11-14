@@ -112,18 +112,33 @@ function hybrid_base_enqueue_scripts() {
 	if ( current_theme_supports( 'foundation' ) ) {
 		wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/vendor/modernizr.js', 'jquery', '2.8.3', true );
 		wp_enqueue_script( 'fastclick', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/vendor/fastclick.js', 'jquery', '1.0.6', true );
-		wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/foundation.js', 'jquery', FOUNDATION_VERSION, true );
-	}
+		if ( in_array( 'all', $_wp_theme_features['foundation'][0] ) ) {
+			wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/foundation.min.js', 'jquery', FOUNDATION_VERSION, true );
+		}
 
-	// ===== Load Foundation components if supported by the theme
-	$foundation_components = array(
-		'abide', 'accordion', 'alert', 'clearing', 'dropdown', 'equalizer', 'interchange', 'joyride', 'magellan', 'offcanvas', 'orbit', 'reveal', 'slider', 'tab', 'tooltip', 'topbar'
-	);
+		// ===== Load individual Foundation components if we didn't call the 'all' flag
+		else {
 
-	foreach ( $foundation_components as $component ) {	
-		if ( current_theme_supports( 'foundation' ) && in_array( $component, $_wp_theme_features['foundation'][0] ) ) {
-			if ( !current_theme_supports( 'popup-navigation' ) && $component == 'offcanvas' ) {
-				wp_enqueue_script( 'foundation-' . $component, get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/foundation/foundation.' . $component . '.js', array( 'jquery' ), FOUNDATION_VERSION, true );
+			wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/foundation/foundation.js', 'jquery', FOUNDATION_VERSION, true );
+
+			$foundation_components = array(
+				'abide', 'accordion', 'alert', 'clearing', 'dropdown', 'equalizer', 'interchange', 'joyride', 'magellan', 'offcanvas', 'orbit', 'reveal', 'slider', 'tab', 'tooltip', 'topbar'
+			);
+
+			foreach ( $foundation_components as $component ) {
+				if ( in_array( $component, $_wp_theme_features['foundation'][0] ) ) {
+
+					if ( $component == 'offcanvas' ) {
+						// Only include offcanvas if we're not using popup-navigation
+						if ( ! current_theme_supports( 'popup-navigation' ) ) {
+							wp_enqueue_script( 'foundation-' . $component, get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/foundation/foundation.' . $component . '.js', array( 'jquery' ), FOUNDATION_VERSION, true );
+						}
+					}
+
+					else {
+						wp_enqueue_script( 'foundation-' . $component, get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/foundation/foundation.' . $component . '.js', array( 'jquery' ), FOUNDATION_VERSION, true );
+					}
+				}
 			}
 		}
 	}
