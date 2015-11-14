@@ -2,6 +2,7 @@ var gulp        = require('gulp');
 var rename      = require('gulp-rename');
 var notify      = require('gulp-notify');
 var sass        = require('gulp-sass');
+var sourcemaps  = require('gulp-sourcemaps')
 var zip         = require('gulp-zip');
 var browserSync = require('browser-sync');
 var reload      = browserSync.reload;
@@ -41,6 +42,7 @@ gulp.task('styles', function() {
 		}))
 		.pipe(gulp.dest('./assets/stylesheets/'));
 	return gulp.src('./assets/scss/style.scss')
+		.pipe(sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'expanded',
 		}).on('error', notify.onError(function(error) {
@@ -51,6 +53,7 @@ gulp.task('styles', function() {
 			outputStyle: 'compressed',
 		}))
 		.pipe(rename("style.min.css"))
+		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./'))
 		.pipe(reload({stream:true}));
 });
