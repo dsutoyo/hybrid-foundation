@@ -1,99 +1,43 @@
 @mixin small-column(
-	$columns:false,
-	$last-column:false,
-	$center:false,
-	$offset:false,
-	$push:false,
-	$pull:false,
-	$collapse:false,
-	$float:true,
-	$position:false) {
+	$columns:null,
+	$gutter:$grid-column-gutter) {
 
 	@media only screen {
-		@include grid-column(
+		@include flex-grid-column(
 			$columns,
-			$last-column,
-			$center,
-			$offset,
-			$push,
-			$pull,
-			$collapse,
-			$float,
-			$position);
+			$gutter);
 	}
 }
 
 @mixin medium-column(
-	$columns:false,
-	$last-column:false,
-	$center:false,
-	$offset:false,
-	$push:false,
-	$pull:false,
-	$collapse:false,
-	$float:true,
-	$position:false) {
+	$columns:null,
+	$gutter:$grid-column-gutter) {
 
-	@media #{$medium-up} {
-		@include grid-column(
+	@include breakpoint(medium) {
+		@include flex-grid-column(
 			$columns,
-			$last-column,
-			$center,
-			$offset,
-			$push,
-			$pull,
-			$collapse,
-			$float,
-			$position);
+			$gutter);
 	}
 }
 
 @mixin large-column(
-	$columns:false,
-	$last-column:false,
-	$center:false,
-	$offset:false,
-	$push:false,
-	$pull:false,
-	$collapse:false,
-	$float:true,
-	$position:false) {
+	$columns:null,
+	$gutter:$grid-column-gutter) {
 
-	@media #{$large-up} {
-		@include grid-column(
+	@include breakpoint(large) {
+		@include flex-grid-column(
 			$columns,
-			$last-column,
-			$center,
-			$offset,
-			$push,
-			$pull,
-			$collapse,
-			$float,
-			$position);
+			$gutter);
 	}
 }
 
 @mixin xlarge-column(
-	$columns:false,
-	$last-column:false,
-	$center:false,
-	$offset:false,
-	$push:false,
-	$pull:false,
-	$collapse:false,
-	$float:true,
-	$position:false) {
+	$columns:null,
+	$gutter:$grid-column-gutter) {
 
-	@media #{$xlarge-up} {
-		@include grid-column(
+	@include breakpoint(xlarge) {
+		@include flex-grid-column(
 			$columns,
-			$last-column,
-			$center,
-			$offset,
-			$push,
-			$pull,
-			$collapse,
-			$float,
-			$position);
+			$gutter);
 	}
 }

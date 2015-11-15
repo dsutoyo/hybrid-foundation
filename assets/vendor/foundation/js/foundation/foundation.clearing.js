@@ -4,16 +4,14 @@
   Foundation.libs.clearing = {
     name : 'clearing',
 
-    version : '5.5.3',
+    version : '{{VERSION}}',
 
     settings : {
       templates : {
         viewing : '<a href="#" class="clearing-close">&times;</a>' +
           '<div class="visible-img" style="display: none"><div class="clearing-touch-label"></div><img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="" />' +
           '<p class="clearing-caption"></p><a href="#" class="clearing-main-prev"><span></span></a>' +
-          '<a href="#" class="clearing-main-next"><span></span></a></div>' +
-          '<img class="clearing-preload-next" style="display: none" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="" />' +
-          '<img class="clearing-preload-prev" style="display: none" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="" />'
+          '<a href="#" class="clearing-main-next"><span></span></a></div>'
       },
 
       // comma delimited list of selectors that, on click, will close clearing,
@@ -28,7 +26,7 @@
 
       touch_label : '',
 
-      // event initializer and locks
+      // event initializers and locks
       init : false,
       locked : false
     },
@@ -203,8 +201,7 @@
           visible_image = self.S('.visible-img', container),
           image = self.S('img', visible_image).not($image),
           label = self.S('.clearing-touch-label', container),
-          error = false,
-          loaded = {};
+          error = false;
 
       // Event to disable scrolling on touch devices when Clearing is activated
       $('body').on('touchmove', function (e) {
@@ -230,7 +227,6 @@
       function cb (image) {
         var $image = $(image);
         $image.css('visibility', 'visible');
-        $image.trigger('imageVisible');
         // toggle the gallery
         body.css('overflow', 'hidden');
         root.addClass('clearing-blackout');
@@ -249,17 +245,9 @@
       if (!this.locked()) {
         visible_image.trigger('open.fndtn.clearing');
         // set the image to the selected thumbnail
-        loaded = this.load($image);
-        if (loaded.interchange) {
-          image
-            .attr('data-interchange', loaded.interchange)
-            .foundation('interchange', 'reflow');
-        } else {
-          image
-            .attr('src', loaded.src)
-            .attr('data-interchange', '');
-        }
-        image.css('visibility', 'hidden');
+        image
+          .attr('src', this.load($image))
+          .css('visibility', 'hidden');
 
         startLoad.call(this);
       }
@@ -314,7 +302,7 @@
         this.go(clearing, 'prev');
       }
       if (e.which === ESC_KEY) {
-        this.S('a.clearing-close').trigger('click.fndtn.clearing');
+        this.S('a.clearing-close').trigger('click').trigger('click.fndtn.clearing');
       }
     },
 
@@ -393,55 +381,37 @@
     // image loading and preloading
 
     load : function ($image) {
-      var href,
-          interchange,
-          closest_a;
+      var href;
 
       if ($image[0].nodeName === 'A') {
         href = $image.attr('href');
-        interchange = $image.data('clearing-interchange');
       } else {
-        closest_a = $image.closest('a');
-        href = closest_a.attr('href');
-        interchange = closest_a.data('clearing-interchange');
+        href = $image.closest('a').attr('href');
       }
 
       this.preload($image);
 
-      return {
-        'src': href ? href : $image.attr('src'),
-        'interchange': href ? interchange : $image.data('clearing-interchange')
+      if (href) {
+        return href;
       }
+      return $image.attr('src');
     },
 
     preload : function ($image) {
       this
-        .img($image.closest('li').next(), 'next')
-        .img($image.closest('li').prev(), 'prev');
+        .img($image.closest('li').next())
+        .img($image.closest('li').prev());
     },
 
-    img : function (img, sibling_type) {
+    img : function (img) {
       if (img.length) {
-        var preload_img = $('.clearing-preload-' + sibling_type),
-            new_a = this.S('a', img),
-            src,
-            interchange,
-            image;
+        var new_img = new Image(),
+            new_a = this.S('a', img);
 
         if (new_a.length) {
-          src = new_a.attr('href');
-          interchange = new_a.data('clearing-interchange');
+          new_img.src = new_a.attr('href');
         } else {
-          image = this.S('img', img);
-          src = image.attr('src');
-          interchange = image.data('clearing-interchange');
-        }
-
-        if (interchange) {
-          preload_img.attr('data-interchange', interchange);
-        } else {
-          preload_img.attr('src', src);
-          preload_img.attr('data-interchange', '');
+          new_img.src = this.S('img', img).attr('src');
         }
       }
       return this;
@@ -453,9 +423,9 @@
       var caption = $image.attr('data-caption');
 
       if (caption) {
-      	var containerPlain = container.get(0);
-      	containerPlain.innerHTML = caption;
-        container.show();
+        container
+          .html(caption)
+          .show();
       } else {
         container
           .text('')
@@ -477,7 +447,7 @@
 
       if (target.length) {
         this.S('img', target)
-          .trigger('click.fndtn.clearing', [current, target])
+          .trigger('click', [current, target]).trigger('click.fndtn.clearing', [current, target])
           .trigger('change.fndtn.clearing');
       }
     },

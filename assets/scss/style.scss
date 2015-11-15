@@ -11,84 +11,116 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-@charset "UTF-8";
-// Foundation by ZURB
+// Foundation for Sites by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
-// Version 5.5.2
 
-// Our own custom mixins
-@import "global/mixins";
+$foundation-version: '6.0.0-alpha.1';
 
-// Global Foundation Settings
-@import "settings";
+// Third-party libraries
+@import '../vendor/foundation/scss/vendor/normalize';
 
-// Make sure the charset is set appropriately
+// Sass utilities
+@import '../vendor/foundation/scss/util/util';
 
-/**
- * Normalize
- * --------------------------------------------------------------------------- */
-@import "../vendor/foundation/scss/normalize";
+// Global variables and styles
+@import '../vendor/foundation/scss/global';
 
-/**
- * Fonts
- * --------------------------------------------------------------------------- */
-@import "../vendor/font-awesome/scss/font-awesome";
+// Components
+@import '../vendor/foundation/scss/grid/grid';
+@import '../vendor/foundation/scss/typography/typography';
+@import '../vendor/foundation/scss/forms/forms';
+@import '../vendor/foundation/scss/components/visibility';
+@import '../vendor/foundation/scss/components/float';
+@import '../vendor/foundation/scss/components/button';
+@import '../vendor/foundation/scss/components/button-group';
+@import '../vendor/foundation/scss/components/accordion-menu';
+@import '../vendor/foundation/scss/components/accordion';
+@import '../vendor/foundation/scss/components/badge';
+@import '../vendor/foundation/scss/components/breadcrumbs';
+@import '../vendor/foundation/scss/components/callout';
+@import '../vendor/foundation/scss/components/close-button';
+@import '../vendor/foundation/scss/components/drilldown';
+@import '../vendor/foundation/scss/components/dropdown-menu';
+@import '../vendor/foundation/scss/components/dropdown';
+@import '../vendor/foundation/scss/components/flex-video';
+@import '../vendor/foundation/scss/components/label';
+@import '../vendor/foundation/scss/components/media-object';
+@import '../vendor/foundation/scss/components/menu';
+@import '../vendor/foundation/scss/components/off-canvas';
+@import '../vendor/foundation/scss/components/orbit';
+@import '../vendor/foundation/scss/components/pagination';
+@import '../vendor/foundation/scss/components/progress-bar';
+@import '../vendor/foundation/scss/components/reveal';
+@import '../vendor/foundation/scss/components/slider';
+@import '../vendor/foundation/scss/components/sticky';
+@import '../vendor/foundation/scss/components/switch';
+@import '../vendor/foundation/scss/components/table';
+@import '../vendor/foundation/scss/components/tabs';
+@import '../vendor/foundation/scss/components/title-bar';
+@import '../vendor/foundation/scss/components/top-bar';
+@import '../vendor/foundation/scss/components/thumbnail';
+@import '../vendor/foundation/scss/components/tooltip';
+@import '../vendor/foundation/scss/components/joyride';
 
-/**
- * Foundation Components
- * --------------------------------------------------------------------------- */
-// Behold, here are all the Foundation components.
-@import "../vendor/foundation/scss/foundation/components/accordion";
-@import "../vendor/foundation/scss/foundation/components/alert-boxes";
-@import "../vendor/foundation/scss/foundation/components/block-grid";
-@import "../vendor/foundation/scss/foundation/components/breadcrumbs";
-@import "../vendor/foundation/scss/foundation/components/button-groups";
-@import "../vendor/foundation/scss/foundation/components/buttons";
-@import "../vendor/foundation/scss/foundation/components/clearing";
-@import "../vendor/foundation/scss/foundation/components/dropdown-buttons";
-@import "../vendor/foundation/scss/foundation/components/dropdown";
-@import "../vendor/foundation/scss/foundation/components/flex-video";
-@import "../vendor/foundation/scss/foundation/components/forms";
-@import "../vendor/foundation/scss/foundation/components/global";
-@import "../vendor/foundation/scss/foundation/components/grid";
-@import "../vendor/foundation/scss/foundation/components/icon-bar";
-@import "../vendor/foundation/scss/foundation/components/inline-lists";
-@import "../vendor/foundation/scss/foundation/components/joyride";
-@import "../vendor/foundation/scss/foundation/components/keystrokes";
-@import "../vendor/foundation/scss/foundation/components/labels";
-@import "../vendor/foundation/scss/foundation/components/magellan";
-@import "../vendor/foundation/scss/foundation/components/offcanvas";
-@import "../vendor/foundation/scss/foundation/components/orbit";
-@import "../vendor/foundation/scss/foundation/components/pagination";
-@import "../vendor/foundation/scss/foundation/components/panels";
-@import "../vendor/foundation/scss/foundation/components/pricing-tables";
-@import "../vendor/foundation/scss/foundation/components/progress-bars";
-@import "../vendor/foundation/scss/foundation/components/range-slider";
-@import "../vendor/foundation/scss/foundation/components/reveal";
-@import "../vendor/foundation/scss/foundation/components/side-nav";
-@import "../vendor/foundation/scss/foundation/components/split-buttons";
-@import "../vendor/foundation/scss/foundation/components/sub-nav";
-@import "../vendor/foundation/scss/foundation/components/switches";
-@import "../vendor/foundation/scss/foundation/components/tables";
-@import "../vendor/foundation/scss/foundation/components/tabs";
-@import "../vendor/foundation/scss/foundation/components/thumbs";
-@import "../vendor/foundation/scss/foundation/components/tooltips";
-@import "../vendor/foundation/scss/foundation/components/top-bar";
-@import "../vendor/foundation/scss/foundation/components/type";
-@import "../vendor/foundation/scss/foundation/components/visibility";
+// These styles are applied to <meta> tags, which are read by the Foundation JavaScript
+.foundation-mq {
+  font-family: "#{-zf-bp-serialize($breakpoints)}";
+}
 
-@import "global/foundation";
+@mixin foundation-everything {
+  @include foundation-global-styles;
+  @include foundation-flex-grid;
+  @include foundation-typography;
+  @include foundation-button;
+  @include foundation-forms;
+  @include foundation-visibility-classes;
+  @include foundation-float-classes;
+  @include foundation-accordion;
+  @include foundation-badge;
+  @include foundation-breadcrumbs;
+  @include foundation-button-group;
+  @include foundation-callout;
+  @include foundation-close-button;
+  @include foundation-drilldown-menu;
+  @include foundation-dropdown;
+  @include foundation-dropdown-menu;
+  @include foundation-flex-video;
+  // @include foundation-joyride;
+  @include foundation-label;
+  @include foundation-media-object;
+  @include foundation-menu;
+  @include foundation-off-canvas;
+  @include foundation-orbit;
+  @include foundation-pagination;
+  @include foundation-progress-bar;
+  @include foundation-slider;
+  @include foundation-sticky;
+  @include foundation-reveal;
+  @include foundation-switch;
+  @include foundation-table;
+  @include foundation-tabs;
+  @include foundation-thumbnail;
+  @include foundation-title-bar;
+  @include foundation-tooltip;
+  @include foundation-top-bar;
+}
+
+@include foundation-everything;
+
+.off-canvas-menu {
+	display: none;
+}
+
+//@import "global/foundation";
 @import "global/grid";
-@import "global/wordpress";
+//@import "global/wordpress";
 
-@import "partials/layout";
+@import "partials/layout";/*
 @import "partials/header";
 @import "partials/offcanvas";
 @import "partials/popup-nav";
 @import "partials/content";
 @import "partials/sidebar";
 @import "partials/footer";
-@import "partials/breadcrumbs";
-
-@import "plugins/make";
+@import "partials/breadcrumbs";*/

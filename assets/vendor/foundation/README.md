@@ -1,46 +1,51 @@
-# [Foundation](http://foundation.zurb.com)
+# [Foundation for Sites](http://foundation.zurb.com) (Public Beta)
 
-[![Build Status](https://travis-ci.org/zurb/foundation.svg)](https://travis-ci.org/zurb/foundation)
+This is the in-development version of Foundation for Sites 6.0. 
 
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/zurb/foundation-sites-6?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-Foundation is the most advanced responsive front-end framework in the world. You can quickly prototype and build sites or apps that work on any kind of device with Foundation, which includes layout constructs (like a fully responsive grid), elements and best practices.
+## Requirements
 
-To get started, check out <http://foundation.zurb.com/docs>
+Requires NodeJS to be installed on your machine. Works with 0.10, 0.12, and 4.1! **Note that parts of our build process will break with NPM 3, due to the changes in how packages are installed.**
 
+The Sass is compiled using libsass, which requires the GCC to be installed on your machine. Windows users can install it through [MinGW](http://www.mingw.org/), and Mac users can install it through the [Xcode Command-line Tools](http://osxdaily.com/2014/02/12/install-command-line-tools-mac-os-x/).
 
-## Quickstart
+## Setup
 
-To get going with Foundation you can:
-
-  * [Download the latest release](http://foundation.zurb.com/develop/download.html)
-  * [Install with Bower](http://bower.io): `bower install foundation`
-  * [Install with npm](http://npmjs.com): `npm install foundation-sites`
-
-## Documentation
-
-Foundation uses [Assemble.io](http://assemble.io) and [Grunt](http://gruntjs.com/) to generate its [documentation pages](http://foundation.zurb.com/docs). Documentation can also be run from your local computer:
-
-### View documentation locally
-
-You'll want to clone the Foundation repo first and install all the dependencies. You can do this using the following commands:
-
-```
-git clone git@github.com:zurb/foundation.git
-cd foundation
-npm install -g grunt-cli bower
+```bash
+git clone https://github.com/zurb/foundation-sites-6.git
+cd foundation-sites-6
 npm install
-bower install
-bundle install
+npm start
 ```
 
-Then just run `grunt build` and the documentation will be compiled:
+## Local Testing
 
-```
-foundation/
-├── dist/
-│   └── ...
-├────── docs/
-│       └── ...
-```
+`npm start` will compile the documentation. For this testing period, we've created a small testbed to experiment with components. You can find the assets under the `testing/` folder. To use the testbed, run `npm run testbed` after installing the needed dependencies.
 
-Copyright (c) 2015 ZURB, inc.
+## Folder structure
+
+- `_build/`: compiled HTML, CSS, and JavaScript. *Don't edit these files directly, as they will be overwritten!*
+- `config/`: configuration files for our linters.
+- `dist/`: compiled CSS and JavaScript files for the current release.
+- `docs/`: documentation source.
+  - `layouts/default.html`: base HTML template for every docs page.
+  - `layouts/component.html`: Handlebars template for component documentation.
+  - `pages/*.html`: basic documentation pages.
+  - `pages/*.md`: fancy documentation pages for components, which are parsed through [Supercollider](https://github.com/gakimball/supercollider).
+  - `partials/`: Handlebars partials go here.
+  - `assets/`: docs-specific images, styles, and scripts go here.
+- `js/`: the Foundation 5 JavaScript.
+  - New components are inside this folder.
+  - Old components are in `js/foundation/`.
+- `scss/`: the Sass.
+  - `scss/components`: new UI components go here.
+  - `scss/components_old`: Foundation 5 components stay here.
+  - `scss/forms`: form styles.
+  - `scss/grid`: the new grid.
+  - `scss/typography`: typography.
+  - `scss/util`: helper functions and mixins.
+  - `scss/vendor`: third-party libraries.
+  - `_global.scss`: global variables and styles.
+- `docs_old/`: Foundation 5 documentation.
+- `spec/`: Foundation 5 unit tests.

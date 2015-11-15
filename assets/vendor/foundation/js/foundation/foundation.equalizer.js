@@ -4,14 +4,13 @@
   Foundation.libs.equalizer = {
     name : 'equalizer',
 
-    version : '5.5.3',
+    version : '{{VERSION}}',
 
     settings : {
       use_tallest : true,
       before_height_change : $.noop,
       after_height_change : $.noop,
-      equalize_on_stack : false,
-      act_on_hidden_el: false
+      equalize_on_stack : false
     },
 
     init : function (scope, method, options) {
@@ -28,38 +27,28 @@
 
     equalize : function (equalizer) {
       var isStacked = false,
-          group = equalizer.data('equalizer'),
-          settings = equalizer.data(this.attr_name(true)+'-init') || this.settings,
-          vals,
-          firstTopOffset;
+          vals = equalizer.find('[' + this.attr_name() + '-watch]:visible'),
+          settings = equalizer.data(this.attr_name(true) + '-init');
 
-      if (settings.act_on_hidden_el) {
-        vals = group ? equalizer.find('['+this.attr_name()+'-watch="'+group+'"]') : equalizer.find('['+this.attr_name()+'-watch]');
-      }
-      else {
-        vals = group ? equalizer.find('['+this.attr_name()+'-watch="'+group+'"]:visible') : equalizer.find('['+this.attr_name()+'-watch]:visible');
-      }
-      
       if (vals.length === 0) {
         return;
       }
-
+      var firstTopOffset = vals.first().offset().top;
       settings.before_height_change();
-      equalizer.trigger('before-height-change.fndth.equalizer');
+      equalizer.trigger('before-height-change').trigger('before-height-change.fndth.equalizer');
       vals.height('inherit');
+      vals.each(function () {
+        var el = $(this);
+        if (el.offset().top !== firstTopOffset) {
+          isStacked = true;
+        }
+      });
 
       if (settings.equalize_on_stack === false) {
-        firstTopOffset = vals.first().offset().top;
-        vals.each(function () {
-          if ($(this).offset().top !== firstTopOffset) {
-            isStacked = true;
-            return false;
-          }
-        });
         if (isStacked) {
           return;
         }
-      }
+      };
 
       var heights = vals.map(function () { return $(this).outerHeight(false) }).get();
 
@@ -70,33 +59,17 @@
         var min = Math.min.apply(null, heights);
         vals.css('height', min);
       }
-
       settings.after_height_change();
-      equalizer.trigger('after-height-change.fndtn.equalizer');
+      equalizer.trigger('after-height-change').trigger('after-height-change.fndtn.equalizer');
     },
 
     reflow : function () {
       var self = this;
 
       this.S('[' + this.attr_name() + ']', this.scope).each(function () {
-        var $eq_target = $(this),
-            media_query = $eq_target.data('equalizer-mq'),
-            ignore_media_query = true;
-
-        if (media_query) {
-          media_query = 'is_' + media_query.replace(/-/g, '_');
-          if (Foundation.utils.hasOwnProperty(media_query)) {
-            ignore_media_query = false;
-          }
-        }
-
+        var $eq_target = $(this);
         self.image_loaded(self.S('img', this), function () {
-          if (ignore_media_query || Foundation.utils[media_query]()) {
-            self.equalize($eq_target)
-          } else {
-            var vals = $eq_target.find('[' + self.attr_name() + '-watch]:visible');
-            vals.css('height', 'auto');
-          }
+          self.equalize($eq_target)
         });
       });
     }

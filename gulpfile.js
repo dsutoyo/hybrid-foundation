@@ -22,8 +22,10 @@ gulp.task('browser-sync', function() {
 // Moving dependencies into place
 // =========================================================
 gulp.task('foundation', function() {
-	gulp.src('./bower_components/foundation/**/*.*')
+	gulp.src('./bower_components/foundation-sites-6-develop/**/*.*')
 		.pipe(gulp.dest('./assets/vendor/foundation'));
+	gulp.src('./bower_components/foundation-sites-6-develop/js/*.*')
+		.pipe(gulp.dest('./assets/javascripts/foundation'));
 });
 
 gulp.task('font-awesome', function() {

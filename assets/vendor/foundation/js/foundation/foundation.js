@@ -1,7 +1,7 @@
 /*
  * Foundation Responsive Library
  * http://foundation.zurb.com
- * Copyright 2015, ZURB
+ * Copyright 2014, ZURB
  * Free to use under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
 */
@@ -10,12 +10,14 @@
   'use strict';
 
   var header_helpers = function (class_array) {
+    var i = class_array.length;
     var head = $('head');
-    head.prepend($.map(class_array, function (class_name) {
-      if (head.has('.' + class_name).length === 0) {
-        return '<meta class="' + class_name + '" />';
+
+    while (i--) {
+      if (head.has('.' + class_array[i]).length === 0) {
+        head.append('<meta class="' + class_array[i] + '" />');
       }
-    }));
+    }
   };
 
   header_helpers([
@@ -155,52 +157,42 @@
     }
   };
 
-  /*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas, David Knight. Dual MIT/BSD license */
+  /*
+    https://github.com/paulirish/matchMedia.js
+  */
 
-  window.matchMedia || (window.matchMedia = function() {
-      "use strict";
+  window.matchMedia = window.matchMedia || (function ( doc ) {
 
-      // For browsers that support matchMedium api such as IE 9 and webkit
-      var styleMedia = (window.styleMedia || window.media);
+    'use strict';
 
-      // For those that don't support matchMedium
-      if (!styleMedia) {
-          var style       = document.createElement('style'),
-              script      = document.getElementsByTagName('script')[0],
-              info        = null;
+    var bool,
+        docElem = doc.documentElement,
+        refNode = docElem.firstElementChild || docElem.firstChild,
+        // fakeBody required for <FF4 when executed in <head>
+        fakeBody = doc.createElement( 'body' ),
+        div = doc.createElement( 'div' );
 
-          style.type  = 'text/css';
-          style.id    = 'matchmediajs-test';
+    div.id = 'mq-test-1';
+    div.style.cssText = 'position:absolute;top:-100em';
+    fakeBody.style.background = 'none';
+    fakeBody.appendChild(div);
 
-          script.parentNode.insertBefore(style, script);
+    return function (q) {
 
-          // 'style.currentStyle' is used by IE <= 8 and 'window.getComputedStyle' for all other browsers
-          info = ('getComputedStyle' in window) && window.getComputedStyle(style, null) || style.currentStyle;
+      div.innerHTML = '&shy;<style media="' + q + '"> #mq-test-1 { width: 42px; }</style>';
 
-          styleMedia = {
-              matchMedium: function(media) {
-                  var text = '@media ' + media + '{ #matchmediajs-test { width: 1px; } }';
+      docElem.insertBefore( fakeBody, refNode );
+      bool = div.offsetWidth === 42;
+      docElem.removeChild( fakeBody );
 
-                  // 'style.styleSheet' is used by IE <= 8 and 'style.textContent' for all other browsers
-                  if (style.styleSheet) {
-                      style.styleSheet.cssText = text;
-                  } else {
-                      style.textContent = text;
-                  }
-
-                  // Test if media query is true or false
-                  return info.width === '1px';
-              }
-          };
-      }
-
-      return function(media) {
-          return {
-              matches: styleMedia.matchMedium(media || 'all'),
-              media: media || 'all'
-          };
+      return {
+        matches : bool,
+        media : q
       };
-  }());
+
+    };
+
+  }( document ));
 
   /*
    * jquery.requestAnimationFrame
@@ -288,30 +280,21 @@
     return string;
   }
 
-  function MediaQuery(selector) {
-    this.selector = selector;
-    this.query = '';
-  }
-
-  MediaQuery.prototype.toString = function () {
-    return this.query || (this.query = S(this.selector).css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''));
-  };
-
   window.Foundation = {
     name : 'Foundation',
 
-    version : '5.5.3',
+    version : '{{VERSION}}',
 
     media_queries : {
-      'small'       : new MediaQuery('.foundation-mq-small'),
-      'small-only'  : new MediaQuery('.foundation-mq-small-only'),
-      'medium'      : new MediaQuery('.foundation-mq-medium'),
-      'medium-only' : new MediaQuery('.foundation-mq-medium-only'),
-      'large'       : new MediaQuery('.foundation-mq-large'),
-      'large-only'  : new MediaQuery('.foundation-mq-large-only'),
-      'xlarge'      : new MediaQuery('.foundation-mq-xlarge'),
-      'xlarge-only' : new MediaQuery('.foundation-mq-xlarge-only'),
-      'xxlarge'     : new MediaQuery('.foundation-mq-xxlarge')
+      'small'       : S('.foundation-mq-small').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
+      'small-only'  : S('.foundation-mq-small-only').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
+      'medium'      : S('.foundation-mq-medium').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
+      'medium-only' : S('.foundation-mq-medium-only').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
+      'large'       : S('.foundation-mq-large').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
+      'large-only'  : S('.foundation-mq-large-only').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
+      'xlarge'      : S('.foundation-mq-xlarge').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
+      'xlarge-only' : S('.foundation-mq-xlarge-only').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, ''),
+      'xxlarge'     : S('.foundation-mq-xxlarge').css('font-family').replace(/^[\/\\'"]+|(;\s?})+|[\/\\'"]+$/g, '')
     },
 
     stylesheet : $('<style></style>').appendTo('head')[0].sheet,
@@ -600,7 +583,7 @@
 
           if (query !== undefined) {
             Foundation.stylesheet.insertRule('@media ' +
-              Foundation.media_queries[media] + '{ ' + rule + ' }', Foundation.stylesheet.cssRules.length);
+              Foundation.media_queries[media] + '{ ' + rule + ' }');
           }
         }
       },
@@ -616,19 +599,7 @@
         var self = this,
             unloaded = images.length;
 
-        function pictures_has_height(images) {
-          var pictures_number = images.length;
-
-          for (var i = pictures_number - 1; i >= 0; i--) {
-            if(images.attr('height') === undefined) {
-              return false;
-            };
-          };
-
-          return true;
-        }
-
-        if (unloaded === 0 || pictures_has_height(images)) {
+        if (unloaded === 0) {
           callback(images);
         }
 

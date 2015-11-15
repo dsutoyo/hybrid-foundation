@@ -32,7 +32,7 @@
 
 			<?php endif; ?>
 
-			<nav class="top-bar" data-topbar>
+			<div class="top-bar" data-topbar>
 
 			<ul <?php hybrid_attr( 'branding' ); ?>>
 			<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
@@ -54,7 +54,7 @@
 
 			<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
 
-			</nav>
+			</div>
 
 			<?php if ( current_theme_supports( 'popup-navigation' ) ) : ?>
 

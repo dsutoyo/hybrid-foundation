@@ -51,7 +51,7 @@ new Hybrid();
 define( 'THEME_VERSION', '2.0.2' );
 
 // Specify our Foundation version
-define( 'FOUNDATION_VERSION', '5.5.2');
+define( 'FOUNDATION_VERSION', '6');
 
 // Do theme setup on the 'after_setup_theme' hook.
 add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );
@@ -96,7 +96,7 @@ function hybrid_base_theme_setup() {
 	// Foundation components.
 	add_theme_support( 
 		'foundation', 
-		array( 'all' ) 
+		array( 'dropdown', 'dropdownMenu' ) 
 	);
 
 	// Popup menu navigation.
@@ -107,6 +107,10 @@ function hybrid_base_theme_setup() {
 
 	// Handle content width for embeds and images.
 	hybrid_set_content_width( 1280 );
+
+	/*wp_deregister_script('jquery');
+	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', false, '2.1.0');
+	wp_enqueue_script('jquery');*/
 
 }
 

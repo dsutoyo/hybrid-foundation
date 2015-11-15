@@ -4,7 +4,7 @@
   Foundation.libs.dropdown = {
     name : 'dropdown',
 
-    version : '5.5.3',
+    version : '{{VERSION}}',
 
     settings : {
       active_class : 'open',
@@ -34,7 +34,7 @@
           var settings = S(this).data(self.attr_name(true) + '-init') || self.settings;
           if (!settings.is_hover || Modernizr.touch) {
             e.preventDefault();
-            if (S(this).parent('[data-reveal-id]').length) {
+            if (S(this).parent('[data-reveal-id]')) {
               e.stopPropagation();
             }
             self.toggle($(this));
@@ -131,8 +131,8 @@
 
     close : function (dropdown) {
       var self = this;
-      dropdown.each(function (idx) {
-        var original_target = $('[' + self.attr_name() + '=' + dropdown[idx].id + ']') || $('aria-controls=' + dropdown[idx].id + ']');
+      dropdown.each(function () {
+        var original_target = $('[' + self.attr_name() + '=' + dropdown[0].id + ']') || $('aria-controls=' + dropdown[0].id + ']');
         original_target.attr('aria-expanded', 'false');
         if (self.S(this).hasClass(self.settings.active_class)) {
           self.S(this)
@@ -143,7 +143,7 @@
             .removeClass(self.settings.active_class)
             .removeData('target');
 
-          self.S(this).trigger('closed.fndtn.dropdown', [dropdown]);
+          self.S(this).trigger('closed').trigger('closed.fndtn.dropdown', [dropdown]);
         }
       });
       dropdown.removeClass('f-open-' + this.attr_name(true));
@@ -161,7 +161,7 @@
         .css(dropdown
         .addClass(this.settings.active_class), target);
       dropdown.prev('[' + this.attr_name() + ']').addClass(this.settings.active_class);
-      dropdown.data('target', target.get(0)).trigger('opened.fndtn.dropdown', [dropdown, target]);
+      dropdown.data('target', target.get(0)).trigger('opened').trigger('opened.fndtn.dropdown', [dropdown, target]);
       dropdown.attr('aria-hidden', 'false');
       target.attr('aria-expanded', 'true');
       dropdown.focus();
@@ -209,12 +209,9 @@
 
     css : function (dropdown, target) {
       var left_offset = Math.max((target.width() - dropdown.width()) / 2, 8),
-          settings = target.data(this.attr_name(true) + '-init') || this.settings,
-          parentOverflow = dropdown.parent().css('overflow-y') || dropdown.parent().css('overflow');
+          settings = target.data(this.attr_name(true) + '-init') || this.settings;
 
       this.clear_idx();
-
-
 
       if (this.small()) {
         var p = this.dirs.bottom.call(dropdown, target, settings);
@@ -227,19 +224,7 @@
         });
 
         dropdown.css(Foundation.rtl ? 'right' : 'left', left_offset);
-      }
-      // detect if dropdown is in an overflow container
-      else if (parentOverflow !== 'visible') {
-        var offset = target[0].offsetTop + target[0].offsetHeight;
-
-        dropdown.attr('style', '').css({
-          position : 'absolute',
-          top : offset
-        });
-
-        dropdown.css(Foundation.rtl ? 'right' : 'left', left_offset);
-      }
-      else {
+      } else {
 
         this.style(dropdown, target, settings);
       }
@@ -258,7 +243,7 @@
     // `this` is the dropdown
     dirs : {
       // Calculate target offset
-      _base : function (t, s) {
+      _base : function (t) {
         var o_p = this.offsetParent(),
             o = o_p.offset(),
             p = t.offset();
@@ -275,36 +260,31 @@
         //lets see if the panel will be off the screen
         //get the actual width of the page and store it
         var actualBodyWidth;
-        var windowWidth = window.innerWidth;
-        
         if (document.getElementsByClassName('row')[0]) {
           actualBodyWidth = document.getElementsByClassName('row')[0].clientWidth;
         } else {
-          actualBodyWidth = windowWidth;
+          actualBodyWidth = window.outerWidth;
         }
 
-        var actualMarginWidth = (windowWidth - actualBodyWidth) / 2;
+        var actualMarginWidth = (window.outerWidth - actualBodyWidth) / 2;
         var actualBoundary = actualBodyWidth;
 
-        if (!this.hasClass('mega') && !s.ignore_repositioning) {
-          var outerWidth = this.outerWidth();
-          var o_left = t.offset().left;
-		  
+        if (!this.hasClass('mega')) {
           //miss top
           if (t.offset().top <= this.outerHeight()) {
             p.missTop = true;
-            actualBoundary = windowWidth - actualMarginWidth;
+            actualBoundary = window.outerWidth - actualMarginWidth;
             p.leftRightFlag = true;
           }
 
           //miss right
-          if (o_left + outerWidth > o_left + actualMarginWidth && o_left - actualMarginWidth > outerWidth) {
+          if (t.offset().left + this.outerWidth() > t.offset().left + actualMarginWidth && t.offset().left - actualMarginWidth > this.outerWidth()) {
             p.missRight = true;
             p.missLeft = false;
           }
 
           //miss left
-          if (o_left - outerWidth <= 0) {
+          if (t.offset().left - this.outerWidth() <= 0) {
             p.missLeft = true;
             p.missRight = false;
           }
@@ -315,7 +295,7 @@
 
       top : function (t, s) {
         var self = Foundation.libs.dropdown,
-            p = self.dirs._base.call(this, t, s);
+            p = self.dirs._base.call(this, t);
 
         this.addClass('drop-top');
 
@@ -342,7 +322,7 @@
 
       bottom : function (t, s) {
         var self = Foundation.libs.dropdown,
-            p = self.dirs._base.call(this, t, s);
+            p = self.dirs._base.call(this, t);
 
         if (p.missRight == true) {
           p.left = p.left - this.outerWidth() + t.outerWidth();
@@ -360,7 +340,7 @@
       },
 
       left : function (t, s) {
-        var p = Foundation.libs.dropdown.dirs._base.call(this, t, s);
+        var p = Foundation.libs.dropdown.dirs._base.call(this, t);
 
         this.addClass('drop-left');
 
@@ -374,7 +354,7 @@
       },
 
       right : function (t, s) {
-        var p = Foundation.libs.dropdown.dirs._base.call(this, t, s);
+        var p = Foundation.libs.dropdown.dirs._base.call(this, t);
 
         this.addClass('drop-right');
 
