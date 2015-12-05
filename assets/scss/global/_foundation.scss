@@ -1,16 +1,6 @@
-/**
- * Foundation Setup
- * --------------------------------------------------------------------------- */
-
-/* Foundation line heights are missing some elements */
-body,
-address,
-code,
-pre {
-	//line-height: $paragraph-line-height;
-}
-
+/* # Foundation Normalization ===== */
 address {
+	margin-bottom: rem-calc(16);
 	font-style: normal;
 }
 
@@ -31,5 +21,42 @@ abbr {
 	}
 	cite {
 		font-style: normal;
+	}
+}
+
+/* Inputs should be like buttons */
+input[type="submit"] {
+	@include button( $button-tny, $radius: true );
+}
+
+
+.screen-reader-text {
+	display: none;
+}
+
+/* # General Styles ===== */
+table {
+	width: 100%;
+	border: none;
+
+	th {
+		border-top: 1px solid $chrome-color;
+		border-bottom: 2px solid $chrome-color;
+	}
+}
+
+pre {
+	margin-bottom: rem-calc(16);
+	padding: rem-calc(20);
+	background: $chrome-color-light;
+}
+
+blockquote {
+	margin-bottom: rem-calc(16);
+	padding: rem-calc(20 20 1 20);
+	background: $chrome-color-light;
+
+	cite {
+		margin-top: rem-calc(8);
 	}
 }

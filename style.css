@@ -3,7 +3,7 @@
  * Theme Name:  Hybrid Foundation
  * Theme URI:   http://github.com/dsutoyo/hybrid-foundation
  * Description: A fork of Hybrid Base, integrated with Zurb Foundation
- * Version:     2.0.2
+ * Version:     2.0.3
  * Author:      David Sutoyo
  * Author URI:  http://davidsutoyo.com
  * Tags:        one-column, two-columns, custom-background, custom-header, custom-menu, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready, Foundation, sass
@@ -11750,11 +11750,9 @@ th.hide-for-touch {
   }
 }
 
-/**
- * Foundation Setup
- * --------------------------------------------------------------------------- */
-/* Foundation line heights are missing some elements */
+/* # Foundation Normalization ===== */
 address {
+  margin-bottom: 1rem;
   font-style: normal;
 }
 
@@ -11780,74 +11778,141 @@ abbr {
   font-style: normal;
 }
 
-/**
- * WordPress Specific Styles
- * --------------------------------------------------------------------------- */
-/* Hybrid skip link
-   ======================================= */
+/* Inputs should be like buttons */
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.625rem 1.25rem 0.6875rem 1.25rem;
+  font-size: 0.6875rem;
+  background-color: #008CBA;
+  border-color: #007095;
+  color: #FFFFFF;
+  border-radius: 3px;
+  transition: background-color 300ms ease-out;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+  background-color: #007095;
+}
+
+input[type="submit"]:hover, input[type="submit"]:focus {
+  color: #FFFFFF;
+}
+
+.screen-reader-text {
+  display: none;
+}
+
+/* # General Styles ===== */
+table {
+  width: 100%;
+  border: none;
+}
+
+table th {
+  border-top: 1px solid #cccccc;
+  border-bottom: 2px solid #cccccc;
+}
+
+pre {
+  margin-bottom: 1rem;
+  padding: 1.25rem;
+  background: #fafafa;
+}
+
+blockquote {
+  margin-bottom: 1rem;
+  padding: 1.25rem 1.25rem 0.0625rem 1.25rem;
+  background: #fafafa;
+}
+
+blockquote cite {
+  margin-top: 0.5rem;
+}
+
+/* # WordPress Specific Styles ===== */
+/* ## Skip Link ===== */
 .skip-link {
   display: none;
 }
 
-/* Gallery
-   ======================================= */
-.gallery .gallery-row {
-  margin: 0 -0.9375rem;
-  max-width: none;
-  width: auto;
+/* ## Gallery ===== */
+.gallery {
+  margin: 0.625rem 0;
 }
 
-.gallery .gallery-row:before, .gallery .gallery-row:after {
+.gallery:before, .gallery:after {
   content: " ";
   display: table;
 }
 
-.gallery .gallery-row:after {
+.gallery:after {
   clear: both;
 }
 
-.gallery .col-1 {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 100%;
+.gallery .gallery-item {
   float: left;
-}
-
-.gallery .col-2 {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 50%;
-  float: left;
-}
-
-.gallery .col-3 {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 33.33333%;
-  float: left;
-}
-
-.gallery .col-4 {
-  padding-left: 0.9375rem;
-  padding-right: 0.9375rem;
-  width: 25%;
-  float: left;
-}
-
-.gallery .gallery-item .gallery-icon {
   margin: 0;
 }
 
-.gallery .gallery-item .gallery-icon img {
-  border: 0.9375rem solid #fff !important;
+.gallery .gallery-item .gallery-icon {
+  padding: 0.9375rem;
+  text-align: center;
 }
 
 .gallery .gallery-item .gallery-caption {
   font-style: italic;
 }
 
-/* Comments
-   ======================================= */
+.gallery-columns-1 .gallery-item {
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  width: 33.33333%;
+}
+
+.gallery-columns-4 .gallery-item {
+  width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  width: 16.66667%;
+}
+
+.gallery-columns-7 .gallery-item {
+  width: 14.28571%;
+}
+
+.gallery-columns-8 .gallery-item {
+  width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  width: 11.11111%;
+}
+
+/* ## Comments ===== */
 .comment-list {
   margin-left: 0;
   list-style-type: none;
@@ -11857,10 +11922,9 @@ abbr {
   list-style-type: none;
 }
 
-/* Image Alignment
-   ======================================= */
+/* ## Image Alignment ===== */
 .alignnone {
-  margin: 0.9375rem 1.875rem 1.875rem 0;
+  margin: 0.9375rem 0.9375rem 0.9375rem 0;
 }
 
 .aligncenter, div.aligncenter {
@@ -11870,26 +11934,26 @@ abbr {
 
 .alignright {
   float: right;
-  margin: 0 0 1.875rem 1.875rem;
+  margin: 0 0 0.9375rem 0.9375rem;
 }
 
 .alignleft {
   float: left;
-  margin: 0 1.875rem 1.875rem 0;
+  margin: 0 0.9375rem 0.9375rem 0;
 }
 
 a img.alignright {
   float: right;
-  margin: 0 0 1.875rem 1.875rem;
+  margin: 0 0 0.9375rem 0.9375rem;
 }
 
 a img.alignnone {
-  margin: 0 1.875rem 1.875rem 0;
+  margin: 0 0.9375rem 0.9375rem 0;
 }
 
 a img.alignleft {
   float: left;
-  margin: 0 1.875rem 1.875rem 0;
+  margin: 0 0.9375rem 0.9375rem 0;
 }
 
 a img.aligncenter {
@@ -11923,15 +11987,18 @@ img.aligncenter {
 }
 
 .wp-caption.alignnone {
-  margin: 0 1.875rem 1.875rem 0;
+  margin: 0 0.9375rem 0.9375rem 0;
+  padding: 0;
 }
 
 .wp-caption.alignleft {
-  margin: 0 1.875rem 1.875rem 0;
+  margin: 0 0.9375rem 0.9375rem 0;
+  padding: 0;
 }
 
 .wp-caption.alignright {
-  margin: 0 0 1.875rem 1.875rem;
+  margin: 0 0 0.9375rem 0.9375rem;
+  padding: 0;
 }
 
 .wp-caption img {
@@ -11949,17 +12016,20 @@ img.aligncenter {
   padding: 0 0.9375rem;
 }
 
-/* Admin Bar
-   ======================================= */
+figcaption {
+  margin-top: 0.3125rem;
+  font-size: 0.75rem;
+  color: #cccccc;
+}
+
+/* ## Admin Bar ===== */
 @media screen and (max-width: 600px) {
   #wpadminbar {
     position: fixed;
   }
 }
 
-/**
- * Layout
- * --------------------------------------------------------------------------- */
+/* # Layout Structure ===== */
 #main > .wrap {
   margin: 0 auto;
   max-width: 62.5rem;
@@ -12179,9 +12249,8 @@ img.aligncenter {
   }
 }
 
-/**
- * Header
- * --------------------------------------------------------------------------- */
+/* # Header ===== */
+/* Show/hide nav elements */
 .offcanvas-navigation .tab-bar {
   display: block;
 }
@@ -12234,6 +12303,7 @@ li.description {
   display: none;
 }
 
+/* # Mobile Menu ===== */
 .left-off-canvas-menu ul {
   margin: 0;
   list-style-type: none;
@@ -12294,41 +12364,145 @@ li.description {
   padding-left: 15px;
 }
 
+/* # Popup Navigation ===== */
+.popup-navigation-trigger {
+  position: absolute;
+  top: 0;
+  right: 0.9375rem;
+  line-height: 2.8125rem;
+  font-size: 0.875rem;
+}
+
 @media only screen and (min-width: 40.0625em) {
   .popup-navigation-trigger {
     display: none;
   }
 }
 
-/**
- * Content
- * --------------------------------------------------------------------------- */
-/* ====== BREADCRUMBS ====== */
-.breadcrumbs > *:before {
-  content: none;
+.popup-navigation-trigger span {
+  padding: 0.1875rem 0.3125rem;
+  border: 1px solid #008CBA;
+  border-radius: 2px;
 }
 
-.breadcrumb-trail .sep {
-  margin: 0 0.625rem;
+.popup-navigation-close {
+  display: block;
+  padding: 0.625rem 0.9375rem;
+  text-align: right;
+  font-size: 0.875rem;
 }
 
-/* ====== POSTS ====== */
-/* === Post Header === */
-/* === Post content and excerpts === */
-/* === Post Footer === */
-/* === Asides === */
-/* === Chats === */
-/* === Links === */
-/* === Galleries === */
-/* === Quotes === */
-/* === Status updates === */
-/* === Audio and Video === */
-/**
- * Sidebars and Widgets
- * --------------------------------------------------------------------------- */
-/**
- * Footer
- * --------------------------------------------------------------------------- */
+.popup-navigation-close span {
+  padding: 0.1875rem 0.3125rem;
+  border-radius: 2px;
+  border: 1px solid #008CBA;
+}
+
+.popup-navigation .off-canvas-menu > ul {
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* # Posts ===== */
+/* ## Post Header ===== */
+.entry-byline {
+  margin-bottom: 1.25rem;
+  color: #cccccc;
+  font-size: 0.75rem;
+}
+
+.entry-byline a {
+  color: #cccccc;
+}
+
+.entry-byline a:hover {
+  color: #008CBA;
+}
+
+.entry-byline .comments-link:before,
+.entry-byline .entry-published:before,
+.entry-byline .post-edit-link:before {
+  content: '/';
+  padding: 0 0.625rem 0 0.3125rem;
+  color: #cccccc;
+}
+
+/* ## Post Footer ===== */
+.entry-footer {
+  padding: 0.625rem 0;
+  margin: 1.25rem 0;
+  color: #cccccc;
+  font-size: 0.75rem;
+  border-top: 1px solid #fafafa;
+  border-bottom: 1px solid #fafafa;
+}
+
+.loop-nav .prev,
+.loop-nav .next {
+  float: left;
+}
+
+.loop-nav .prev span,
+.loop-nav .next span {
+  display: block;
+  font-size: 0.75rem;
+  color: #cccccc;
+}
+
+.loop-nav .prev {
+  width: 50%;
+}
+
+.loop-nav .next {
+  width: 100%;
+}
+
+.loop-nav .prev + .next {
+  width: 50%;
+}
+
+.loop-nav .next {
+  text-align: right;
+}
+
+/* # Sidebars and Widgets ===== */
+.widget-title,
+.widgettitle {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.widget {
+  margin-bottom: 2.5rem;
+}
+
+.widget p,
+.widget ul,
+.widget ol,
+.widget dl {
+  font-size: 0.875rem;
+}
+
+.widget ul,
+.widget ol,
+.widget dl {
+  list-style-type: none;
+  margin-left: 0;
+}
+
+.widget ul li,
+.widget ul dd,
+.widget ol li,
+.widget ol dd,
+.widget dl li,
+.widget dl dd {
+  margin-bottom: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  border-bottom: 1px solid #fafafa;
+}
+
+/* # Footer ===== */
+/* # Breadcrumbs ===== */
 .trail-items li {
   color: #008CBA;
   float: left;

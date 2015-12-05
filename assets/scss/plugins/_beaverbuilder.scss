@@ -1,0 +1,24 @@
+/* # Beaver Builder ===== */
+#container {
+	.fl-builder-content {
+		@include grid-row(nest);
+	}
+
+	.fl-col-small {
+		max-width: none;
+	}
+}
+
+.layout-1c-f #container {
+	.fl-builder-content {
+		margin: 0;
+	}
+
+	.fl-row-full-width {
+		> .fl-row-content-wrap {
+			@media screen and (min-width: #{$row-width}) {
+				@include grid-row(nest);
+			}
+		}
+	}
+}

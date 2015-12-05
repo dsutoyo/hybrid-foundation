@@ -1,126 +1,65 @@
-/**
- * Content
- * --------------------------------------------------------------------------- */
+/* # Posts ===== */
 
-/* ====== BREADCRUMBS ====== */
-.breadcrumbs > *:before {
-	content: none;
-}
+/* ## Post Header ===== */
+.entry-byline {
+	margin-bottom: rem-calc(20);
+	color: $chrome-color;
+	font-size: rem-calc(12);
 
-.breadcrumb-trail {
+	a {
+		color: $chrome-color;
 
-	.trail-begin {}
-
-	.trail-end {}
-
-	.sep {
-		margin: 0 rem-calc(10);
+		&:hover {
+			color: $primary-color;
+		}
 	}
 
-	a {}
-	a:hover {}
-
+	.comments-link,
+	.entry-published,
+	.post-edit-link {
+		&:before {
+			content: '/';
+			padding: rem-calc(0 10 0 5);
+			color: $chrome-color;
+		}
+	}
 }
 
-/* ====== POSTS ====== */
+/* ## Post Footer ===== */
+.entry-footer {
+	padding: rem-calc(10 0);
+	margin: rem-calc(20 0);
+	color: $chrome-color;
+	font-size: rem-calc(12);
+	border-top: 1px solid $chrome-color-light;
+	border-bottom: 1px solid $chrome-color-light;
+}
 
-.hentry  {}
-.sticky {}
+.loop-nav {
+	.prev,
+	.next {
+		float: left;
 
-	/* === Post Header === */
+		span {
+			display: block;
+			font-size: rem-calc(12);
+			color: $chrome-color;
+		}
+	}
 
-	.entry-header {}
+	.prev {
+		width: 50%;
+	}
 
-		.entry-title {}
+	.next {
+		width: 100%;
+	}
 
-			.entry-title a {}
-			.entry-title a:hover {}
+	.prev + .next {
+		width: 50%;
+	}
 
-		.entry-byline {}
-
-			.entry-byline a {}
-			.entry-byline a:hover {}
-
-			.entry-byline .published {}
-
-	/* === Post content and excerpts === */
-
-	.entry-content {}
-
-	.entry-summary {}
-
-	/* === Post Footer === */
-
-	.entry-footer {}
-
-		.entry-meta {}
-
-			.entry-meta a {}
-			.entry-meta a:hover {}
-
-			.entry-meta .published {}
-
-			.entry-meta .category {}
-			.entry-meta .post_tag {}
-
-	/* === Asides === */
-
-	.format-aside {}
-
-		.format-aside .entry-content a.permalink {}
-
-	/* === Chats === */
-
-	.format-chat {}
-
-		.format-chat .chat-row {}
-
-			.format-chat .chat-text {}
-
-			.format-chat cite {}
-
-			.format-chat .chat-speaker-1 {}
-			.format-chat .chat-speaker-2 {}
-			.format-chat .chat-speaker-3 {}
-			.format-chat .chat-speaker-4 {}
-			.format-chat .chat-speaker-5 {}
-			.format-chat .chat-speaker-6 {}
-			.format-chat .chat-speaker-7 {}
-			.format-chat .chat-speaker-8 {}
-			.format-chat .chat-speaker-9 {}
-
-	/* === Links === */
-
-	.format-link {}
-
-		.format-link .entry-title {}
-
-			.format-link .entry-title a {}
-			.format-link .entry-title a:hover {}
-
-				.format-link .entry-title a .meta-nav {}
-
-	/* === Galleries === */
-
-	.format-gallery {}
-
-		.format-gallery .image-count {}
-
-	/* === Quotes === */
-
-	.format-quote {}
-
-		.format-quote blockquote {}
-
-			.format-quote blockquote cite {}
-
-	/* === Status updates === */
-
-	.format-status
-
-		.format-status .avatar {}
-
-	/* === Audio and Video === */
-
-	.format-video {}
-	.format-audio {}
+	.next {
+		text-align: right;
+	}
+}

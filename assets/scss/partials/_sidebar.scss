@@ -1,3 +1,31 @@
-/**
- * Sidebars and Widgets
- * --------------------------------------------------------------------------- */
+/* # Sidebars and Widgets ===== */
+.widget-title,
+.widgettitle {
+	font-size: rem-calc(14);
+	text-transform: uppercase;
+}
+
+.widget {
+	margin-bottom: rem-calc(40);
+
+	p,
+	ul,
+	ol,
+	dl {
+		font-size: rem-calc(14);
+	}
+
+	ul,
+	ol,
+	dl {
+		list-style-type: none;
+		margin-left: 0;
+
+		li,
+		dd {
+			margin-bottom: rem-calc(5);
+			padding-bottom: rem-calc(5);
+			border-bottom: 1px solid $chrome-color-light;
+		}
+	}
+}

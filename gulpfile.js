@@ -41,14 +41,15 @@ gulp.task('styles', function() {
 			outputStyle: 'expanded'
 		}))
 		.pipe(gulp.dest('./assets/stylesheets/'));
-	return gulp.src('./assets/scss/style.scss')
-		.pipe(sourcemaps.init())
+	gulp.src('./assets/scss/style.scss')
 		.pipe(sass({
 			outputStyle: 'expanded',
 		}).on('error', notify.onError(function(error) {
 			return "Error: " + error.message;
 		})))
-		.pipe(gulp.dest('./'))
+		.pipe(gulp.dest('./'));
+	return gulp.src('./assets/scss/style.scss')
+		.pipe(sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'compressed',
 		}))

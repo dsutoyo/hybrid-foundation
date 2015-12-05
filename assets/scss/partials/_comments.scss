@@ -1,67 +1,82 @@
-/**
- * Comments Template
- * --------------------------------------------------------------------------- */
+/* # Comments ===== */
+#comments {
+	margin-top: rem-calc(40);
+}
 
-#comments-template {}
+/* ## Individual Comments ===== */
+li.comment,
+li.ping,
+li.bypostauthor {
+	margin: rem-calc(10 0 50 0);
 
-/* ====== COMMENTS ======= */
+	article {
+		padding-bottom: rem-calc(20);
+		border-bottom: 1px solid $chrome-color-light;
+	}
+}
 
-#comments {}
+.comment-header {
+	margin-bottom: rem-calc(20);
+	@include clearfix;
+}
 
-	#comments-number {}
+/* ## Comment Avatars ===== */
+.comment-avatar {
+	float: left;
+	width: rem-calc(75);
+	margin-right: rem-calc(15);
 
-	/* === Comments closed message === */
+	img {
+		@include radius(1000px);
+	}
+}
 
-	.comments-closed {}
+/* ## Comment Meta===== */
+.comment-meta {
+	float: left;
+	padding-top: 2%;
+	cite {
+		display: block;
+		font-style: normal;
+		font-weight: bold;
+		line-height: 1;
 
-	.comments-closed.pings-open {}
-
-	/* === Comment list === */
-
-	ol.comment-list {
-
-		ol.children {}
-
+		.bypostauthor &,
+		.bypostauthor & a {
+			color: $warning-color;
+		}
 	}
 
-		/* === Individual comments */
+	time,
+	.comment-permalink,
+	.comment-edit-link {
+		font-size: rem-calc(12);
+		color: $chrome-color;
+	}
 
-		li.comment {}
+	.ping & {
+		float: none;
+	}
+}
 
-		li.ping {}
-
-		li.bypostauthor {}
-
-			/* === Avatars === */
-
-			.comment-list .avatar {}
-
-			/* === Meta === */
-
-			.comment-meta {
-
-				.published {}
-			}
-
-			.comment-author {
-
-				cite {}
-
-			}
-
-			/* === Comment text/content === */
-
-			.comment-content {}
+/* ## Comment Content ===== */
+.comment-content {
+	padding-left: rem-calc(90);
+}
 
 
-			/* === Reply link === */
+/* ## Comment Reply ===== */
+.comment-reply-link {
+	margin-top: rem-calc(10);
+	margin-bottom: 0;
+	text-align: right;
+	font-size: rem-calc(12);
+	color: $chrome-color;
+}
+.comment-reply-link:hover {}
 
-			.comment-reply-link {}
-			.comment-reply-link:hover {}
 
-
-/* ====== RESPOND (COMMENT FORM) ====== */
-
+/* ## Comment Form ===== */
 #respond {
 
 	.log-in-out {}
