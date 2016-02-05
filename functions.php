@@ -1,14 +1,14 @@
 <?php
 /**
  *
- * This program is free software; you can redistribute it and/or modify it under the terms of the GNU 
- * General Public License as published by the Free Software Foundation; either version 2 of the License, 
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
+ * General Public License as published by the Free Software Foundation; either version 2 of the License,
  * or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * You should have received a copy of the GNU General Public License along with this program; if not, write 
+ * You should have received a copy of the GNU General Public License along with this program; if not, write
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package    HybridFoundation
@@ -51,7 +51,7 @@ new Hybrid();
 define( 'THEME_VERSION', '2.0.2' );
 
 // Specify our Foundation version
-define( 'FOUNDATION_VERSION', '6');
+define( 'FOUNDATION_VERSION', '6.1.2');
 
 // Do theme setup on the 'after_setup_theme' hook.
 add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );
@@ -88,15 +88,15 @@ function hybrid_base_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	// Post formats.
-	add_theme_support( 
-		'post-formats', 
-		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' ) 
+	add_theme_support(
+		'post-formats',
+		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' )
 	);
 
 	// Foundation components.
-	add_theme_support( 
-		'foundation', 
-		array( 'dropdown', 'dropdownMenu' ) 
+	add_theme_support(
+		'foundation',
+		array( 'all' )
 	);
 
 	// Popup menu navigation.

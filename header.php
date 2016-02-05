@@ -11,7 +11,7 @@
 
 		<div class="inner-wrap">
 
-		<?php hybrid_get_menu( 'mobile' ); ?>
+		<?php //hybrid_get_menu( 'mobile' ); ?>
 
 		<div class="skip-link">
 			<a href="#content" class="screen-reader-text"><?php esc_html_e( 'Skip to content', 'hybrid-base' ); ?></a>
@@ -34,23 +34,25 @@
 
 			<div class="top-bar" data-topbar>
 
-			<ul <?php hybrid_attr( 'branding' ); ?>>
-			<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
+				<div class="top-bar-title">
+					<ul <?php hybrid_attr( 'branding' ); ?>>
+					<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
 
-				<li class="name"><?php hybrid_site_title(); ?></li>
-				<li class="description"><?php hybrid_site_description(); ?></li>
+						<li class="name"><?php hybrid_site_title(); ?></li>
+						<li class="description"><?php hybrid_site_description(); ?></li>
 
-			<?php elseif ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
+					<?php elseif ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
 
-				<li class="name"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="" /></a></li>
+						<li class="name"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="" /></a></li>
 
-			<?php elseif ( get_header_image() ) : // If there's a header image. ?>
+					<?php elseif ( get_header_image() ) : // If there's a header image. ?>
 
-				<li class="name"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></li>
+						<li class="name"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></li>
 
-			<?php endif; // End check for header image. ?>
+					<?php endif; // End check for header image. ?>
 
-			</ul><!-- #branding -->
+					</ul><!-- #branding -->
+				</div>
 
 			<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
 

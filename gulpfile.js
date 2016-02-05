@@ -22,9 +22,9 @@ gulp.task('browser-sync', function() {
 // Moving dependencies into place
 // =========================================================
 gulp.task('foundation', function() {
-	gulp.src('./bower_components/foundation-sites-6-develop/**/*.*')
+	gulp.src('./bower_components/foundation-sites-6-develop/scss/**/*.*')
 		.pipe(gulp.dest('./assets/vendor/foundation'));
-	gulp.src('./bower_components/foundation-sites-6-develop/js/*.*')
+	gulp.src('./bower_components/foundation-sites-6-develop/js/**/*.*')
 		.pipe(gulp.dest('./assets/javascripts/foundation'));
 });
 
@@ -33,6 +33,11 @@ gulp.task('font-awesome', function() {
 		.pipe(gulp.dest('./assets/vendor/font-awesome'));
 	gulp.src('./bower_components/components-font-awesome/fonts/**/*.*')
 		.pipe(gulp.dest('./assets/fonts'));
+});
+
+gulp.task('bourbon', function() {
+	gulp.src('./bower_components/bourbon/app/assets/**/*.*')
+		.pipe(gulp.dest('./assets/vendor/bourbon'));
 });
 
 // Compile our stylesheets

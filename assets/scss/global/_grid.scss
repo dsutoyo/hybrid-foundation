@@ -1,43 +1,71 @@
 @mixin small-column(
-	$columns:null,
-	$gutter:$grid-column-gutter) {
+	$columns: null,
+	$gutter: $grid-column-gutter) {
 
 	@media only screen {
-		@include flex-grid-column(
-			$columns,
-			$gutter);
+		@if not $global-flex {
+			@include grid-column(
+				$columns,
+				$gutter);
+		}
+		@else {
+			@include flex-grid-column(
+				$columns,
+				$gutter);
+		}
 	}
 }
 
 @mixin medium-column(
-	$columns:null,
-	$gutter:$grid-column-gutter) {
+	$columns: null,
+	$gutter: $grid-column-gutter) {
 
 	@include breakpoint(medium) {
-		@include flex-grid-column(
-			$columns,
-			$gutter);
+		@if not $global-flex {
+			@include grid-column(
+				$columns,
+				$gutter);
+		}
+		@else {
+			@include flex-grid-column(
+				$columns,
+				$gutter);
+		}
 	}
 }
 
 @mixin large-column(
-	$columns:null,
-	$gutter:$grid-column-gutter) {
+	$columns: null,
+	$gutter: $grid-column-gutter) {
 
 	@include breakpoint(large) {
-		@include flex-grid-column(
-			$columns,
-			$gutter);
+		@if not $global-flex {
+			@include grid-column(
+				$columns,
+				$gutter);
+		}
+		@else {
+			@include flex-grid-column(
+				$columns,
+				$gutter);
+		}
 	}
 }
 
 @mixin xlarge-column(
-	$columns:null,
-	$gutter:$grid-column-gutter) {
+	$columns: null,
+	$gutter: $grid-column-gutter) {
 
 	@include breakpoint(xlarge) {
-		@include flex-grid-column(
-			$columns,
-			$gutter);
+		@if not $global-flex {
+			@include grid-column(
+				$columns,
+				$gutter);
+		}
+		@else {
+			@include flex-grid-column(
+				$columns,
+				$gutter);
+		}
 	}
 }

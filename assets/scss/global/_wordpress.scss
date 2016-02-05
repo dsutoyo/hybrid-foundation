@@ -1,6 +1,8 @@
 /**
  * WordPress Specific Styles
  * --------------------------------------------------------------------------- */
+$column-gutter: map-get($grid-column-responsive-gutter, medium);
+
 
 /* Hybrid skip link
    ======================================= */
@@ -16,7 +18,7 @@
 	}
 	@for $i from 1 through 4 {
 		.col-#{$i} {
-			@include grid-column($total-columns/$i, $float: left);
+			@include grid-column($grid-column-count/$i);
 		}
 	}
 

@@ -55,6 +55,19 @@
 	}
 }
 
+/* Custom Top Bar Styles */
+
+// Center the title and menu
+.top-bar {
+	@include display(flex);
+
+	.menu-primary {
+		@include display(flex);
+		@include flex-direction(column);
+		@include justify-content(center);
+	}
+}
+
 // Top menu link
 .top-bar-section ul li {
 	&:not(.has-form) > a {

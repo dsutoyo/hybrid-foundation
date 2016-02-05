@@ -33,7 +33,7 @@ add_filter( 'breadcrumb_trail_args', 'hybrid_base_breadcrumb_trail_args' );
 add_filter( 'breadcrumb_trail', 'hybrid_base_breadcrumb_trail', 5, 2 );
 
 /**
- * Registers custom image sizes for the theme. 
+ * Registers custom image sizes for the theme.
  *
  * @since  1.0.0
  * @access public
@@ -113,7 +113,7 @@ function hybrid_base_enqueue_scripts() {
 		//wp_enqueue_script( 'modernizr', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/vendor/modernizr.js', 'jquery', '2.8.3', true );
 		//wp_enqueue_script( 'fastclick', get_stylesheet_directory_uri() . '/assets/vendor/foundation/js/vendor/fastclick.js', 'jquery', '1.0.6', true );
 		if ( in_array( 'all', $_wp_theme_features['foundation'][0] ) ) {
-			wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/assets/vendor/foundation/dist/foundation.js', '', FOUNDATION_VERSION, true );
+			wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/assets/javascripts/foundation/foundation.min.js', '', FOUNDATION_VERSION, true );
 		}
 
 		// ===== Load individual Foundation components if we didn't call the 'all' flag
@@ -214,7 +214,7 @@ function hybrid_base_attr_body( $attr ) {
  * @return array
  */
 function hybrid_base_attr_branding( $attr ) {
-	$attr['class'] = 'title-area';
+	$attr['class'] = 'title-area menu';
 	return $attr;
 }
 
@@ -266,7 +266,7 @@ function hybrid_base_theme_layout( $theme_layout ) {
  * @return array
  */
 function hybrid_base_comment_form_defaults( $defaults ) {
-	
+
 	/* Change the defaults depending on your requirements */
 	//$defaults['title_reply'] = __( 'Submit a Comment', 'hybrid-base' );
 

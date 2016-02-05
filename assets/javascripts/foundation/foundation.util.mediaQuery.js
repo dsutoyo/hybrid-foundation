@@ -92,7 +92,11 @@ var MediaQuery = {
       }
     }
 
-    return matched.name;
+    if(typeof matched === 'object') {
+      return matched.name;
+    } else {
+      return matched;
+    }
   },
 
   /**
@@ -203,4 +207,4 @@ function parseStyleToObject(str) {
   return styleObject;
 }
 
-}(jQuery, Foundation)
+}(jQuery, Foundation);

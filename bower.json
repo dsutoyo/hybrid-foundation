@@ -3,6 +3,7 @@
     "version": "2.0.2",
     "description": "WordPress starter theme",
     "dependencies": {
+       "bourbon": "4.2.6",
        "foundation": "5.5.3",
        "components-font-awesome": "4.4.0"
     }

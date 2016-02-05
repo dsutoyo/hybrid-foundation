@@ -2,6 +2,7 @@
  * Interchange module.
  * @module foundation.interchange
  * @requires foundation.util.mediaQuery
+ * @requires foundation.util.timerAndImageLoader
  */
 !function(Foundation, $) {
   'use strict';
@@ -22,13 +23,17 @@
     this._init();
     this._events();
 
-    Foundation.registerPlugin(this);
+    Foundation.registerPlugin(this, 'Interchange');
   }
 
   /**
    * Default settings for plugin
    */
   Interchange.defaults = {
+    /**
+     * Rules to be applied to Interchange elements. Set with the `data-interchange` array notation.
+     * @option
+     */
     rules: null
   };
 
@@ -55,7 +60,7 @@
    * @private
    */
   Interchange.prototype._events = function() {
-    $(window).on('resize.fndtn.interchange', Foundation.util.throttle(this._reflow.bind(this), 50));
+    $(window).on('resize.zf.interchange', Foundation.util.throttle(this._reflow.bind(this), 50));
   };
 
   /**
@@ -137,30 +142,45 @@
   Interchange.prototype.replace = function(path) {
     if (this.currentPath === path) return;
 
-    var _this = this;
+    var _this = this,
+        trigger = 'replaced.zf.interchange';
 
     // Replacing images
     if (this.$element[0].nodeName === 'IMG') {
       this.$element.attr('src', path).load(function() {
-        _this.$element.trigger('replaced.zf.interchange');
         _this.currentPath = path;
-      });
+      })
+      .trigger(trigger);
     }
     // Replacing background images
     else if (path.match(/\.(gif|jpg|jpeg|tiff|png)([?#].*)?/i)) {
-      this.$element.css({ 'background-image': 'url('+path+')' });
+      this.$element.css({ 'background-image': 'url('+path+')' })
+          .trigger(trigger);
     }
     // Replacing HTML
     else {
       $.get(path, function(response) {
-        _this.$element.html(response);
-        _this.$element.trigger('replaced.zf.interchange');
+        _this.$element.html(response)
+             .trigger(trigger);
+        $(response).foundation();
         _this.currentPath = path;
       });
     }
-  };
 
-  Foundation.plugin(Interchange);
+    /**
+     * Fires when content in an Interchange element is done being loaded.
+     * @event Interchange#replaced
+     */
+    // this.$element.trigger('replaced.zf.interchange');
+  };
+  /**
+   * Destroys an instance of interchange.
+   * @function
+   */
+  Interchange.prototype.destroy = function(){
+    //TODO this.
+  };
+  Foundation.plugin(Interchange, 'Interchange');
 
   // Exports for AMD/Browserify
   if (typeof module !== 'undefined' && typeof module.exports !== 'undefined')
