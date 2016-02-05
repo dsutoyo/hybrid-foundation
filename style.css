@@ -3836,11 +3836,6 @@ address {
   font-style: normal;
 }
 
-/* Foundation sizes abbr at 90%. Undo that */
-abbr {
-  font-size: 100%;
-}
-
 /* Undo styles for vcard */
 .vcard {
   display: inline;
@@ -4441,8 +4436,8 @@ img.aligncenter {
 /**
  * Header
  * --------------------------------------------------------------------------- */
-.offcanvas-navigation .tab-bar {
-  display: block;
+.no-js [data-responsive-toggle] {
+  display: none;
 }
 
 .offcanvas-navigation .top-bar {
@@ -4450,11 +4445,14 @@ img.aligncenter {
 }
 
 @media screen and (min-width: 40em) {
-  .offcanvas-navigation .tab-bar {
-    display: none;
-  }
   .offcanvas-navigation .top-bar {
-    display: block;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -4536,6 +4534,21 @@ li.description {
 /**
  * Footer
  * --------------------------------------------------------------------------- */
+#footer .wrap {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#footer .wrap::before, #footer .wrap::after {
+  content: ' ';
+  display: table;
+}
+
+#footer .wrap::after {
+  clear: both;
+}
+
 @media only screen {
   .breadcrumb-trail {
     padding-left: 0.625rem;

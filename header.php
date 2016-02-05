@@ -7,11 +7,15 @@
 
 <body <?php hybrid_attr( 'body' ); ?>>
 
-	<div id="container" class="off-canvas-wrap" data-offcanvas>
+<div id="container" class="off-canvas-wrapper">
 
-		<div class="inner-wrap">
+	<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
-		<?php //hybrid_get_menu( 'mobile' ); ?>
+		<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+			<?php hybrid_get_menu( 'mobile' ); ?>
+		</div>
+
+		<div class="off-canvas-content" data-off-canvas-content>
 
 		<div class="skip-link">
 			<a href="#content" class="screen-reader-text"><?php esc_html_e( 'Skip to content', 'hybrid-base' ); ?></a>
@@ -21,13 +25,11 @@
 
 			<?php if ( !current_theme_supports( 'popup-navigation' ) ) : ?>
 
-			<nav class="tab-bar" data-topbar>
-				<section class="left-small">
-					<a class="left-off-canvas-toggle menu-icon" href="#off-canvas-navigation" role="button"><span></span></a>
-				</section>
-				<section class="middle tab-bar-section">
+			<nav class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+				<button type="button" class="menu-icon" data-toggle="offCanvas"></button>
+				<div class="title-bar-title">
 					<?php bloginfo( 'name' ); ?>
-				</section>
+				</div>
 			</nav>
 
 			<?php endif; ?>

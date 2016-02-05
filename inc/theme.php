@@ -196,6 +196,8 @@ function hybrid_base_enqueue_styles() {
  * @return array
  */
 function hybrid_base_attr_body( $attr ) {
+	$attr['class'] .= ' no-js';
+	
 	if ( current_theme_supports( 'popup-navigation' ) ) {
 		$attr['class'] .= ' popup-navigation';
 	}

@@ -1,23 +1,20 @@
 /**
  * Header
  * --------------------------------------------------------------------------- */
+
+.no-js [data-responsive-toggle] {
+	display: none;
+}
+
 // Show/hide nav elements
 .offcanvas-navigation {
-	.tab-bar {
-		display: block;
-	}
-
 	.top-bar {
 		display: none;
 	}
 
 	@media #{$medium-up} {
-		.tab-bar {
-			display: none;
-		}
-
 		.top-bar {
-			display: block;
+			@include display(flex);
 		}
 	}
 }
