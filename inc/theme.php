@@ -33,7 +33,7 @@ add_filter( 'breadcrumb_trail_args', 'hybrid_base_breadcrumb_trail_args' );
 add_filter( 'breadcrumb_trail', 'hybrid_base_breadcrumb_trail', 5, 2 );
 
 /**
- * Registers custom image sizes for the theme. 
+ * Registers custom image sizes for the theme.
  *
  * @since  1.0.0
  * @access public
@@ -239,10 +239,6 @@ function hybrid_base_theme_layout( $theme_layout ) {
 		elseif ( is_page_template( 'template-builder.php' ) ) {
 			$theme_layout = '1c';
 		}
-
-		else {
-			$theme_layout = hybrid_get_default_layout();
-		}
 	}
 
 	return $theme_layout;
@@ -256,7 +252,7 @@ function hybrid_base_theme_layout( $theme_layout ) {
  * @return array
  */
 function hybrid_base_comment_form_defaults( $defaults ) {
-	
+
 	/* Change the defaults depending on your requirements */
 	//$defaults['title_reply'] = __( 'Submit a Comment', 'hybrid-base' );
 
