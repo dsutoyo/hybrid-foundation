@@ -1,14 +1,14 @@
 <?php
 /**
  *
- * This program is free software; you can redistribute it and/or modify it under the terms of the GNU 
- * General Public License as published by the Free Software Foundation; either version 2 of the License, 
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
+ * General Public License as published by the Free Software Foundation; either version 2 of the License,
  * or (at your option) any later version.
  *
- * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * You should have received a copy of the GNU General Public License along with this program; if not, write 
+ * You should have received a copy of the GNU General Public License along with this program; if not, write
  * to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  *
  * @package    HybridFoundation
@@ -31,16 +31,8 @@ require_once( $hybrid_base_dir . 'inc/theme.php' );
 require_once( $hybrid_base_dir . 'inc/walker.php' );
 require_once( $hybrid_base_dir . 'inc/class-tgm-plugin-activation.php');
 
-if ( file_exists ( $hybrid_base_dir . 'inc/customizer-library/customizer-library.php' ) ) :
-	// Helper library for the theme customizer.
-	require_once( $hybrid_base_dir . '/inc/customizer-library/customizer-library.php' );
-	// Define options for the theme customizer.
-	require_once( $hybrid_base_dir . '/inc/customizer-options.php' );
-	// Output inline styles based on theme customizer selections.
-	require_once( $hybrid_base_dir . '/inc/styles.php' );
-	// Additional filters and actions based on theme customizer selections.
-	require_once( $hybrid_base_dir . '/inc/mods.php' );
-endif;
+require_once( 'titan-framework/titan-framework-embedder.php' );
+require_once( $hybrid_base_dir . 'inc/titan-options.php' );
 
 
 // Launch the Hybrid Core framework.
@@ -88,15 +80,15 @@ function hybrid_base_theme_setup() {
 	add_theme_support( 'automatic-feed-links' );
 
 	// Post formats.
-	add_theme_support( 
-		'post-formats', 
-		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' ) 
+	add_theme_support(
+		'post-formats',
+		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' )
 	);
 
 	// Foundation components.
-	add_theme_support( 
-		'foundation', 
-		array( 'all' ) 
+	add_theme_support(
+		'foundation',
+		array( 'all' )
 	);
 
 	// Popup menu navigation.
