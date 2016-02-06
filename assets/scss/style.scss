@@ -2,7 +2,7 @@
  * Theme Name:  Hybrid Foundation
  * Theme URI:   http://github.com/dsutoyo/hybrid-foundation
  * Description: A fork of Hybrid Base, integrated with Zurb Foundation
- * Version:     2.0.3
+ * Version:     3.0.0
  * Author:      David Sutoyo
  * Author URI:  http://davidsutoyo.com
  * Tags:        one-column, two-columns, custom-background, custom-header, custom-menu, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready, Foundation, sass
@@ -11,87 +11,117 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-@charset "UTF-8";
-// Foundation by ZURB
-// foundation.zurb.com
-// Licensed under MIT Open Source
-// Version 5.5.3
-
-// Our own custom mixins
-@import "global/mixins";
-
-// Define our own variables;
-@import "global/variables";
-
-// Global Foundation Settings
-@import "settings";
-
-// Make sure the charset is set appropriately
-
 /**
- * Normalize
- * --------------------------------------------------------------------------- */
-@import "../vendor/foundation/scss/normalize";
+ * Foundation for Sites by ZURB
+ * Version 6.1.2
+ * foundation.zurb.com
+ * Licensed under MIT Open Source
+ */
 
-/**
- * Fonts
- * --------------------------------------------------------------------------- */
-@import "../vendor/font-awesome/scss/font-awesome";
+// Our settings
+@import 'settings';
 
-/**
- * Foundation Components
- * --------------------------------------------------------------------------- */
-// Behold, here are all the Foundation components.
-@import "../vendor/foundation/scss/foundation/components/accordion";
-@import "../vendor/foundation/scss/foundation/components/alert-boxes";
-@import "../vendor/foundation/scss/foundation/components/block-grid";
-@import "../vendor/foundation/scss/foundation/components/breadcrumbs";
-@import "../vendor/foundation/scss/foundation/components/button-groups";
-@import "../vendor/foundation/scss/foundation/components/buttons";
-@import "../vendor/foundation/scss/foundation/components/clearing";
-@import "../vendor/foundation/scss/foundation/components/dropdown-buttons";
-@import "../vendor/foundation/scss/foundation/components/dropdown";
-@import "../vendor/foundation/scss/foundation/components/flex-video";
-@import "../vendor/foundation/scss/foundation/components/forms";
-@import "../vendor/foundation/scss/foundation/components/global";
-@import "../vendor/foundation/scss/foundation/components/grid";
-@import "../vendor/foundation/scss/foundation/components/icon-bar";
-@import "../vendor/foundation/scss/foundation/components/inline-lists";
-@import "../vendor/foundation/scss/foundation/components/joyride";
-@import "../vendor/foundation/scss/foundation/components/keystrokes";
-@import "../vendor/foundation/scss/foundation/components/labels";
-@import "../vendor/foundation/scss/foundation/components/magellan";
-@import "../vendor/foundation/scss/foundation/components/offcanvas";
-@import "../vendor/foundation/scss/foundation/components/orbit";
-@import "../vendor/foundation/scss/foundation/components/pagination";
-@import "../vendor/foundation/scss/foundation/components/panels";
-@import "../vendor/foundation/scss/foundation/components/pricing-tables";
-@import "../vendor/foundation/scss/foundation/components/progress-bars";
-@import "../vendor/foundation/scss/foundation/components/range-slider";
-@import "../vendor/foundation/scss/foundation/components/reveal";
-@import "../vendor/foundation/scss/foundation/components/side-nav";
-@import "../vendor/foundation/scss/foundation/components/split-buttons";
-@import "../vendor/foundation/scss/foundation/components/sub-nav";
-@import "../vendor/foundation/scss/foundation/components/switches";
-@import "../vendor/foundation/scss/foundation/components/tables";
-@import "../vendor/foundation/scss/foundation/components/tabs";
-@import "../vendor/foundation/scss/foundation/components/thumbs";
-@import "../vendor/foundation/scss/foundation/components/tooltips";
-@import "../vendor/foundation/scss/foundation/components/top-bar";
-@import "../vendor/foundation/scss/foundation/components/type";
-@import "../vendor/foundation/scss/foundation/components/visibility";
+// Sass utilities
+@import '../vendor/foundation-sites/scss/util/util';
 
+// Global variables and styles
+@import '../vendor/foundation-sites/scss/global';
+
+// Components
+@import '../vendor/foundation-sites/scss/grid/grid';
+@import '../vendor/foundation-sites/scss/typography/typography';
+@import '../vendor/foundation-sites/scss/forms/forms';
+@import '../vendor/foundation-sites/scss/components/visibility';
+@import '../vendor/foundation-sites/scss/components/float';
+@import '../vendor/foundation-sites/scss/components/button';
+@import '../vendor/foundation-sites/scss/components/button-group';
+@import '../vendor/foundation-sites/scss/components/accordion-menu';
+@import '../vendor/foundation-sites/scss/components/accordion';
+@import '../vendor/foundation-sites/scss/components/badge';
+@import '../vendor/foundation-sites/scss/components/breadcrumbs';
+@import '../vendor/foundation-sites/scss/components/callout';
+@import '../vendor/foundation-sites/scss/components/close-button';
+@import '../vendor/foundation-sites/scss/components/drilldown';
+@import '../vendor/foundation-sites/scss/components/dropdown-menu';
+@import '../vendor/foundation-sites/scss/components/dropdown';
+@import '../vendor/foundation-sites/scss/components/flex-video';
+@import '../vendor/foundation-sites/scss/components/label';
+@import '../vendor/foundation-sites/scss/components/media-object';
+@import '../vendor/foundation-sites/scss/components/menu';
+@import '../vendor/foundation-sites/scss/components/off-canvas';
+@import '../vendor/foundation-sites/scss/components/orbit';
+@import '../vendor/foundation-sites/scss/components/pagination';
+@import '../vendor/foundation-sites/scss/components/progress-bar';
+@import '../vendor/foundation-sites/scss/components/reveal';
+@import '../vendor/foundation-sites/scss/components/slider';
+@import '../vendor/foundation-sites/scss/components/sticky';
+@import '../vendor/foundation-sites/scss/components/switch';
+@import '../vendor/foundation-sites/scss/components/table';
+@import '../vendor/foundation-sites/scss/components/tabs';
+@import '../vendor/foundation-sites/scss/components/title-bar';
+@import '../vendor/foundation-sites/scss/components/top-bar';
+@import '../vendor/foundation-sites/scss/components/thumbnail';
+@import '../vendor/foundation-sites/scss/components/tooltip';
+
+@mixin foundation-everything($flex: false) {
+  @include foundation-global-styles;
+  @if not $flex {
+    @include foundation-grid;
+  }
+  @else {
+    @include foundation-flex-grid;
+  }
+  @include foundation-typography;
+  @include foundation-button;
+  @include foundation-forms;
+  @include foundation-visibility-classes;
+  @include foundation-float-classes;
+  @include foundation-accordion;
+  @include foundation-accordion-menu;
+  @include foundation-badge;
+  @include foundation-breadcrumbs;
+  @include foundation-button-group;
+  @include foundation-callout;
+  @include foundation-close-button;
+  @include foundation-drilldown-menu;
+  @include foundation-dropdown;
+  @include foundation-dropdown-menu;
+  @include foundation-flex-video;
+  @include foundation-label;
+  @include foundation-media-object;
+  @include foundation-menu;
+  @include foundation-off-canvas;
+  @include foundation-orbit;
+  @include foundation-pagination;
+  @include foundation-progress-bar;
+  @include foundation-slider;
+  @include foundation-sticky;
+  @include foundation-reveal;
+  @include foundation-switch;
+  @include foundation-table;
+  @include foundation-tabs;
+  @include foundation-thumbnail;
+  @include foundation-title-bar;
+  @include foundation-tooltip;
+  @include foundation-top-bar;
+}
+
+$global-flex: true;
+
+@include foundation-everything($global-flex);
+
+// Import some Bourbon helpers. Proceed with caution
+@import "../vendor/bourbon/stylesheets/addons/hide-text";
+@import "../vendor/bourbon/stylesheets/css3/font-face";
+@import "../vendor/bourbon/stylesheets/css3/hidpi-media-query";
+@import "../vendor/bourbon/stylesheets/css3/placeholder";
+
+@import 'global/variables';
 @import "global/foundation";
 @import "global/grid";
 @import "global/wordpress";
 
 @import "partials/layout";
 @import "partials/header";
-@import "partials/offcanvas";
-@import "partials/popup-nav";
-@import "partials/content";
-@import "partials/sidebar";
 @import "partials/footer";
 @import "partials/breadcrumbs";
-
-@import "plugins/make";

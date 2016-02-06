@@ -1,22 +1,17 @@
 /* # Header ===== */
+.no-js [data-responsive-toggle] {
+	display: none;
+}
 
-/* Show/hide nav elements */
+// Show/hide nav elements
 .offcanvas-navigation {
-	.tab-bar {
-		display: block;
-	}
-
 	.top-bar {
 		display: none;
 	}
 
 	@media #{$medium-up} {
-		.tab-bar {
-			display: none;
-		}
-
 		.top-bar {
-			display: block;
+			display: flex;
 		}
 	}
 }
@@ -27,9 +22,6 @@
 		opacity: 0;
 		width: 100vw;
 		height: 0;
-		-webkit-transition: opacity 0.25s ease-in-out;
-		-moz-transition: opacity 0.25s ease-in-out;
-		-o-transition: opacity 0.25s ease-in-out;
 		transition: opacity 0.25s ease-in-out;
 	}
 }
@@ -45,12 +37,22 @@
 		height: 100vh;
 		background: #000;
 		opacity: 0.9;
-		-webkit-transition: opacity 0.25s ease-in-out;
-		-moz-transition: opacity 0.25s ease-in-out;
-		-o-transition: opacity 0.25s ease-in-out;
 		transition: opacity 0.25s ease-in-out;
 		overflow: auto;
 		transform: none;
+	}
+}
+
+/* Custom Top Bar Styles */
+
+// Center the title and menu
+.top-bar {
+	display: flex;
+
+	.menu-primary {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 }
 

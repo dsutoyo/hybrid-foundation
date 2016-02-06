@@ -13,7 +13,7 @@
  *
  * @package    HybridFoundation
  * @subpackage Functions
- * @version    2.0.3
+ * @version    3.0.0
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2013 - 2015, David Sutoyo
  * @link       https://github.com/dsutoyo/hybrid-foundation
@@ -40,10 +40,10 @@ new Hybrid();
 
 /* Define Constants. */
 // Theme Version
-define( 'THEME_VERSION', '2.0.3' );
+define( 'THEME_VERSION', '3.0.0' );
 
 // Specify our Foundation version
-define( 'FOUNDATION_VERSION', '5.5.3');
+define( 'FOUNDATION_VERSION', '6.1.2');
 
 // Do theme setup on the 'after_setup_theme' hook.
 add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );
@@ -85,21 +85,14 @@ function hybrid_base_theme_setup() {
 		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' )
 	);
 
-	// Foundation components.
-	add_theme_support(
-		'foundation',
-		array( 'all' )
-	);
-
 	// Popup menu navigation.
-	add_theme_support( 'popup-navigation' );
+	//add_theme_support( 'popup-navigation' );
 
 	// Editor styles.
 	add_editor_style( hybrid_base_get_editor_styles() );
 
 	// Handle content width for embeds and images.
 	hybrid_set_content_width( 1280 );
-
 }
 
 /**

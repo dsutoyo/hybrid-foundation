@@ -1,99 +1,71 @@
 @mixin small-column(
-	$columns:false,
-	$last-column:false,
-	$center:false,
-	$offset:false,
-	$push:false,
-	$pull:false,
-	$collapse:false,
-	$float:true,
-	$position:false) {
+	$columns: null,
+	$gutter: $grid-column-gutter) {
 
 	@media only screen {
-		@include grid-column(
-			$columns,
-			$last-column,
-			$center,
-			$offset,
-			$push,
-			$pull,
-			$collapse,
-			$float,
-			$position);
+		@if not $global-flex {
+			@include grid-column(
+				$columns,
+				$gutter);
+		}
+		@else {
+			@include flex-grid-column(
+				$columns,
+				$gutter);
+		}
 	}
 }
 
 @mixin medium-column(
-	$columns:false,
-	$last-column:false,
-	$center:false,
-	$offset:false,
-	$push:false,
-	$pull:false,
-	$collapse:false,
-	$float:true,
-	$position:false) {
+	$columns: null,
+	$gutter: $grid-column-gutter) {
 
-	@media #{$medium-up} {
-		@include grid-column(
-			$columns,
-			$last-column,
-			$center,
-			$offset,
-			$push,
-			$pull,
-			$collapse,
-			$float,
-			$position);
+	@include breakpoint(medium) {
+		@if not $global-flex {
+			@include grid-column(
+				$columns,
+				$gutter);
+		}
+		@else {
+			@include flex-grid-column(
+				$columns,
+				$gutter);
+		}
 	}
 }
 
 @mixin large-column(
-	$columns:false,
-	$last-column:false,
-	$center:false,
-	$offset:false,
-	$push:false,
-	$pull:false,
-	$collapse:false,
-	$float:true,
-	$position:false) {
+	$columns: null,
+	$gutter: $grid-column-gutter) {
 
-	@media #{$large-up} {
-		@include grid-column(
-			$columns,
-			$last-column,
-			$center,
-			$offset,
-			$push,
-			$pull,
-			$collapse,
-			$float,
-			$position);
+	@include breakpoint(large) {
+		@if not $global-flex {
+			@include grid-column(
+				$columns,
+				$gutter);
+		}
+		@else {
+			@include flex-grid-column(
+				$columns,
+				$gutter);
+		}
 	}
 }
 
 @mixin xlarge-column(
-	$columns:false,
-	$last-column:false,
-	$center:false,
-	$offset:false,
-	$push:false,
-	$pull:false,
-	$collapse:false,
-	$float:true,
-	$position:false) {
+	$columns: null,
+	$gutter: $grid-column-gutter) {
 
-	@media #{$xlarge-up} {
-		@include grid-column(
-			$columns,
-			$last-column,
-			$center,
-			$offset,
-			$push,
-			$pull,
-			$collapse,
-			$float,
-			$position);
+	@include breakpoint(xlarge) {
+		@if not $global-flex {
+			@include grid-column(
+				$columns,
+				$gutter);
+		}
+		@else {
+			@include flex-grid-column(
+				$columns,
+				$gutter);
+		}
 	}
 }

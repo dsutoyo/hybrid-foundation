@@ -1,4 +1,5 @@
 /* # WordPress Specific Styles ===== */
+$column-gutter: map-get($grid-column-responsive-gutter, medium);
 
 /* ## Skip Link ===== */
 .skip-link {
@@ -7,8 +8,14 @@
 
 /* ## Gallery ===== */
 .gallery {
-	margin: rem-calc(10 0);
-	@include clearfix;
+	.gallery-row {
+		@include grid-row($behavior: nest);
+	}
+	@for $i from 1 through 4 {
+		.col-#{$i} {
+			@include grid-column($grid-column-count/$i);
+		}
+	}
 
 	.gallery-item {
 		float: left;

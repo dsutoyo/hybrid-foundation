@@ -1,7 +1,13 @@
 /* # Breadcrumbs ===== */
+.breadcrumb-trail {
+	@include small-column(12);
+	@include medium-column(12);
+	@include large-column(12);
+}
+
 .trail-items {
+	@include breadcrumbs-container;
 	li {
-		@include crumbs;
 		&:first-of-type:before {
 			content: " ";
 			margin: 0;

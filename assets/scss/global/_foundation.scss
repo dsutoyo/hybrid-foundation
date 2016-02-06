@@ -4,11 +4,6 @@ address {
 	font-style: normal;
 }
 
-/* Foundation sizes abbr at 90%. Undo that */
-abbr {
-	font-size: 100%;
-}
-
 /* Undo styles for vcard */
 .vcard {
 	display: inline;
@@ -26,7 +21,7 @@ abbr {
 
 /* Inputs should be like buttons */
 input[type="submit"] {
-	@include button( $button-tny, $radius: true );
+	@include button;
 }
 
 

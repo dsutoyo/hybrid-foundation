@@ -86,7 +86,7 @@ class Foundationalize_Walker extends Walker_Nav_Menu {
 			// Else if inside the top bar...
 			else if ( $this->nav_bar['in_top_bar'] == true ) {
 
-				$classes[] = 'has-dropdown';
+				$classes[] = 'has-submenu';
 				$flyout_toggle = '';
 
 				if ( $this->nav_bar['has_dropdown_marker'] == false ) {
@@ -144,15 +144,15 @@ class Foundationalize_Walker extends Walker_Nav_Menu {
 		if ( $depth == 0 && $this->nav_bar['item_type'] == 'li' ) {
 			$indent = str_repeat("\t", 1);
 			if ( $this->nav_bar['offcanvas'] == true ) {
-				$output .= "\n$indent<ul class=\"submenu\">\n";
+				$output .= "\n$indent<ul class=\"submenu menu\">\n";
 			}
 			else {
-				$output .= $this->nav_bar['in_top_bar'] == true ? "\n$indent<ul class=\"dropdown\">\n" : "\n$indent<ul class=\"flyout\">\n";
+				$output .= $this->nav_bar['in_top_bar'] == true ? "\n$indent<ul class=\"submenu menu\" data-submenu>\n" : "\n$indent<ul class=\"flyout\">\n";
 			}
 	 	}
 	 	else {
 			$indent = str_repeat("\t", $depth);
-			$output .= $this->nav_bar['in_top_bar'] == true ? "\n$indent<ul class=\"dropdown\">\n" : "\n$indent<ul class=\"level-$depth\">\n";
+			$output .= $this->nav_bar['in_top_bar'] == true ? "\n$indent<ul class=\"submenu menu\" data-submenu>\n" : "\n$indent<ul class=\"level-$depth\">\n";
 		}
 	}
 }

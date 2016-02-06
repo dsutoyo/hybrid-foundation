@@ -1,1 +1,6 @@
 /* # Footer ===== */
+#footer {
+	.wrap {
+		@include grid-row;
+	}
+}
