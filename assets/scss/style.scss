@@ -1,51 +1,67 @@
 /**
+ * Theme Name:  Hybrid Foundation
+ * Theme URI:   http://github.com/dsutoyo/hybrid-foundation
+ * Description: A fork of Hybrid Base, integrated with Zurb Foundation
+ * Version:     3.0.0
+ * Author:      David Sutoyo
+ * Author URI:  http://davidsutoyo.com
+ * Tags:        one-column, two-columns, custom-background, custom-header, custom-menu, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready, Foundation, sass
+ * Text Domain: hybrid-base
+ * License:     GNU General Public License v2.0 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ */
+
+/**
  * Foundation for Sites by ZURB
  * Version 6.1.2
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
 
+// Our settings
+@import 'settings';
+
 // Sass utilities
-@import '../vendor/foundation/util/util';
+@import '../vendor/foundation-sites/scss/util/util';
 
 // Global variables and styles
-@import '../vendor/foundation/global';
+@import '../vendor/foundation-sites/scss/global';
 
 // Components
-@import '../vendor/foundation/grid/grid';
-@import '../vendor/foundation/typography/typography';
-@import '../vendor/foundation/forms/forms';
-@import '../vendor/foundation/components/visibility';
-@import '../vendor/foundation/components/float';
-@import '../vendor/foundation/components/button';
-@import '../vendor/foundation/components/button-group';
-@import '../vendor/foundation/components/accordion-menu';
-@import '../vendor/foundation/components/accordion';
-@import '../vendor/foundation/components/badge';
-@import '../vendor/foundation/components/breadcrumbs';
-@import '../vendor/foundation/components/callout';
-@import '../vendor/foundation/components/close-button';
-@import '../vendor/foundation/components/drilldown';
-@import '../vendor/foundation/components/dropdown-menu';
-@import '../vendor/foundation/components/dropdown';
-@import '../vendor/foundation/components/flex-video';
-@import '../vendor/foundation/components/label';
-@import '../vendor/foundation/components/media-object';
-@import '../vendor/foundation/components/menu';
-@import '../vendor/foundation/components/off-canvas';
-@import '../vendor/foundation/components/orbit';
-@import '../vendor/foundation/components/pagination';
-@import '../vendor/foundation/components/progress-bar';
-@import '../vendor/foundation/components/reveal';
-@import '../vendor/foundation/components/slider';
-@import '../vendor/foundation/components/sticky';
-@import '../vendor/foundation/components/switch';
-@import '../vendor/foundation/components/table';
-@import '../vendor/foundation/components/tabs';
-@import '../vendor/foundation/components/title-bar';
-@import '../vendor/foundation/components/top-bar';
-@import '../vendor/foundation/components/thumbnail';
-@import '../vendor/foundation/components/tooltip';
+@import '../vendor/foundation-sites/scss/grid/grid';
+@import '../vendor/foundation-sites/scss/typography/typography';
+@import '../vendor/foundation-sites/scss/forms/forms';
+@import '../vendor/foundation-sites/scss/components/visibility';
+@import '../vendor/foundation-sites/scss/components/float';
+@import '../vendor/foundation-sites/scss/components/button';
+@import '../vendor/foundation-sites/scss/components/button-group';
+@import '../vendor/foundation-sites/scss/components/accordion-menu';
+@import '../vendor/foundation-sites/scss/components/accordion';
+@import '../vendor/foundation-sites/scss/components/badge';
+@import '../vendor/foundation-sites/scss/components/breadcrumbs';
+@import '../vendor/foundation-sites/scss/components/callout';
+@import '../vendor/foundation-sites/scss/components/close-button';
+@import '../vendor/foundation-sites/scss/components/drilldown';
+@import '../vendor/foundation-sites/scss/components/dropdown-menu';
+@import '../vendor/foundation-sites/scss/components/dropdown';
+@import '../vendor/foundation-sites/scss/components/flex-video';
+@import '../vendor/foundation-sites/scss/components/label';
+@import '../vendor/foundation-sites/scss/components/media-object';
+@import '../vendor/foundation-sites/scss/components/menu';
+@import '../vendor/foundation-sites/scss/components/off-canvas';
+@import '../vendor/foundation-sites/scss/components/orbit';
+@import '../vendor/foundation-sites/scss/components/pagination';
+@import '../vendor/foundation-sites/scss/components/progress-bar';
+@import '../vendor/foundation-sites/scss/components/reveal';
+@import '../vendor/foundation-sites/scss/components/slider';
+@import '../vendor/foundation-sites/scss/components/sticky';
+@import '../vendor/foundation-sites/scss/components/switch';
+@import '../vendor/foundation-sites/scss/components/table';
+@import '../vendor/foundation-sites/scss/components/tabs';
+@import '../vendor/foundation-sites/scss/components/title-bar';
+@import '../vendor/foundation-sites/scss/components/top-bar';
+@import '../vendor/foundation-sites/scss/components/thumbnail';
+@import '../vendor/foundation-sites/scss/components/tooltip';
 
 @mixin foundation-everything($flex: false) {
   @include foundation-global-styles;
@@ -94,10 +110,11 @@ $global-flex: true;
 
 @include foundation-everything($global-flex);
 
-// Import Bourbon. Proceed with caution
-@import "../vendor/bourbon/stylesheets/settings/prefixer";
-@import "../vendor/bourbon/stylesheets/addons/prefixer";
-@import "../vendor/bourbon/stylesheets/css3/flex-box";
+// Import some Bourbon helpers. Proceed with caution
+@import "../vendor/bourbon/stylesheets/addons/hide-text";
+@import "../vendor/bourbon/stylesheets/css3/font-face";
+@import "../vendor/bourbon/stylesheets/css3/hidpi-media-query";
+@import "../vendor/bourbon/stylesheets/css3/placeholder";
 
 @import "global/foundation";
 @import "global/grid";

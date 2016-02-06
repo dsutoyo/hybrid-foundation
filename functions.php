@@ -13,7 +13,7 @@
  *
  * @package    HybridFoundation
  * @subpackage Functions
- * @version    2.0.2
+ * @version    3.0.0
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2013 - 2015, David Sutoyo
  * @link       https://github.com/dsutoyo/hybrid-foundation
@@ -31,16 +31,8 @@ require_once( $hybrid_base_dir . 'inc/theme.php' );
 require_once( $hybrid_base_dir . 'inc/walker.php' );
 require_once( $hybrid_base_dir . 'inc/class-tgm-plugin-activation.php');
 
-if ( file_exists ( $hybrid_base_dir . 'inc/customizer-library/customizer-library.php' ) ) :
-	// Helper library for the theme customizer.
-	require_once( $hybrid_base_dir . '/inc/customizer-library/customizer-library.php' );
-	// Define options for the theme customizer.
-	require_once( $hybrid_base_dir . '/inc/customizer-options.php' );
-	// Output inline styles based on theme customizer selections.
-	require_once( $hybrid_base_dir . '/inc/styles.php' );
-	// Additional filters and actions based on theme customizer selections.
-	require_once( $hybrid_base_dir . '/inc/mods.php' );
-endif;
+require_once( 'titan-framework/titan-framework-embedder.php' );
+require_once( $hybrid_base_dir . 'inc/titan-options.php' );
 
 
 // Launch the Hybrid Core framework.
@@ -48,7 +40,7 @@ new Hybrid();
 
 /* Define Constants. */
 // Theme Version
-define( 'THEME_VERSION', '2.0.2' );
+define( 'THEME_VERSION', '3.0.0' );
 
 // Specify our Foundation version
 define( 'FOUNDATION_VERSION', '6.1.2');
@@ -93,12 +85,6 @@ function hybrid_base_theme_setup() {
 		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' )
 	);
 
-	// Foundation components.
-	add_theme_support(
-		'foundation',
-		array( 'all' )
-	);
-
 	// Popup menu navigation.
 	//add_theme_support( 'popup-navigation' );
 
@@ -107,11 +93,6 @@ function hybrid_base_theme_setup() {
 
 	// Handle content width for embeds and images.
 	hybrid_set_content_width( 1280 );
-
-	/*wp_deregister_script('jquery');
-	wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', false, '2.1.0');
-	wp_enqueue_script('jquery');*/
-
 }
 
 /**

@@ -14,7 +14,7 @@
 
 	@media #{$medium-up} {
 		.top-bar {
-			@include display(flex);
+			display: flex;
 		}
 	}
 }
@@ -25,9 +25,6 @@
 		opacity: 0;
 		width: 100vw;
 		height: 0;
-		-webkit-transition: opacity 0.25s ease-in-out;
-		-moz-transition: opacity 0.25s ease-in-out;
-		-o-transition: opacity 0.25s ease-in-out;
 		transition: opacity 0.25s ease-in-out;
 	}
 }
@@ -43,9 +40,6 @@
 		height: 100vh;
 		background: #000;
 		opacity: 0.9;
-		-webkit-transition: opacity 0.25s ease-in-out;
-		-moz-transition: opacity 0.25s ease-in-out;
-		-o-transition: opacity 0.25s ease-in-out;
 		transition: opacity 0.25s ease-in-out;
 		overflow: auto;
 		transform: none;
@@ -56,12 +50,12 @@
 
 // Center the title and menu
 .top-bar {
-	@include display(flex);
+	display: flex;
 
 	.menu-primary {
-		@include display(flex);
-		@include flex-direction(column);
-		@include justify-content(center);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 }
 
