@@ -1,6 +1,6 @@
 # Hybrid Foundation
 
-A starter theme based on <a href="http://http://themehybrid.com/hybrid-core/">Hybrid Core</a> and Foundation 5.5.2.
+A starter theme based on <a href="http://http://themehybrid.com/hybrid-core/">Hybrid Core</a> and Foundation 6.1.2.
 
 ## Getting Started
 ### Prerequisites
@@ -26,20 +26,12 @@ $ npm install
 $ bower install
 ```
 
-#### 2. Copy dependencies
+#### 2. Copy dependencies (optional)
 
-We don't need everything in `bower_components`, so we're going to copy some of them over to our `assets/vendor` directory.
-
-Copy Foundation
+We don't need everything in `bower_components`, so we're going to copy some of them over to our `assets/vendor` directory. The necessary files are already in `assets/vendor` so this step is optional for setup, but required if you are updating dependencies.
 
 ```
-$ gulp foundation
-```
-
-Copy Font Awesome (optional)
-
-```
-$ gulp font-awesome
+$ gulp deps
 ```
 
 #### 3. Edit gulpfile.js
