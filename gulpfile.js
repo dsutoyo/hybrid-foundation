@@ -44,6 +44,7 @@ gulp.task('styles', function() {
 	gulp.src('./assets/scss/style.scss')
 		.pipe(sass({
 			outputStyle: 'expanded',
+			sourceComments: 'normal'
 		}).on('error', notify.onError(function(error) {
 			return "Error: " + error.message;
 		})))
