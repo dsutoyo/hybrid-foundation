@@ -107,7 +107,7 @@ function hybrid_base_register_sidebars() {
  */
 function hybrid_base_enqueue_scripts() {
 	// ===== Foundation
-	wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/assets/dist/foundation.js', '', FOUNDATION_VERSION, true );
+	wp_enqueue_script( 'foundation', get_stylesheet_directory_uri() . '/assets/dist/foundation.min.js', '', FOUNDATION_VERSION, true );
 
 	// ===== Initialize Foundation
 	wp_enqueue_script( 'foundation-init', get_stylesheet_directory_uri() . '/assets/dist/app.min.js', array( 'jquery' ), FOUNDATION_VERSION, true );

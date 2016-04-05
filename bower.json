@@ -4,6 +4,6 @@
     "description": "WordPress starter theme",
     "dependencies": {
        "bourbon": "4.2.6",
-       "foundation-sites": "^6.1.2"
+       "foundation-sites": "^6.2.0"
     }
 }

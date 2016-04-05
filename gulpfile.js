@@ -26,9 +26,9 @@ gulp.task('browser-sync', function() {
 // =========================================================
 gulp.task('deps', function() {
 	gulp.src('./bower_components/foundation-sites/scss/**/*.*')
-		.pipe(gulp.dest('./assets/vendor/foundation-sites/scss/'));
+		.pipe(gulp.dest('./../../bower_components/foundation-sites/scss/'));
 	gulp.src('./bower_components/foundation-sites/js/**/*.*')
-		.pipe(gulp.dest('./assets/vendor/foundation-sites/js/'));
+		.pipe(gulp.dest('./../../bower_components/foundation-sites/js/'));
 	gulp.src('./bower_components/bourbon/app/assets/**/*.*')
 		.pipe(gulp.dest('./assets/vendor/bourbon'));
 });
@@ -50,7 +50,8 @@ gulp.task('styles', function() {
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions', 'ie >= 9']
 		}))
-		.pipe(gulp.dest('./assets/dist/'))
+		.pipe(gulp.dest('./assets/dist/'));
+	gulp.src('./assets/scss/style.scss')
 		.pipe(sass({
 			outputStyle: 'compressed',
 		}))
@@ -93,35 +94,36 @@ gulp.task('foundation-js', function() {
 		http://foundation.zurb.com/sites/docs/javascript.html */
 
 		// Core Foundation - needed when choosing plugins ala carte
-		'assets/vendor/foundation-sites/js/foundation.core.js',
+		'../../bower_components/foundation-sites/js/foundation.core.js',
 
 		// Choose the individual plugins you want in your project
-		'assets/vendor/foundation-sites/js/foundation.abide.js',
-		'assets/vendor/foundation-sites/js/foundation.accordion.js',
-		'assets/vendor/foundation-sites/js/foundation.accordionMenu.js',
-		'assets/vendor/foundation-sites/js/foundation.drilldown.js',
-		'assets/vendor/foundation-sites/js/foundation.dropdown.js',
-		'assets/vendor/foundation-sites/js/foundation.dropdownMenu.js',
-		'assets/vendor/foundation-sites/js/foundation.equalizer.js',
-		'assets/vendor/foundation-sites/js/foundation.interchange.js',
-		'assets/vendor/foundation-sites/js/foundation.magellan.js',
-		'assets/vendor/foundation-sites/js/foundation.offcanvas.js',
-		'assets/vendor/foundation-sites/js/foundation.orbit.js',
-		'assets/vendor/foundation-sites/js/foundation.responsiveMenu.js',
-		'assets/vendor/foundation-sites/js/foundation.responsiveToggle.js',
-		'assets/vendor/foundation-sites/js/foundation.reveal.js',
-		'assets/vendor/foundation-sites/js/foundation.slider.js',
-		'assets/vendor/foundation-sites/js/foundation.sticky.js',
-		'assets/vendor/foundation-sites/js/foundation.tabs.js',
-		'assets/vendor/foundation-sites/js/foundation.toggler.js',
-		'assets/vendor/foundation-sites/js/foundation.util.box.js',
-		'assets/vendor/foundation-sites/js/foundation.util.keyboard.js',
-		'assets/vendor/foundation-sites/js/foundation.util.mediaQuery.js',
-		'assets/vendor/foundation-sites/js/foundation.util.motion.js',
-		'assets/vendor/foundation-sites/js/foundation.util.nest.js',
-		'assets/vendor/foundation-sites/js/foundation.util.timerAndImageLoader.js',
-		'assets/vendor/foundation-sites/js/foundation.util.touch.js',
-		'assets/vendor/foundation-sites/js/foundation.util.triggers.js',
+		'../../bower_components/foundation-sites/js/foundation.abide.js',
+		'../../bower_components/foundation-sites/js/foundation.accordion.js',
+		'../../bower_components/foundation-sites/js/foundation.accordionMenu.js',
+		'../../bower_components/foundation-sites/js/foundation.drilldown.js',
+		'../../bower_components/foundation-sites/js/foundation.dropdown.js',
+		'../../bower_components/foundation-sites/js/foundation.dropdownMenu.js',
+		'../../bower_components/foundation-sites/js/foundation.equalizer.js',
+		'../../bower_components/foundation-sites/js/foundation.interchange.js',
+		'../../bower_components/foundation-sites/js/foundation.magellan.js',
+		'../../bower_components/foundation-sites/js/foundation.offcanvas.js',
+		'../../bower_components/foundation-sites/js/foundation.orbit.js',
+		'../../bower_components/foundation-sites/js/foundation.responsiveMenu.js',
+		'../../bower_components/foundation-sites/js/foundation.responsiveToggle.js',
+		'../../bower_components/foundation-sites/js/foundation.reveal.js',
+		'../../bower_components/foundation-sites/js/foundation.slider.js',
+		'../../bower_components/foundation-sites/js/foundation.sticky.js',
+		'../../bower_components/foundation-sites/js/foundation.tabs.js',
+		'../../bower_components/foundation-sites/js/foundation.toggler.js',
+		'../../bower_components/foundation-sites/js/foundation.tooltip.js',
+		'../../bower_components/foundation-sites/js/foundation.util.box.js',
+		'../../bower_components/foundation-sites/js/foundation.util.keyboard.js',
+		'../../bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
+		'../../bower_components/foundation-sites/js/foundation.util.motion.js',
+		'../../bower_components/foundation-sites/js/foundation.util.nest.js',
+		'../../bower_components/foundation-sites/js/foundation.util.timerAndImageLoader.js',
+		'../../bower_components/foundation-sites/js/foundation.util.touch.js',
+		'../../bower_components/foundation-sites/js/foundation.util.triggers.js',
 	])
 	.pipe(concat('foundation.js'))
 	.pipe(uglify())

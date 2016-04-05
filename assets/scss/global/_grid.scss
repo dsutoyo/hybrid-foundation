@@ -1,15 +1,15 @@
 @mixin small-column(
 	$columns: null,
-	$gutter: $grid-column-gutter) {
+	$gutter: $grid-column-responsive-gutter) {
 
 	@media only screen {
-		@if not $global-flex {
-			@include grid-column(
+		@if $global-flexbox {
+			@include flex-grid-column(
 				$columns,
 				$gutter);
 		}
 		@else {
-			@include flex-grid-column(
+			@include grid-column(
 				$columns,
 				$gutter);
 		}
@@ -18,16 +18,16 @@
 
 @mixin medium-column(
 	$columns: null,
-	$gutter: $grid-column-gutter) {
+	$gutter: $grid-column-responsive-gutter) {
 
 	@include breakpoint(medium) {
-		@if not $global-flex {
-			@include grid-column(
+		@if $global-flexbox {
+			@include flex-grid-column(
 				$columns,
 				$gutter);
 		}
 		@else {
-			@include flex-grid-column(
+			@include grid-column(
 				$columns,
 				$gutter);
 		}
@@ -36,16 +36,16 @@
 
 @mixin large-column(
 	$columns: null,
-	$gutter: $grid-column-gutter) {
+	$gutter: $grid-column-responsive-gutter) {
 
 	@include breakpoint(large) {
-		@if not $global-flex {
-			@include grid-column(
+		@if $global-flexbox {
+			@include flex-grid-column(
 				$columns,
 				$gutter);
 		}
 		@else {
-			@include flex-grid-column(
+			@include grid-column(
 				$columns,
 				$gutter);
 		}
@@ -54,16 +54,16 @@
 
 @mixin xlarge-column(
 	$columns: null,
-	$gutter: $grid-column-gutter) {
+	$gutter: $grid-column-responsive-gutter) {
 
 	@include breakpoint(xlarge) {
-		@if not $global-flex {
-			@include grid-column(
+		@if $global-flexbox {
+			@include flex-grid-column(
 				$columns,
 				$gutter);
 		}
 		@else {
-			@include flex-grid-column(
+			@include grid-column(
 				$columns,
 				$gutter);
 		}

@@ -1,5 +1,5 @@
 /* # WordPress Specific Styles ===== */
-$column-gutter: map-get($grid-column-responsive-gutter, medium);
+$column-gutter: map-get($grid-column-gutter, medium);
 
 /* ## Skip Link ===== */
 .skip-link {
