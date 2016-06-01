@@ -144,7 +144,7 @@ class Foundationalize_Walker extends Walker_Nav_Menu {
 		if ( $depth == 0 && $this->nav_bar['item_type'] == 'li' ) {
 			$indent = str_repeat("\t", 1);
 			if ( $this->nav_bar['offcanvas'] == true ) {
-				$output .= "\n$indent<ul class=\"submenu menu\">\n";
+				$output .= "\n$indent<ul class=\"submenu menu vertical nested\">\n";
 			}
 			else {
 				$output .= $this->nav_bar['in_top_bar'] == true ? "\n$indent<ul class=\"submenu menu\" data-submenu>\n" : "\n$indent<ul class=\"flyout\">\n";

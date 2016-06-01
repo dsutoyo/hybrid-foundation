@@ -13,8 +13,12 @@
 			array(
 				'theme_location' => 'primary',
 				'depth' => 0,
-				'items_wrap' => '<ul>%3$s</ul>',
+				'items_wrap' => '<ul class="vertical menu" data-accordion-menu>%3$s</ul>',
 				'container' => false,
+				'walker' => new Foundationalize_Walker( array(
+					'item_type' => 'li',
+					'offcanvas' => true
+				)),
 			)
 		);?>
 
