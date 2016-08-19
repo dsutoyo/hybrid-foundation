@@ -1,6 +1,6 @@
 @mixin small-column(
 	$columns: null,
-	$gutter: $grid-column-responsive-gutter) {
+	$gutter: $grid-column-gutter) {
 
 	@media only screen {
 		@if $global-flexbox {
@@ -18,7 +18,7 @@
 
 @mixin medium-column(
 	$columns: null,
-	$gutter: $grid-column-responsive-gutter) {
+	$gutter: $grid-column-gutter) {
 
 	@include breakpoint(medium) {
 		@if $global-flexbox {
@@ -36,7 +36,7 @@
 
 @mixin large-column(
 	$columns: null,
-	$gutter: $grid-column-responsive-gutter) {
+	$gutter: $grid-column-gutter) {
 
 	@include breakpoint(large) {
 		@if $global-flexbox {
@@ -54,7 +54,7 @@
 
 @mixin xlarge-column(
 	$columns: null,
-	$gutter: $grid-column-responsive-gutter) {
+	$gutter: $grid-column-gutter) {
 
 	@include breakpoint(xlarge) {
 		@if $global-flexbox {
