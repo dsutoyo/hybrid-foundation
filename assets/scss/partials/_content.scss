@@ -3,11 +3,11 @@
 /* ## Post Header ===== */
 .entry-byline {
 	margin-bottom: rem-calc(20);
-	color: $chrome-color;
+	color: $medium-gray;
 	font-size: rem-calc(12);
 
 	a {
-		color: $chrome-color;
+		color: $medium-gray;
 
 		&:hover {
 			color: $primary-color;
@@ -20,7 +20,7 @@
 		&:before {
 			content: '/';
 			padding: rem-calc(0 10 0 5);
-			color: $chrome-color;
+			color: $medium-gray;
 		}
 	}
 }
@@ -29,10 +29,10 @@
 .entry-footer {
 	padding: rem-calc(10 0);
 	margin: rem-calc(20 0);
-	color: $chrome-color;
+	color: $medium-gray;
 	font-size: rem-calc(12);
-	border-top: 1px solid $chrome-color-light;
-	border-bottom: 1px solid $chrome-color-light;
+	border-top: 1px solid $light-gray;
+	border-bottom: 1px solid $light-gray;
 }
 
 .loop-nav {
@@ -43,7 +43,7 @@
 		span {
 			display: block;
 			font-size: rem-calc(12);
-			color: $chrome-color;
+			color: $medium-gray;
 		}
 	}
 

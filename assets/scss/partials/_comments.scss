@@ -11,7 +11,7 @@ li.bypostauthor {
 
 	article {
 		padding-bottom: rem-calc(20);
-		border-bottom: 1px solid $chrome-color-light;
+		border-bottom: 1px solid $light-gray;
 	}
 }
 
@@ -51,7 +51,7 @@ li.bypostauthor {
 	.comment-permalink,
 	.comment-edit-link {
 		font-size: rem-calc(12);
-		color: $chrome-color;
+		color: $medium-gray;
 	}
 
 	.ping & {
@@ -71,7 +71,7 @@ li.bypostauthor {
 	margin-bottom: 0;
 	text-align: right;
 	font-size: rem-calc(12);
-	color: $chrome-color;
+	color: $medium-gray;
 }
 .comment-reply-link:hover {}
 

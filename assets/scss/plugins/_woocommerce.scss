@@ -10,12 +10,12 @@
 					float: left;
 					margin: 0;
 					border-radius: 0;
-					border-color: $chrome-color-light;
+					border-color: $light-gray;
 					border-bottom: none;
 					border-right: none;
 
 					&:last-child {
-						border-right: 1px solid $chrome-color-light;
+						border-right: 1px solid $light-gray;
 					}
 
 					&:before,
@@ -37,7 +37,7 @@
 				background: transparent;
 				border-left: none;
 				border-right: none;
-				border-top: 1px solid $chrome-color-light;
+				border-top: 1px solid $light-gray;
 				border-bottom: none;
 			}
 		}
