@@ -49,7 +49,7 @@ define( 'FOUNDATION_VERSION', '6.2.3');
 add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );
 
 // Register the required plugins
-add_action( 'tgmpa_register', 'hybrid_base_register_required_plugins' );
+// add_action( 'tgmpa_register', 'hybrid_base_register_required_plugins' );
 
 /**
  * Theme setup function.  This function adds support for theme features and defines the default theme
