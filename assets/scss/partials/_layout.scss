@@ -42,6 +42,22 @@
 			@include large-column(4);
 		}
 	}
+
+	.layout-1c-f & {
+		> .wrap {
+			width: 100%;
+			max-width: none;
+		}
+
+		#content {
+			width: 100%;
+		}
+
+		#sidebar-primary,
+		#sidebar-secondary {
+			display: none;
+		}
+	}
 }
 
 #sidebar-subsidiary,

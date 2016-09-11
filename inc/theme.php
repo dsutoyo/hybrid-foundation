@@ -67,9 +67,11 @@ function hybrid_base_register_menus() {
  */
 function hybrid_base_register_layouts() {
 
+
 	hybrid_register_layout( '1c',   array( 'label' => esc_html__( '1 Column',                     'hybrid-base' ), 'image' => '%s/assets/images/layouts/1c.png'   ) );
 	hybrid_register_layout( '2c-l', array( 'label' => esc_html__( '2 Columns: Content / Sidebar', 'hybrid-base' ), 'image' => '%s/assets/images/layouts/2c-l.png' ) );
 	hybrid_register_layout( '2c-r', array( 'label' => esc_html__( '2 Columns: Sidebar / Content', 'hybrid-base' ), 'image' => '%s/assets/images/layouts/2c-r.png' ) );
+	hybrid_register_layout( '1c-f',   array( 'label' => esc_html__( '1 Column Full-Width',                     'hybrid-base' ), 'image' => '%s/assets/images/layouts/1c-f.png'   ) );
 }
 
 /**

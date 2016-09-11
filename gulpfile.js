@@ -1,5 +1,6 @@
 var gulp          = require('gulp');
 var autoprefixer  = require('gulp-autoprefixer');
+var babel         = require('gulp-babel');
 var concat        = require('gulp-concat');
 var rename        = require('gulp-rename');
 var notify        = require('gulp-notify');
@@ -25,11 +26,11 @@ gulp.task('browser-sync', function() {
 // Moving dependencies into place
 // =========================================================
 gulp.task('deps', function() {
-	gulp.src('./bower_components/foundation-sites/scss/**/*.*')
-		.pipe(gulp.dest('./../../bower_components/foundation-sites/scss/'));
-	gulp.src('./bower_components/foundation-sites/js/**/*.*')
-		.pipe(gulp.dest('./../../bower_components/foundation-sites/js/'));
-	gulp.src('./bower_components/bourbon/app/assets/**/*.*')
+	gulp.src('./node_modules/foundation-sites/scss/**/*.*')
+		.pipe(gulp.dest('././node_modules/foundation-sites/scss/'));
+	gulp.src('./node_modules/foundation-sites/js/**/*.*')
+		.pipe(gulp.dest('././node_modules/foundation-sites/js/'));
+	gulp.src('./node_modules/bourbon/app/assets/**/*.*')
 		.pipe(gulp.dest('./assets/vendor/bourbon'));
 });
 
@@ -67,15 +68,15 @@ gulp.task('styles', function() {
 
 // Compile our scripts
 // =========================================================
-gulp.task('scripts', ['foundation-js'], function() {
+gulp.task('scripts', function() {
 	return gulp.src('assets/javascripts/**/*.js')
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest('./assets/dist/'))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(uglify()
-		.on('error', notify.onError(function(error) {
-			return "Error: " + error.message;
-		}))
+			.on('error', notify.onError(function(error) {
+				return "Error: " + error.message;
+			}))
 		)
 		.pipe(gulp.dest('./assets/dist/'))
 		.pipe(reload({stream:true}))
@@ -95,46 +96,54 @@ gulp.task('foundation-js', function() {
 		http://foundation.zurb.com/sites/docs/javascript.html */
 
 		// Core Foundation - needed when choosing plugins ala carte
-		'../../bower_components/foundation-sites/js/foundation.core.js',
+		'./node_modules/foundation-sites/js/foundation.core.js',
+		'./node_modules/foundation-sites/js/foundation.util.mediaQuery.js',
 
 		// Choose the individual plugins you want in your project
-		'../../bower_components/foundation-sites/js/foundation.abide.js',
-		'../../bower_components/foundation-sites/js/foundation.accordion.js',
-		'../../bower_components/foundation-sites/js/foundation.accordionMenu.js',
-		'../../bower_components/foundation-sites/js/foundation.drilldown.js',
-		'../../bower_components/foundation-sites/js/foundation.dropdown.js',
-		'../../bower_components/foundation-sites/js/foundation.dropdownMenu.js',
-		'../../bower_components/foundation-sites/js/foundation.equalizer.js',
-		'../../bower_components/foundation-sites/js/foundation.interchange.js',
-		'../../bower_components/foundation-sites/js/foundation.magellan.js',
-		'../../bower_components/foundation-sites/js/foundation.offcanvas.js',
-		'../../bower_components/foundation-sites/js/foundation.orbit.js',
-		'../../bower_components/foundation-sites/js/foundation.responsiveMenu.js',
-		'../../bower_components/foundation-sites/js/foundation.responsiveToggle.js',
-		'../../bower_components/foundation-sites/js/foundation.reveal.js',
-		'../../bower_components/foundation-sites/js/foundation.slider.js',
-		'../../bower_components/foundation-sites/js/foundation.sticky.js',
-		'../../bower_components/foundation-sites/js/foundation.tabs.js',
-		'../../bower_components/foundation-sites/js/foundation.toggler.js',
-		'../../bower_components/foundation-sites/js/foundation.tooltip.js',
-		'../../bower_components/foundation-sites/js/foundation.util.box.js',
-		'../../bower_components/foundation-sites/js/foundation.util.keyboard.js',
-		'../../bower_components/foundation-sites/js/foundation.util.mediaQuery.js',
-		'../../bower_components/foundation-sites/js/foundation.util.motion.js',
-		'../../bower_components/foundation-sites/js/foundation.util.nest.js',
-		'../../bower_components/foundation-sites/js/foundation.util.timerAndImageLoader.js',
-		'../../bower_components/foundation-sites/js/foundation.util.touch.js',
-		'../../bower_components/foundation-sites/js/foundation.util.triggers.js',
+		'./node_modules/foundation-sites/js/foundation.abide.js',
+		'./node_modules/foundation-sites/js/foundation.accordion.js',
+		'./node_modules/foundation-sites/js/foundation.accordionMenu.js',
+		'./node_modules/foundation-sites/js/foundation.drilldown.js',
+		'./node_modules/foundation-sites/js/foundation.dropdown.js',
+		'./node_modules/foundation-sites/js/foundation.dropdownMenu.js',
+		'./node_modules/foundation-sites/js/foundation.equalizer.js',
+		'./node_modules/foundation-sites/js/foundation.interchange.js',
+		'./node_modules/foundation-sites/js/foundation.magellan.js',
+		'./node_modules/foundation-sites/js/foundation.offcanvas.js',
+		'./node_modules/foundation-sites/js/foundation.orbit.js',
+		'./node_modules/foundation-sites/js/foundation.responsiveMenu.js',
+		'./node_modules/foundation-sites/js/foundation.responsiveToggle.js',
+		'./node_modules/foundation-sites/js/foundation.reveal.js',
+		'./node_modules/foundation-sites/js/foundation.slider.js',
+		'./node_modules/foundation-sites/js/foundation.sticky.js',
+		'./node_modules/foundation-sites/js/foundation.tabs.js',
+		'./node_modules/foundation-sites/js/foundation.toggler.js',
+		'./node_modules/foundation-sites/js/foundation.tooltip.js',
+		'./node_modules/foundation-sites/js/foundation.util.box.js',
+		'./node_modules/foundation-sites/js/foundation.util.keyboard.js',
+		'./node_modules/foundation-sites/js/foundation.util.motion.js',
+		'./node_modules/foundation-sites/js/foundation.util.nest.js',
+		'./node_modules/foundation-sites/js/foundation.util.timerAndImageLoader.js',
+		'./node_modules/foundation-sites/js/foundation.util.touch.js',
+		'./node_modules/foundation-sites/js/foundation.util.triggers.js',
 	])
+	.pipe(babel({
+		presets: ['es2015'],
+		compact: true
+	}))
 	.pipe(concat('foundation.js'))
+	.pipe(gulp.dest('./assets/dist/'))
+	.pipe(rename({suffix: '.min'}))
 	.pipe(uglify())
-	.pipe(gulp.dest('./assets/dist/'));
+	.pipe(gulp.dest('./assets/dist/'))
+	.pipe(notify({ message: "Foundation JS task complete!"}));
 });
 
 // Watch function
 // =========================================================
 gulp.task('watch', ['styles', 'scripts'], function() {
 	gulp.watch('./assets/scss/**/*.scss', ['styles']);
+	gulp.watch('./assets/javascripts/**/*.js', ['scripts']);
 })
 
 // Package it up for distribution
@@ -147,8 +156,8 @@ gulp.task('package', function() {
 
 // Build an updated package
 // =========================================================
-gulp.task('build', ['styles', 'package']);
+gulp.task('build', ['styles', 'scripts', 'package']);
 
 // Default task
 // =========================================================
-gulp.task('default', ['watch', 'browser-sync']);
+gulp.task('default', ['watch', 'foundation-js', 'browser-sync']);
