@@ -2,7 +2,7 @@
  * Theme Name:  Hybrid Foundation
  * Theme URI:   http://github.com/dsutoyo/hybrid-foundation
  * Description: A fork of Hybrid Base, integrated with Zurb Foundation
- * Version:     3.1.0
+ * Version:     3.1.1
  * Author:      David Sutoyo
  * Author URI:  http://davidsutoyo.com
  * Tags:        one-column, two-columns, custom-background, custom-header, custom-menu, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready, Foundation, sass
@@ -26,48 +26,48 @@
  * --------------------------------------------------------------------------- */
 
 // Sass utilities
-@import '../../bower_components/foundation-sites/scss/util/util';
+@import '../../node_modules/foundation-sites/scss/util/util';
 
 // Global variables and styles
-@import '../../bower_components/foundation-sites/scss/global';
+@import '../../node_modules/foundation-sites/scss/global';
 
 // Components
-@import '../../bower_components/foundation-sites/scss/grid/grid';
-@import '../../bower_components/foundation-sites/scss/typography/typography';
-@import '../../bower_components/foundation-sites/scss/forms/forms';
-@import '../../bower_components/foundation-sites/scss/components/visibility';
-@import '../../bower_components/foundation-sites/scss/components/float';
-@import '../../bower_components/foundation-sites/scss/components/button';
-@import '../../bower_components/foundation-sites/scss/components/button-group';
-@import '../../bower_components/foundation-sites/scss/components/accordion-menu';
-@import '../../bower_components/foundation-sites/scss/components/accordion';
-@import '../../bower_components/foundation-sites/scss/components/badge';
-@import '../../bower_components/foundation-sites/scss/components/breadcrumbs';
-@import '../../bower_components/foundation-sites/scss/components/callout';
-@import '../../bower_components/foundation-sites/scss/components/close-button';
-@import '../../bower_components/foundation-sites/scss/components/drilldown';
-@import '../../bower_components/foundation-sites/scss/components/dropdown-menu';
-@import '../../bower_components/foundation-sites/scss/components/dropdown';
-@import '../../bower_components/foundation-sites/scss/components/flex';
-@import '../../bower_components/foundation-sites/scss/components/flex-video';
-@import '../../bower_components/foundation-sites/scss/components/label';
-@import '../../bower_components/foundation-sites/scss/components/media-object';
-@import '../../bower_components/foundation-sites/scss/components/menu';
-@import '../../bower_components/foundation-sites/scss/components/menu-icon';
-@import '../../bower_components/foundation-sites/scss/components/off-canvas';
-@import '../../bower_components/foundation-sites/scss/components/orbit';
-@import '../../bower_components/foundation-sites/scss/components/pagination';
-@import '../../bower_components/foundation-sites/scss/components/progress-bar';
-@import '../../bower_components/foundation-sites/scss/components/reveal';
-@import '../../bower_components/foundation-sites/scss/components/slider';
-@import '../../bower_components/foundation-sites/scss/components/sticky';
-@import '../../bower_components/foundation-sites/scss/components/switch';
-@import '../../bower_components/foundation-sites/scss/components/table';
-@import '../../bower_components/foundation-sites/scss/components/tabs';
-@import '../../bower_components/foundation-sites/scss/components/title-bar';
-@import '../../bower_components/foundation-sites/scss/components/top-bar';
-@import '../../bower_components/foundation-sites/scss/components/thumbnail';
-@import '../../bower_components/foundation-sites/scss/components/tooltip';
+@import '../../node_modules/foundation-sites/scss/grid/grid';
+@import '../../node_modules/foundation-sites/scss/typography/typography';
+@import '../../node_modules/foundation-sites/scss/forms/forms';
+@import '../../node_modules/foundation-sites/scss/components/visibility';
+@import '../../node_modules/foundation-sites/scss/components/float';
+@import '../../node_modules/foundation-sites/scss/components/button';
+@import '../../node_modules/foundation-sites/scss/components/button-group';
+@import '../../node_modules/foundation-sites/scss/components/accordion-menu';
+@import '../../node_modules/foundation-sites/scss/components/accordion';
+@import '../../node_modules/foundation-sites/scss/components/badge';
+@import '../../node_modules/foundation-sites/scss/components/breadcrumbs';
+@import '../../node_modules/foundation-sites/scss/components/callout';
+@import '../../node_modules/foundation-sites/scss/components/close-button';
+@import '../../node_modules/foundation-sites/scss/components/drilldown';
+@import '../../node_modules/foundation-sites/scss/components/dropdown-menu';
+@import '../../node_modules/foundation-sites/scss/components/dropdown';
+@import '../../node_modules/foundation-sites/scss/components/flex';
+@import '../../node_modules/foundation-sites/scss/components/flex-video';
+@import '../../node_modules/foundation-sites/scss/components/label';
+@import '../../node_modules/foundation-sites/scss/components/media-object';
+@import '../../node_modules/foundation-sites/scss/components/menu';
+@import '../../node_modules/foundation-sites/scss/components/menu-icon';
+@import '../../node_modules/foundation-sites/scss/components/off-canvas';
+@import '../../node_modules/foundation-sites/scss/components/orbit';
+@import '../../node_modules/foundation-sites/scss/components/pagination';
+@import '../../node_modules/foundation-sites/scss/components/progress-bar';
+@import '../../node_modules/foundation-sites/scss/components/reveal';
+@import '../../node_modules/foundation-sites/scss/components/slider';
+@import '../../node_modules/foundation-sites/scss/components/sticky';
+@import '../../node_modules/foundation-sites/scss/components/switch';
+@import '../../node_modules/foundation-sites/scss/components/table';
+@import '../../node_modules/foundation-sites/scss/components/tabs';
+@import '../../node_modules/foundation-sites/scss/components/title-bar';
+@import '../../node_modules/foundation-sites/scss/components/top-bar';
+@import '../../node_modules/foundation-sites/scss/components/thumbnail';
+@import '../../node_modules/foundation-sites/scss/components/tooltip';
 
 @mixin foundation-everything($flex: false) {
 	$global-flexbox: $flex !global;
@@ -123,13 +123,13 @@
 
 // ===== Import some Bourbon helpers. Proceed with caution.
 // Use with font-face
-@import "../../bower_components/bourbon/app/assets/stylesheets/functions/contains";
-@import "../../bower_components/bourbon/app/assets/stylesheets/helpers/font-source-declaration";
+@import "../../node_modules/bourbon/app/assets/stylesheets/functions/contains";
+@import "../../node_modules/bourbon/app/assets/stylesheets/helpers/font-source-declaration";
 
-@import "../../bower_components/bourbon/app/assets/stylesheets/addons/hide-text";
-@import "../../bower_components/bourbon/app/assets/stylesheets/css3/font-face";
-@import "../../bower_components/bourbon/app/assets/stylesheets/css3/hidpi-media-query";
-@import "../../bower_components/bourbon/app/assets/stylesheets/css3/placeholder";
+@import "../../node_modules/bourbon/app/assets/stylesheets/addons/hide-text";
+@import "../../node_modules/bourbon/app/assets/stylesheets/css3/font-face";
+@import "../../node_modules/bourbon/app/assets/stylesheets/css3/hidpi-media-query";
+@import "../../node_modules/bourbon/app/assets/stylesheets/css3/placeholder";
 
 @import 'global/variables';
 @import "global/foundation";

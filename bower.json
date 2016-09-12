@@ -1,9 +1,0 @@
-{
-    "name": "hybrid-foundation",
-    "version": "3.1.0",
-    "description": "WordPress starter theme",
-    "dependencies": {
-       "bourbon": "^4.2.0",
-       "foundation-sites": "^6.2.0"
-    }
-}
