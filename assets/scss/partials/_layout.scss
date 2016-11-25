@@ -33,13 +33,13 @@
 	.layout-2c-r & {
 		#content {
 			@include small-column(12);
-			@include medium-column(8);
-			@include large-column(8);
+			@include medium-column(8,2);
+			@include large-column(8,2);
 		}
 		#sidebar-primary {
 			@include small-column(12);
-			@include medium-column(4);
-			@include large-column(4);
+			@include medium-column(4,1);
+			@include large-column(4,1);
 		}
 	}
 

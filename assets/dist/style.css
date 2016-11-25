@@ -3,7 +3,7 @@
  * Theme Name:  Hybrid Foundation
  * Theme URI:   http://github.com/dsutoyo/hybrid-foundation
  * Description: A fork of Hybrid Base, integrated with Zurb Foundation
- * Version:     3.1.0
+ * Version:     3.1.1
  * Author:      David Sutoyo
  * Author URI:  http://davidsutoyo.com
  * Tags:        one-column, two-columns, custom-background, custom-header, custom-menu, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready, Foundation, sass
@@ -6184,6 +6184,8 @@ figcaption {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     max-width: 66.66667%;
+    -ms-flex-order: 2;
+        order: 2;
   }
 }
 
@@ -6203,6 +6205,8 @@ figcaption {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     max-width: 66.66667%;
+    -ms-flex-order: 2;
+        order: 2;
   }
 }
 
@@ -6241,6 +6245,8 @@ figcaption {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     max-width: 33.33333%;
+    -ms-flex-order: 1;
+        order: 1;
   }
 }
 
@@ -6260,6 +6266,8 @@ figcaption {
     padding-left: 0.625rem;
     padding-right: 0.625rem;
     max-width: 33.33333%;
+    -ms-flex-order: 1;
+        order: 1;
   }
 }
 

@@ -1,5 +1,6 @@
 @mixin small-column(
 	$columns: null,
+	$order: null,
 	$gutter: $grid-column-gutter) {
 
 	@media only screen {
@@ -7,6 +8,9 @@
 			@include flex-grid-column(
 				$columns,
 				$gutter);
+			@if $gutter != null {
+				@include flex-order($order);
+			}
 		}
 		@else {
 			@include grid-column(
@@ -18,6 +22,7 @@
 
 @mixin medium-column(
 	$columns: null,
+	$order: null,
 	$gutter: $grid-column-gutter) {
 
 	@include breakpoint(medium) {
@@ -25,6 +30,9 @@
 			@include flex-grid-column(
 				$columns,
 				$gutter);
+			@if $gutter != null {
+				@include flex-order($order);
+			}
 		}
 		@else {
 			@include grid-column(
@@ -36,6 +44,7 @@
 
 @mixin large-column(
 	$columns: null,
+	$order: null,
 	$gutter: $grid-column-gutter) {
 
 	@include breakpoint(large) {
@@ -43,6 +52,9 @@
 			@include flex-grid-column(
 				$columns,
 				$gutter);
+			@if $gutter != null {
+				@include flex-order($order);
+			}
 		}
 		@else {
 			@include grid-column(
@@ -54,6 +66,7 @@
 
 @mixin xlarge-column(
 	$columns: null,
+	$order: null,
 	$gutter: $grid-column-gutter) {
 
 	@include breakpoint(xlarge) {
@@ -61,6 +74,9 @@
 			@include flex-grid-column(
 				$columns,
 				$gutter);
+			@if $gutter != null {
+				@include flex-order($order);
+			}
 		}
 		@else {
 			@include grid-column(
