@@ -141,7 +141,7 @@ function hybrid_base_enqueue_styles() {
 	}
 
 	/* Load active theme stylesheet. */
-	wp_enqueue_style( 'style', trailingslashit( get_stylesheet_directory_uri() ) . 'assets/dist/style.min.css' );
+	wp_enqueue_style( 'style', trailingslashit( get_stylesheet_directory_uri() ) . 'assets/dist/style.min.css', array(), filemtime( get_stylesheet_directory() . '/assets/dist/style.min.css' ) );
 }
 
 /**
