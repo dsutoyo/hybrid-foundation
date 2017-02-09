@@ -9,7 +9,7 @@
 		display: none;
 	}
 
-	@media #{$medium-up} {
+	@include breakpoint(medium up) {
 		.top-bar {
 			display: flex;
 		}

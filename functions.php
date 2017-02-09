@@ -43,7 +43,7 @@ new Hybrid();
 define( 'THEME_VERSION', '3.1.1' );
 
 // Specify our Foundation version
-define( 'FOUNDATION_VERSION', '6.2.3');
+define( 'FOUNDATION_VERSION', '6.3.0');
 
 // Do theme setup on the 'after_setup_theme' hook.
 add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );

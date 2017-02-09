@@ -4,7 +4,7 @@
 	"author": "David Sutoyo",
 	"description": "Hybrid Foundation starter theme",
 	"dependencies": {
-		"foundation-sites": "^6.2.0",
+		"foundation-sites": "^6.3.0",
 		"bourbon": "^4.2.0"
 	},
 	"devDependencies": {
