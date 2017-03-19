@@ -1,10 +1,10 @@
 {
 	"name": "hybrid-foundation",
-	"version": "3.1.1",
+	"version": "3.1.2",
 	"author": "David Sutoyo",
 	"description": "Hybrid Foundation starter theme",
 	"dependencies": {
-		"foundation-sites": "^6.3.0",
+		"foundation-sites": "^6.3.1",
 		"bourbon": "^4.2.0"
 	},
 	"devDependencies": {

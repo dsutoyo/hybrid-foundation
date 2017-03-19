@@ -1,24 +1,140 @@
 /* # Beaver Builder ===== */
-#container {
-	.fl-builder-content {
-		@include grid-row(nest);
-	}
+body .fl-row {
+	margin-left: -$grid-column-gutter/2;
+	margin-right: -$grid-column-gutter/2;
+}
 
-	.fl-col-small {
-		max-width: none;
+/* # Restore styles for Beaver Builder settings ===== */
+.fl-builder-lightbox {
+	select {
+		-webkit-appearance: menulist;
 	}
 }
 
-.layout-1c-f #container {
-	.fl-builder-content {
-		margin: 0;
+/* # Restore styles for WP admin elements in Beaver Builder ===== */
+.wordpress .wp-core-ui {
+	.attachment .thumbnail {
+		margin-bottom: 0;
 	}
 
-	.fl-row-full-width {
-		> .fl-row-content-wrap {
-			@media screen and (min-width: #{$row-width}) {
-				@include grid-row(nest);
-			}
+	select {
+		border: 1px solid #ddd;
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+		background-color: #fff;
+		background-image: none;
+		color: #32373c;
+		height: 28px;
+		margin: 11px 2% 1px 1px;
+		outline: 0;
+		transition: 50ms border-color ease-in-out;
+		-webkit-appearance: menulist;
+	}
+
+	.media-toolbar-primary .search {
+		border-radius: 0;
+		box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+		padding: 4px;
+		height: auto;
+	}
+}
+
+.wordpress .media-sidebar {
+	h1, h2, h3, h4, h5, h6 {
+		font-family: "Open Sans", sans-serif;
+	}
+
+	.setting input[type="tel"],
+	.setting input[type="text"],
+	.setting input[type="password"],
+	.setting input[type="number"],
+	.setting input[type="search"],
+	.setting input[type="email"],
+	.setting input[type="url"],
+	.setting textarea {
+		border-radius: 0;
+		height: auto;
+	}
+}
+
+.wordpress .wp-core-ui {
+	.compat-attachment-fields {
+		th {
+			border: none;
 		}
+
+		tbody {
+			background: transparent;
+			border: none;
+		}
+	}
+
+	.label,
+	label {
+		font-size: 12px;
+		background: transparent;
+	}
+}
+
+.wordpress .wp-core-ui {
+	.attachment-display-settings {
+		select {
+			width: auto;
+			margin-top: 3px;
+		}
+	}
+}
+
+.wordpress .wp-core-ui {
+	.alignleft {
+		margin: 0;
+	}
+}
+
+/* My Eyes Are Up Here === */
+.wordpress .wp-core-ui {
+	.post-thumbnail-preview {
+		background: #f5f5f5;
+		background-image: -webkit-gradient(linear, left bottom, left top, from(#f5f5f5), to(#fafafa));
+		background-image: -webkit-linear-gradient(bottom, #f5f5f5, #fafafa);
+		background-image: -moz-linear-gradient(bottom, #f5f5f5, #fafafa);
+		background-image: -o-linear-gradient(bottom, #f5f5f5, #fafafa);
+		background-image: linear-gradient(to top, #f5f5f5, #fafafa);
+		border-color: #dfdfdf;
+		overflow: auto;
+		margin: 0 0 20px 20px;
+		padding: 10px;
+		border-width: 1px;
+		border-style: solid;
+		border-radius: 3px;
+		font-size: 12px;
+		line-height: 0.9;
+		max-width: 160px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+
+	.post-thumbnail-preview .preview-wrap {
+		display: inline-block;
+		margin-top: 5px;
+		margin-right: 5px;
+		background: url(/wp-admin/images/wpspin_light.gif) no-repeat center;
+	}
+
+	.post-thumbnail-preview .preview-wrap img {
+		max-width: 100%;
+		width: auto;
+		max-height: 50px;
+		height: auto;
+	}
+
+	.media-modal .compat-field-face_detection .label {
+		margin-right: 0;
+	}
+
+	.face-detect-large-hidden,
+	.face-detect-large-hidden-copy {
+		position: absolute;
+		left: 9999px;
+		top: -9999px;
 	}
 }

@@ -61,26 +61,42 @@
 }
 
 .alignright {
-	float: right;
-	margin: 0 0 $grid-column-gutter/2 $grid-column-gutter/2;
+	margin: 0 0 $grid-column-gutter/2 0;
+
+	@include breakpoint(medium up) {
+		float: right;
+		margin: 0 0 $grid-column-gutter/2 $grid-column-gutter/2;
+	}
 }
 
 .alignleft {
-	float: left;
-	margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
+	margin: 0 0 $grid-column-gutter/2 0;
+
+	@include breakpoint(medium up) {
+		float: left;
+		margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
+	}
 }
 
 a img.alignright {
-	float: right;
-	margin: 0 0 $grid-column-gutter/2 $grid-column-gutter/2;
-}
+	margin: 0 0 $grid-column-gutter/2 0;
 
-a img.alignnone {
-	margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
+	@include breakpoint(medium up) {
+		float: right;
+		margin: 0 0 $grid-column-gutter/2 $grid-column-gutter/2;
+	}
 }
 
 a img.alignleft {
-	float: left;
+	margin: 0 0 $grid-column-gutter/2 0;
+
+	@include breakpoint(medium up) {
+		float: left;
+		margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
+	}
+}
+
+a img.alignnone {
 	margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
 }
 
@@ -119,13 +135,21 @@ img.aligncenter {
 }
 
 .wp-caption.alignleft {
-	margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
-	padding: 0;
+	margin: 0 0 $grid-column-gutter/2 0;
+
+	@include breakpoint(medium up) {
+		margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
+		padding: 0;
+	}
 }
 
 .wp-caption.alignright {
-	margin: 0 0 $grid-column-gutter/2 $grid-column-gutter/2;
-	padding: 0;
+	margin: 0 0 $grid-column-gutter/2 0;
+
+	@include breakpoint(medium up) {
+		margin: 0 0 $grid-column-gutter/2 $grid-column-gutter/2;
+		padding: 0;
+	}
 }
 
 .wp-caption img {
