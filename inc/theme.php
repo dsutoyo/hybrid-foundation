@@ -203,10 +203,6 @@ function hybrid_base_theme_layout( $theme_layout ) {
 		if ( is_front_page() ) {
 			$theme_layout = '1c';
 		}
-
-		elseif ( is_page_template( 'template-builder.php' ) ) {
-			$theme_layout = '1c';
-		}
 	}
 
 	return $theme_layout;
