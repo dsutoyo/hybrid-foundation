@@ -13,7 +13,7 @@
  *
  * @package    HybridFoundation
  * @subpackage Functions
- * @version    3.1.1
+ * @version    3.1.3
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2013 - 2015, David Sutoyo
  * @link       https://github.com/dsutoyo/hybrid-foundation
@@ -25,14 +25,14 @@ $hybrid_base_dir = trailingslashit( get_template_directory() );
 
 // Load the Hybrid Core framework and theme files.
 require_once( $hybrid_base_dir . 'library/hybrid.php' );
-require_once( $hybrid_base_dir . 'inc/custom-background.php' );
+// require_once( $hybrid_base_dir . 'inc/custom-background.php' );
 require_once( $hybrid_base_dir . 'inc/custom-header.php' );
 require_once( $hybrid_base_dir . 'inc/theme.php' );
 require_once( $hybrid_base_dir . 'inc/walker.php' );
 require_once( $hybrid_base_dir . 'inc/class-tgm-plugin-activation.php');
 
-require_once( 'titan-framework/titan-framework-embedder.php' );
-require_once( $hybrid_base_dir . 'inc/titan-options.php' );
+// require_once( 'titan-framework/titan-framework-embedder.php' );
+// require_once( $hybrid_base_dir . 'inc/titan-options.php' );
 
 
 // Launch the Hybrid Core framework.
@@ -40,7 +40,7 @@ new Hybrid();
 
 /* Define Constants. */
 // Theme Version
-define( 'THEME_VERSION', '3.1.2' );
+define( 'THEME_VERSION', '3.1.3' );
 
 // Specify our Foundation version
 define( 'FOUNDATION_VERSION', '6.3.1');

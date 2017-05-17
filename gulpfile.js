@@ -25,17 +25,6 @@ gulp.task('browser-sync', function() {
 	});
 });
 
-// Moving dependencies into place
-// =========================================================
-gulp.task('deps', function() {
-	gulp.src('./node_modules/foundation-sites/scss/**/*.*')
-		.pipe(gulp.dest('././node_modules/foundation-sites/scss/'));
-	gulp.src('./node_modules/foundation-sites/js/**/*.*')
-		.pipe(gulp.dest('././node_modules/foundation-sites/js/'));
-	gulp.src('./node_modules/bourbon/app/assets/**/*.*')
-		.pipe(gulp.dest('./assets/vendor/bourbon'));
-});
-
 // Compile our stylesheets
 // =========================================================
 gulp.task('styles', function() {
