@@ -60,10 +60,11 @@ gulp.task('styles', function() {
 		.pipe(cleanCSS({
 			keepSpecialComments:0
 		}))
-		.pipe( header() )
+		.pipe(header())
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./assets/dist/'))
-		.pipe(reload({stream:true}));
+		.pipe(reload({stream:true}))
+		.pipe(notify({message: "Styles task complete!"}));
 });
 
 // Compile our scripts
@@ -80,7 +81,7 @@ gulp.task('scripts', function() {
 		)
 		.pipe(gulp.dest('./assets/dist/'))
 		.pipe(reload({stream:true}))
-		.pipe(notify({ message: "Scripts task complete!"}));
+		.pipe(notify({message: "Scripts task complete!"}));
 });
 
 // Foundation JS task, which gives us flexibility to choose what plugins we want
