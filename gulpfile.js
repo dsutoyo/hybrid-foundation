@@ -1,7 +1,9 @@
 var gulp          = require('gulp');
 var autoprefixer  = require('gulp-autoprefixer');
 var babel         = require('gulp-babel');
+var cleanCSS      = require('gulp-clean-css');
 var concat        = require('gulp-concat');
+var header        = require('gulp-header');
 var rename        = require('gulp-rename');
 var notify        = require('gulp-notify');
 var sass          = require('gulp-sass');
@@ -43,6 +45,7 @@ gulp.task('styles', function() {
 		}))
 		.pipe(gulp.dest('./assets/stylesheets/'));
 	gulp.src('./assets/scss/style.scss')
+		.pipe(sourcemaps.init())
 		.pipe(sass({
 			outputStyle: 'expanded',
 			sourceComments: 'normal'
@@ -52,15 +55,12 @@ gulp.task('styles', function() {
 		.pipe(autoprefixer({
 			browsers: ['last 2 versions', 'ie >= 9']
 		}))
-		.pipe(gulp.dest('./assets/dist/'));
-	gulp.src('./assets/scss/style.scss')
-		.pipe(sass({
-			outputStyle: 'compressed',
+		.pipe(gulp.dest('./assets/dist/'))
+		.pipe(rename({suffix: '.min'}))
+		.pipe(cleanCSS({
+			keepSpecialComments:0
 		}))
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions', 'ie >= 9']
-		}))
-		.pipe(rename("style.min.css"))
+		.pipe( header() )
 		.pipe(sourcemaps.write('.'))
 		.pipe(gulp.dest('./assets/dist/'))
 		.pipe(reload({stream:true}));

@@ -2226,10 +2226,6 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #cacaca;
 }
-input::-moz-placeholder,
-textarea::-moz-placeholder {
-  color: #cacaca;
-}
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #cacaca;
@@ -2496,9 +2492,6 @@ select[multiple] {
 
 /* line 48, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_error.scss */
 .is-invalid-input:not(:focus)::-webkit-input-placeholder {
-  color: #a3112d;
-}
-.is-invalid-input:not(:focus)::-moz-placeholder {
   color: #a3112d;
 }
 .is-invalid-input:not(:focus):-ms-input-placeholder {
@@ -3377,7 +3370,6 @@ select[multiple] {
   -ms-flex-pack: start;
       justify-content: flex-start;
   -ms-flex-align: start;
-      -ms-grid-row-align: flex-start;
       align-items: flex-start;
 }
 
@@ -3417,7 +3409,6 @@ select[multiple] {
     -ms-flex-pack: start;
         justify-content: flex-start;
     -ms-flex-align: start;
-        -ms-grid-row-align: flex-start;
         align-items: flex-start;
   }
 }
@@ -3458,7 +3449,6 @@ select[multiple] {
     -ms-flex-pack: start;
         justify-content: flex-start;
     -ms-flex-align: start;
-        -ms-grid-row-align: flex-start;
         align-items: flex-start;
   }
 }
@@ -3504,6 +3494,7 @@ select[multiple] {
 .menu.icon-top > li > a i,
 .menu.icon-top > li > a svg {
   -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
       align-self: stretch;
   margin-bottom: 0.25rem;
   text-align: center;
@@ -5993,7 +5984,6 @@ a.thumbnail image {
 /* line 11, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_flex.scss */
 .align-top {
   -ms-flex-align: start;
-      -ms-grid-row-align: flex-start;
       align-items: flex-start;
 }
 
@@ -6006,7 +5996,6 @@ a.thumbnail image {
 /* line 11, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_flex.scss */
 .align-bottom {
   -ms-flex-align: end;
-      -ms-grid-row-align: flex-end;
       align-items: flex-end;
 }
 
@@ -6019,26 +6008,26 @@ a.thumbnail image {
 /* line 11, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_flex.scss */
 .align-middle {
   -ms-flex-align: center;
-      -ms-grid-row-align: center;
       align-items: center;
 }
 
 /* line 15, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_flex.scss */
 .align-self-middle {
   -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
 }
 
 /* line 11, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_flex.scss */
 .align-stretch {
   -ms-flex-align: stretch;
-      -ms-grid-row-align: stretch;
       align-items: stretch;
 }
 
 /* line 15, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_flex.scss */
 .align-self-stretch {
   -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
       align-self: stretch;
 }
 
@@ -6954,6 +6943,102 @@ li.description {
 /* line 157, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/util/_mixins.scss */
 #footer .wrap::after {
   clear: both;
+}
+
+/* # Posts ===== */
+/* ## Post Header ===== */
+/* line 4, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.entry-byline {
+  margin-bottom: 1.42857rem;
+  color: #cacaca;
+  font-size: 0.85714rem;
+}
+
+/* line 9, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.entry-byline a {
+  color: #cacaca;
+}
+
+/* line 12, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.entry-byline a:hover {
+  color: #008fce;
+}
+
+/* line 20, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.entry-byline .comments-link:before,
+.entry-byline .entry-published:before,
+.entry-byline .post-edit-link:before {
+  content: '/';
+  padding: 0 0.71429rem 0 0.35714rem;
+  color: #cacaca;
+}
+
+/* ## Post Footer ===== */
+/* line 29, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.entry-footer {
+  padding: 0.71429rem 0;
+  margin: 1.42857rem 0;
+  color: #cacaca;
+  font-size: 0.85714rem;
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+}
+
+/* line 39, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.loop-nav .prev,
+.loop-nav .next {
+  float: left;
+}
+
+/* line 43, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.loop-nav .prev span,
+.loop-nav .next span {
+  display: block;
+  font-size: 0.85714rem;
+  color: #cacaca;
+}
+
+/* line 50, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.loop-nav .prev {
+  width: 50%;
+}
+
+/* line 54, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.loop-nav .next {
+  width: 100%;
+}
+
+/* line 58, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.loop-nav .prev + .next {
+  width: 50%;
+}
+
+/* line 62, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
+.loop-nav .next {
+  text-align: right;
+}
+
+/* # Mobile Menu ===== */
+/* line 2, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_offcanvas.scss */
+.off-canvas {
+  background-color: transparent;
+}
+
+/* line 7, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_offcanvas.scss */
+.off-canvas-menu a {
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+
+/* line 12, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_offcanvas.scss */
+.off-canvas-menu .nested {
+  margin-left: 0;
+}
+
+/* line 15, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_offcanvas.scss */
+.off-canvas-menu .nested a {
+  padding-left: 2.28571rem;
+  border-bottom: 1px solid #222;
 }
 
 /* # Breadcrumbs ===== */
