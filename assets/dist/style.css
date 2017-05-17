@@ -545,7 +545,7 @@ template {
 /* line 120, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/_global.scss */
 html {
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 100%;
 }
 
 /* line 126, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/_global.scss */
@@ -635,7 +635,7 @@ pre {
 
 /* line 131, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
 .row {
-  max-width: 71.42857rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
   display: -ms-flexbox;
@@ -646,23 +646,23 @@ pre {
 
 /* line 135, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
 .row .row {
-  margin-right: -1.07143rem;
-  margin-left: -1.07143rem;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
 }
 
 @media print, screen and (min-width: 40em) {
   /* line 135, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
   .row .row {
-    margin-right: -1.07143rem;
-    margin-left: -1.07143rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media print, screen and (min-width: 64em) {
   /* line 135, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
   .row .row {
-    margin-right: -1.07143rem;
-    margin-left: -1.07143rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
@@ -700,8 +700,8 @@ pre {
 .column, .columns {
   -ms-flex: 1 1 0px;
       flex: 1 1 0px;
-  padding-right: 1.07143rem;
-  padding-left: 1.07143rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
   min-width: initial;
 }
 
@@ -1059,8 +1059,8 @@ pre {
 
 /* line 288, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
 .small-uncollapse > .column, .small-uncollapse > .columns {
-  padding-right: 1.07143rem;
-  padding-left: 1.07143rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 
 @media print, screen and (min-width: 40em) {
@@ -1372,8 +1372,8 @@ pre {
   }
   /* line 288, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
   .medium-uncollapse > .column, .medium-uncollapse > .columns {
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
@@ -1686,8 +1686,8 @@ pre {
   }
   /* line 288, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
   .large-uncollapse > .column, .large-uncollapse > .columns {
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
@@ -1700,7 +1700,7 @@ pre {
 
 /* line 299, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_flex-grid.scss */
 .column-block {
-  margin-bottom: 2.14286rem;
+  margin-bottom: 1.875rem;
 }
 
 /* line 78, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_gutter.scss */
@@ -1787,7 +1787,7 @@ h6 small {
 
 /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 h1 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -1795,7 +1795,7 @@ h1 {
 
 /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.3125rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -1803,7 +1803,7 @@ h2 {
 
 /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 h3 {
-  font-size: 1.28571rem;
+  font-size: 1.125rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -1811,7 +1811,7 @@ h3 {
 
 /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 h4 {
-  font-size: 1.14286rem;
+  font-size: 1rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -1819,7 +1819,7 @@ h4 {
 
 /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 h5 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -1827,7 +1827,7 @@ h5 {
 
 /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 h6 {
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 1.4;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -1836,27 +1836,27 @@ h6 {
 @media print, screen and (min-width: 40em) {
   /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
   h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.3125rem;
   }
   /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
   h3 {
-    font-size: 1.28571rem;
+    font-size: 1.125rem;
   }
   /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
   h4 {
-    font-size: 1.14286rem;
+    font-size: 1rem;
   }
   /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
   h5 {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
   /* line 332, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
   h6 {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 }
 
@@ -1881,9 +1881,9 @@ a img {
 /* line 392, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 hr {
   clear: both;
-  max-width: 71.42857rem;
+  max-width: 62.5rem;
   height: 0;
-  margin: 1.42857rem auto;
+  margin: 1.25rem auto;
   border-top: 0;
   border-right: 0;
   border-bottom: 1px solid #cacaca;
@@ -1935,7 +1935,7 @@ dl dt {
 /* line 449, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 blockquote {
   margin: 0 0 1rem;
-  padding: 0.64286rem 1.42857rem 0 1.35714rem;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
   border-left: 1px solid #cacaca;
 }
 
@@ -1948,7 +1948,7 @@ blockquote, blockquote p {
 /* line 461, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 cite {
   display: block;
-  font-size: 0.92857rem;
+  font-size: 0.8125rem;
   color: #8a8a8a;
 }
 
@@ -1971,7 +1971,7 @@ figure {
 
 /* line 484, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 code {
-  padding: 0.14286rem 0.35714rem 0.07143rem;
+  padding: 0.125rem 0.3125rem 0.0625rem;
   border: 1px solid #cacaca;
   background-color: #e9e9e9;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
@@ -1982,7 +1982,7 @@ code {
 /* line 496, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_base.scss */
 kbd {
   margin: 0;
-  padding: 0.14286rem 0.28571rem 0;
+  padding: 0.125rem 0.25rem 0;
   background-color: #e9e9e9;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   color: #0a0a0a;
@@ -1999,7 +1999,7 @@ kbd {
 
 /* line 58, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/typography/_helpers.scss */
 .lead {
-  font-size: 17.5px;
+  font-size: 125%;
   line-height: 1.6;
 }
 
@@ -2184,15 +2184,15 @@ textarea {
   display: block;
   box-sizing: border-box;
   width: 100%;
-  height: 2.78571rem;
-  margin: 0 0 1.14286rem;
-  padding: 0.57143rem;
+  height: 2.4375rem;
+  margin: 0 0 1rem;
+  padding: 0.5rem;
   border: 1px solid #cacaca;
   border-radius: 0;
   background-color: #ffffff;
   box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.1);
   font-family: inherit;
-  font-size: 1.14286rem;
+  font-size: 1rem;
   font-weight: normal;
   color: #0a0a0a;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
@@ -2261,7 +2261,7 @@ input[type='search'] {
 [type='file'],
 [type='checkbox'],
 [type='radio'] {
-  margin: 0 0 1.14286rem;
+  margin: 0 0 1rem;
 }
 
 /* line 17, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_checkbox.scss */
@@ -2269,8 +2269,8 @@ input[type='search'] {
 [type='radio'] + label {
   display: inline-block;
   vertical-align: baseline;
-  margin-left: 0.57143rem;
-  margin-right: 1.14286rem;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
   margin-bottom: 0;
 }
 
@@ -2283,7 +2283,7 @@ input[type='search'] {
 /* line 32, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_checkbox.scss */
 label > [type='checkbox'],
 label > [type='radio'] {
-  margin-right: 0.57143rem;
+  margin-right: 0.5rem;
 }
 
 /* line 38, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_checkbox.scss */
@@ -2295,7 +2295,7 @@ label > [type='radio'] {
 label {
   display: block;
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: normal;
   line-height: 1.8;
   color: #0a0a0a;
@@ -2303,14 +2303,14 @@ label {
 
 /* line 46, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_label.scss */
 label.middle {
-  margin: 0 0 1.14286rem;
-  padding: 0.64286rem 0;
+  margin: 0 0 1rem;
+  padding: 0.5625rem 0;
 }
 
 /* line 22, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_help-text.scss */
 .help-text {
-  margin-top: -0.57143rem;
-  font-size: 0.92857rem;
+  margin-top: -0.5rem;
+  font-size: 0.8125rem;
   font-style: italic;
   color: #0a0a0a;
 }
@@ -2320,7 +2320,7 @@ label.middle {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-bottom: 1.14286rem;
+  margin-bottom: 1rem;
   -ms-flex-align: stretch;
       align-items: stretch;
 }
@@ -2393,10 +2393,10 @@ label.middle {
 .input-group-button input,
 .input-group-button button,
 .input-group-button label {
-  height: 2.85714rem;
+  height: 2.5rem;
   padding-top: 0;
   padding-bottom: 0;
-  font-size: 1.14286rem;
+  font-size: 1rem;
 }
 
 /* line 40, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_fieldset.scss */
@@ -2409,29 +2409,29 @@ fieldset {
 /* line 46, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_fieldset.scss */
 legend {
   max-width: 100%;
-  margin-bottom: 0.57143rem;
+  margin-bottom: 0.5rem;
 }
 
 /* line 51, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_fieldset.scss */
 .fieldset {
-  margin: 1.28571rem 0;
-  padding: 1.42857rem;
+  margin: 1.125rem 0;
+  padding: 1.25rem;
   border: 1px solid #cacaca;
 }
 
 /* line 30, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_fieldset.scss */
 .fieldset legend {
   margin: 0;
-  margin-left: -0.21429rem;
-  padding: 0 0.21429rem;
+  margin-left: -0.1875rem;
+  padding: 0 0.1875rem;
   background: #ffffff;
 }
 
 /* line 82, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_select.scss */
 select {
-  height: 2.78571rem;
-  margin: 0 0 1.14286rem;
-  padding: 0.57143rem;
+  height: 2.4375rem;
+  margin: 0 0 1rem;
+  padding: 0.5rem;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -2439,15 +2439,15 @@ select {
   border-radius: 0;
   background-color: #ffffff;
   font-family: inherit;
-  font-size: 1.14286rem;
+  font-size: 1rem;
   line-height: normal;
   color: #0a0a0a;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
   background-origin: content-box;
-  background-position: right -1.14286rem center;
+  background-position: right -1rem center;
   background-repeat: no-repeat;
   background-size: 9px 6px;
-  padding-right: 1.71429rem;
+  padding-right: 1.5rem;
   transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 }
 
@@ -2509,9 +2509,9 @@ select[multiple] {
 /* line 81, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/forms/_error.scss */
 .form-error {
   display: none;
-  margin-top: -0.57143rem;
-  margin-bottom: 1.14286rem;
-  font-size: 0.85714rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.75rem;
   font-weight: bold;
   color: #a3112d;
 }
@@ -2830,7 +2830,7 @@ select[multiple] {
   padding: 1.25rem 1rem;
   border: 1px solid #e9e9e9;
   border-bottom: 0;
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   line-height: 1;
   color: #008fce;
 }
@@ -2970,7 +2970,7 @@ select[multiple] {
 /* line 48, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_breadcrumbs.scss */
 .breadcrumbs li {
   float: left;
-  font-size: 0.78571rem;
+  font-size: 0.6875rem;
   color: #0a0a0a;
   cursor: default;
   text-transform: uppercase;
@@ -4078,7 +4078,7 @@ select[multiple] {
 .flex-video {
   position: relative;
   height: 0;
-  margin-bottom: 1.14286rem;
+  margin-bottom: 1rem;
   padding-bottom: 75%;
   overflow: hidden;
 }
@@ -4684,9 +4684,9 @@ select[multiple] {
 
 /* line 83, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_pagination.scss */
 .pagination li {
-  margin-right: 0.07143rem;
+  margin-right: 0.0625rem;
   border-radius: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   display: none;
 }
 
@@ -4706,7 +4706,7 @@ select[multiple] {
 .pagination a,
 .pagination button {
   display: block;
-  padding: 0.21429rem 0.71429rem;
+  padding: 0.1875rem 0.625rem;
   border-radius: 0;
   color: #0a0a0a;
 }
@@ -4719,7 +4719,7 @@ select[multiple] {
 
 /* line 165, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_pagination.scss */
 .pagination .current {
-  padding: 0.21429rem 0.71429rem;
+  padding: 0.1875rem 0.625rem;
   background: #008fce;
   color: #ffffff;
   cursor: default;
@@ -4727,7 +4727,7 @@ select[multiple] {
 
 /* line 169, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_pagination.scss */
 .pagination .disabled {
-  padding: 0.21429rem 0.71429rem;
+  padding: 0.1875rem 0.625rem;
   color: #cacaca;
   cursor: not-allowed;
 }
@@ -4739,7 +4739,7 @@ select[multiple] {
 
 /* line 173, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_pagination.scss */
 .pagination .ellipsis::after {
-  padding: 0.21429rem 0.71429rem;
+  padding: 0.1875rem 0.625rem;
   content: '\2026';
   color: #0a0a0a;
 }
@@ -5032,7 +5032,7 @@ html.is-reveal-open body {
   /* line 136, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_reveal.scss */
   .reveal {
     width: 600px;
-    max-width: 71.42857rem;
+    max-width: 62.5rem;
   }
 }
 
@@ -5054,7 +5054,7 @@ html.is-reveal-open body {
   /* line 161, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_reveal.scss */
   .reveal.tiny {
     width: 30%;
-    max-width: 71.42857rem;
+    max-width: 62.5rem;
   }
 }
 
@@ -5062,7 +5062,7 @@ html.is-reveal-open body {
   /* line 162, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_reveal.scss */
   .reveal.small {
     width: 50%;
-    max-width: 71.42857rem;
+    max-width: 62.5rem;
   }
 }
 
@@ -5070,7 +5070,7 @@ html.is-reveal-open body {
   /* line 163, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_reveal.scss */
   .reveal.large {
     width: 90%;
-    max-width: 71.42857rem;
+    max-width: 62.5rem;
   }
 }
 
@@ -5115,7 +5115,7 @@ html.is-reveal-open body {
   position: relative;
   margin-bottom: 1rem;
   outline: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: bold;
   color: #ffffff;
   -webkit-user-select: none;
@@ -5218,7 +5218,7 @@ input:checked + label > .switch-inactive {
 .switch.tiny .switch-paddle {
   width: 3rem;
   height: 1.5rem;
-  font-size: 0.71429rem;
+  font-size: 0.625rem;
 }
 
 /* line 189, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_switch.scss */
@@ -5243,7 +5243,7 @@ input:checked + label > .switch-inactive {
 .switch.small .switch-paddle {
   width: 3.5rem;
   height: 1.75rem;
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
 }
 
 /* line 189, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_switch.scss */
@@ -5268,7 +5268,7 @@ input:checked + label > .switch-inactive {
 .switch.large .switch-paddle {
   width: 5rem;
   height: 2.5rem;
-  font-size: 1.14286rem;
+  font-size: 1rem;
 }
 
 /* line 189, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_switch.scss */
@@ -5301,7 +5301,7 @@ table tfoot {
 
 /* line 115, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_table.scss */
 table caption {
-  padding: 0.57143rem 0.71429rem 0.71429rem;
+  padding: 0.5rem 0.625rem 0.625rem;
   font-weight: bold;
 }
 
@@ -5328,7 +5328,7 @@ table thead th,
 table thead td,
 table tfoot th,
 table tfoot td {
-  padding: 0.57143rem 0.71429rem 0.71429rem;
+  padding: 0.5rem 0.625rem 0.625rem;
   font-weight: bold;
   text-align: left;
 }
@@ -5336,7 +5336,7 @@ table tfoot td {
 /* line 151, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_table.scss */
 table tbody th,
 table tbody td {
-  padding: 0.57143rem 0.71429rem 0.71429rem;
+  padding: 0.5rem 0.625rem 0.625rem;
 }
 
 /* line 83, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_table.scss */
@@ -5479,7 +5479,7 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
 .tabs-title > a {
   display: block;
   padding: 1.25rem 1.5rem;
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   line-height: 1;
   color: #008fce;
 }
@@ -6136,7 +6136,7 @@ a.thumbnail image {
 /* # Foundation Normalization ===== */
 /* line 2, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/global/_foundation.scss */
 address {
-  margin-bottom: 1.14286rem;
+  margin-bottom: 1rem;
   font-style: normal;
 }
 
@@ -6210,21 +6210,21 @@ table th {
 
 /* line 43, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/global/_foundation.scss */
 pre {
-  margin-bottom: 1.14286rem;
-  padding: 1.42857rem;
+  margin-bottom: 1rem;
+  padding: 1.25rem;
   background: #e9e9e9;
 }
 
 /* line 49, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/global/_foundation.scss */
 blockquote {
-  margin-bottom: 1.14286rem;
-  padding: 1.42857rem 1.42857rem 0.07143rem 1.42857rem;
+  margin-bottom: 1rem;
+  padding: 1.25rem 1.25rem 0.0625rem 1.25rem;
   background: #e9e9e9;
 }
 
 /* line 54, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/global/_foundation.scss */
 blockquote cite {
-  margin-top: 0.57143rem;
+  margin-top: 0.5rem;
 }
 
 /* # WordPress Specific Styles ===== */
@@ -6237,23 +6237,23 @@ blockquote cite {
 /* ## Gallery ===== */
 /* line 10, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/global/_wordpress.scss */
 .gallery .gallery-row {
-  margin-right: -1.07143rem;
-  margin-left: -1.07143rem;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
 }
 
 @media print, screen and (min-width: 40em) {
   /* line 10, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/global/_wordpress.scss */
   .gallery .gallery-row {
-    margin-right: -1.07143rem;
-    margin-left: -1.07143rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
 @media print, screen and (min-width: 64em) {
   /* line 10, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/global/_wordpress.scss */
   .gallery .gallery-row {
-    margin-right: -1.07143rem;
-    margin-left: -1.07143rem;
+    margin-right: -0.9375rem;
+    margin-left: -0.9375rem;
   }
 }
 
@@ -6276,8 +6276,8 @@ blockquote cite {
 .gallery .col-1 {
   width: 100%;
   float: left;
-  padding-right: 1.07143rem;
-  padding-left: 1.07143rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 
 /* line 68, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_column.scss */
@@ -6289,8 +6289,8 @@ blockquote cite {
 .gallery .col-2 {
   width: 50%;
   float: left;
-  padding-right: 1.07143rem;
-  padding-left: 1.07143rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 
 /* line 68, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_column.scss */
@@ -6302,8 +6302,8 @@ blockquote cite {
 .gallery .col-3 {
   width: 33.33333%;
   float: left;
-  padding-right: 1.07143rem;
-  padding-left: 1.07143rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 
 /* line 68, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_column.scss */
@@ -6315,8 +6315,8 @@ blockquote cite {
 .gallery .col-4 {
   width: 25%;
   float: left;
-  padding-right: 1.07143rem;
-  padding-left: 1.07143rem;
+  padding-right: 0.9375rem;
+  padding-left: 0.9375rem;
 }
 
 /* line 68, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_column.scss */
@@ -6332,7 +6332,7 @@ blockquote cite {
 
 /* line 23, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/global/_wordpress.scss */
 .gallery .gallery-item .gallery-icon {
-  padding: 1.07143rem;
+  padding: 0.9375rem;
   text-align: center;
 }
 
@@ -6553,8 +6553,8 @@ img.aligncenter {
 
 /* line 170, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/global/_wordpress.scss */
 figcaption {
-  margin-top: 0.35714rem;
-  font-size: 0.85714rem;
+  margin-top: 0.3125rem;
+  font-size: 0.75rem;
   color: #cacaca;
 }
 
@@ -6569,7 +6569,7 @@ figcaption {
 /* # Layout Structure ===== */
 /* line 3, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
 #main > .wrap {
-  max-width: 71.42857rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
   display: -ms-flexbox;
@@ -6584,8 +6584,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6596,8 +6596,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6608,8 +6608,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6620,8 +6620,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6632,8 +6632,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6644,8 +6644,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6656,32 +6656,32 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
 
 @media print, screen and (min-width: 40em) {
-  /* line 21, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #content {
-    -ms-flex: 0 0 66.66667%;
-        flex: 0 0 66.66667%;
-    max-width: 66.66667%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
-    max-width: 66.66667%;
-  }
-}
-
-@media print, screen and (min-width: 64em) {
   /* line 21, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
   .layout-2c-l #main #content {
     -ms-flex: 0 0 66.66667%;
         flex: 0 0 66.66667%;
     max-width: 66.66667%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    max-width: 66.66667%;
+  }
+}
+
+@media print, screen and (min-width: 64em) {
+  /* line 21, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
+  .layout-2c-l #main #content {
+    -ms-flex: 0 0 66.66667%;
+        flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 66.66667%;
   }
 }
@@ -6692,8 +6692,8 @@ figcaption {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 33.33333%;
   }
 }
@@ -6704,8 +6704,8 @@ figcaption {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 33.33333%;
   }
 }
@@ -6716,8 +6716,8 @@ figcaption {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 33.33333%;
   }
 }
@@ -6728,8 +6728,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6740,8 +6740,8 @@ figcaption {
     -ms-flex: 0 0 66.66667%;
         flex: 0 0 66.66667%;
     max-width: 66.66667%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 66.66667%;
     -ms-flex-order: 2;
         order: 2;
@@ -6754,8 +6754,8 @@ figcaption {
     -ms-flex: 0 0 66.66667%;
         flex: 0 0 66.66667%;
     max-width: 66.66667%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 66.66667%;
     -ms-flex-order: 2;
         order: 2;
@@ -6768,8 +6768,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6780,8 +6780,8 @@ figcaption {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 33.33333%;
     -ms-flex-order: 1;
         order: 1;
@@ -6794,8 +6794,8 @@ figcaption {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 33.33333%;
     -ms-flex-order: 1;
         order: 1;
@@ -6826,8 +6826,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6839,8 +6839,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6852,8 +6852,8 @@ figcaption {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -6925,7 +6925,7 @@ li.description {
 /* # Footer ===== */
 /* line 3, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_footer.scss */
 #footer .wrap {
-  max-width: 71.42857rem;
+  max-width: 62.5rem;
   margin-right: auto;
   margin-left: auto;
 }
@@ -6949,9 +6949,9 @@ li.description {
 /* ## Post Header ===== */
 /* line 4, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
 .entry-byline {
-  margin-bottom: 1.42857rem;
+  margin-bottom: 1.25rem;
   color: #cacaca;
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
 }
 
 /* line 9, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
@@ -6969,17 +6969,17 @@ li.description {
 .entry-byline .entry-published:before,
 .entry-byline .post-edit-link:before {
   content: '/';
-  padding: 0 0.71429rem 0 0.35714rem;
+  padding: 0 0.625rem 0 0.3125rem;
   color: #cacaca;
 }
 
 /* ## Post Footer ===== */
 /* line 29, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_content.scss */
 .entry-footer {
-  padding: 0.71429rem 0;
-  margin: 1.42857rem 0;
+  padding: 0.625rem 0;
+  margin: 1.25rem 0;
   color: #cacaca;
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
 }
@@ -6994,7 +6994,7 @@ li.description {
 .loop-nav .prev span,
 .loop-nav .next span {
   display: block;
-  font-size: 0.85714rem;
+  font-size: 0.75rem;
   color: #cacaca;
 }
 
@@ -7037,7 +7037,7 @@ li.description {
 
 /* line 15, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_offcanvas.scss */
 .off-canvas-menu .nested a {
-  padding-left: 2.28571rem;
+  padding-left: 2rem;
   border-bottom: 1px solid #222;
 }
 
@@ -7048,8 +7048,8 @@ li.description {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -7060,8 +7060,8 @@ li.description {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -7072,8 +7072,8 @@ li.description {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
-    padding-right: 1.07143rem;
-    padding-left: 1.07143rem;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
     max-width: 100%;
   }
 }
@@ -7102,7 +7102,7 @@ li.description {
 /* line 48, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_breadcrumbs.scss */
 .trail-items li {
   float: left;
-  font-size: 0.78571rem;
+  font-size: 0.6875rem;
   color: #0a0a0a;
   cursor: default;
   text-transform: uppercase;
