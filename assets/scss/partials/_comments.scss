@@ -10,9 +10,14 @@ li.bypostauthor {
 	margin: rem-calc(10 0 50 0);
 
 	article {
+		display: flex;
 		padding-bottom: rem-calc(20);
 		border-bottom: 1px solid $light-gray;
 	}
+}
+
+.comment-entry {
+	flex: 0 1 auto;
 }
 
 .comment-header {
@@ -22,19 +27,18 @@ li.bypostauthor {
 
 /* ## Comment Avatars ===== */
 .comment-avatar {
-	float: left;
+	flex: 0 0 rem-calc(75);
 	width: rem-calc(75);
-	margin-right: rem-calc(15);
 
 	img {
-		@include radius(1000px);
+		border-radius: 1000px;
 	}
 }
 
 /* ## Comment Meta===== */
 .comment-meta {
-	float: left;
 	padding-top: 2%;
+
 	cite {
 		display: block;
 		font-style: normal;
@@ -58,12 +62,6 @@ li.bypostauthor {
 		float: none;
 	}
 }
-
-/* ## Comment Content ===== */
-.comment-content {
-	padding-left: rem-calc(90);
-}
-
 
 /* ## Comment Reply ===== */
 .comment-reply-link {

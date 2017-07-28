@@ -1,1 +1,16 @@
 /* # Archives ===== */
+
+
+/* # Pagination ===== */
+.nav-links {
+	span {
+		display: block;
+		padding: $pagination-item-padding;
+		border-radius: $pagination-radius;
+		color: $pagination-item-color;
+	}
+}
+
+.page-numbers {
+	margin-left: 0;
+}

@@ -24,34 +24,13 @@ input[type="submit"] {
 	@include button;
 }
 
-
 .screen-reader-text {
 	display: none;
 }
 
 /* # General Styles ===== */
-table {
-	width: 100%;
-	border: none;
-
-	th {
-		border-top: 1px solid $medium-gray;
-		border-bottom: 2px solid $medium-gray;
-	}
-}
-
 pre {
 	margin-bottom: rem-calc(16);
 	padding: rem-calc(20);
 	background: $light-gray;
-}
-
-blockquote {
-	margin-bottom: rem-calc(16);
-	padding: rem-calc(20 20 1 20);
-	background: $light-gray;
-
-	cite {
-		margin-top: rem-calc(8);
-	}
 }

@@ -9,13 +9,11 @@
 
 <div id="container" class="off-canvas-wrapper">
 
-	<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+	<div class="off-canvas position-left" id="offCanvas" data-off-canvas data-transition="push">
+		<?php hybrid_get_menu( 'mobile' ); ?>
+	</div>
 
-		<div class="off-canvas position-left" id="offCanvas" data-off-canvas>
-			<?php hybrid_get_menu( 'mobile' ); ?>
-		</div>
-
-		<div class="off-canvas-content" data-off-canvas-content>
+	<div class="off-canvas-content" data-off-canvas-content>
 
 		<div class="skip-link">
 			<a href="#content" class="screen-reader-text"><?php esc_html_e( 'Skip to content', 'hybrid-base' ); ?></a>

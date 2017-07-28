@@ -2,7 +2,7 @@
  * Theme Name:  Hybrid Foundation
  * Theme URI:   http://github.com/dsutoyo/hybrid-foundation
  * Description: A fork of Hybrid Base, integrated with Zurb Foundation
- * Version:     3.1.3
+ * Version:     3.2.0
  * Author:      David Sutoyo
  * Author URI:  http://davidsutoyo.com
  * Tags:        one-column, two-columns, custom-background, custom-header, custom-menu, featured-images, left-sidebar, post-formats, responsive-layout, right-sidebar, rtl-language-support, threaded-comments, translation-ready, Foundation, sass
@@ -10,10 +10,9 @@
  * License:     GNU General Public License v2.0 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
-
 /**
  * Foundation for Sites by ZURB
- * Version 6.3.1
+ * Version 6.4.1
  * foundation.zurb.com
  * Licensed under MIT Open Source
  */
@@ -27,21 +26,20 @@
 @import '../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/replace';
 @import '../../node_modules/foundation-sites/_vendor/sassy-lists/stylesheets/functions/to-list';
 
-/* Our settings */
+// Settings
+// import your own `settings` here or
+// import and modify the default settings through
 @import 'settings';
-
-/**
- * Foundation Components
- * --------------------------------------------------------------------------- */
 
 // Sass utilities
 @import '../../node_modules/foundation-sites/scss/util/util';
 
 // Global variables and styles
-@import '../../node_modules/foundation-sites/scss/global';
+@import 'global';
 
 // Components
 @import '../../node_modules/foundation-sites/scss/grid/grid';
+@import '../../node_modules/foundation-sites/scss/xy-grid/xy-grid';
 @import '../../node_modules/foundation-sites/scss/typography/typography';
 @import '../../node_modules/foundation-sites/scss/forms/forms';
 @import '../../node_modules/foundation-sites/scss/components/visibility';
@@ -53,6 +51,7 @@
 @import '../../node_modules/foundation-sites/scss/components/badge';
 @import '../../node_modules/foundation-sites/scss/components/breadcrumbs';
 @import '../../node_modules/foundation-sites/scss/components/callout';
+@import '../../node_modules/foundation-sites/scss/components/card';
 @import '../../node_modules/foundation-sites/scss/components/close-button';
 @import '../../node_modules/foundation-sites/scss/components/drilldown';
 @import '../../node_modules/foundation-sites/scss/components/dropdown-menu';
@@ -77,61 +76,78 @@
 @import '../../node_modules/foundation-sites/scss/components/top-bar';
 @import '../../node_modules/foundation-sites/scss/components/thumbnail';
 @import '../../node_modules/foundation-sites/scss/components/tooltip';
+@import '../../node_modules/foundation-sites/scss/prototype/prototype';
 
-@mixin foundation-everything($flex: false) {
-	$global-flexbox: $flex !global;
+@mixin foundation-everything(
+  $flex: true,
+  $prototype: false
+) {
+  @if $flex {
+    $global-flexbox: true !global;
+  }
 
-	@include foundation-global-styles;
-	@if not $flex {
-		@include foundation-grid;
-	}
-	@else {
-		@include foundation-flex-grid;
-	}
-	@include foundation-typography;
-	@include foundation-forms;
-	@include foundation-button;
-	@include foundation-accordion;
-	@include foundation-accordion-menu;
-	@include foundation-badge;
-	@include foundation-breadcrumbs;
-	@include foundation-button-group;
-	@include foundation-callout;
-	@include foundation-close-button;
-	@include foundation-menu;
-	@include foundation-menu-icon;
-	@include foundation-drilldown-menu;
-	@include foundation-dropdown;
-	@include foundation-dropdown-menu;
-	@include foundation-responsive-embed;
-	@include foundation-label;
-	@include foundation-media-object;
-	@include foundation-off-canvas;
-	@include foundation-orbit;
-	@include foundation-pagination;
-	@include foundation-progress-bar;
-	@include foundation-slider;
-	@include foundation-sticky;
-	@include foundation-reveal;
-	@include foundation-switch;
-	@include foundation-table;
-	@include foundation-tabs;
-	@include foundation-thumbnail;
-	@include foundation-title-bar;
-	@include foundation-tooltip;
-	@include foundation-top-bar;
-	@include foundation-visibility-classes;
-	@include foundation-float-classes;
+  @include foundation-global-styles;
+  @if not $flex {
+    @include foundation-grid;
+  }
+  @else {
+    @if $xy-grid {
+      @include foundation-xy-grid-classes;
+    }
+    @else {
+      @include foundation-flex-grid;
+    }
+  }
+  @include foundation-typography;
+  @include foundation-forms;
+  @include foundation-button;
+  @include foundation-accordion;
+  @include foundation-accordion-menu;
+  @include foundation-badge;
+  @include foundation-breadcrumbs;
+  @include foundation-button-group;
+  @include foundation-callout;
+  @include foundation-card;
+  @include foundation-close-button;
+  @include foundation-menu;
+  @include foundation-menu-icon;
+  @include foundation-drilldown-menu;
+  @include foundation-dropdown;
+  @include foundation-dropdown-menu;
+  @include foundation-responsive-embed;
+  @include foundation-label;
+  @include foundation-media-object;
+  @include foundation-off-canvas;
+  @include foundation-orbit;
+  @include foundation-pagination;
+  @include foundation-progress-bar;
+  @include foundation-slider;
+  @include foundation-sticky;
+  @include foundation-reveal;
+  @include foundation-switch;
+  @include foundation-table;
+  @include foundation-tabs;
+  @include foundation-thumbnail;
+  @include foundation-title-bar;
+  @include foundation-tooltip;
+  @include foundation-top-bar;
+  @include foundation-visibility-classes;
+  @include foundation-float-classes;
 
-	@if $flex {
-		@include foundation-flex-classes;
-	}
+  @if $flex {
+    @include foundation-flex-classes;
+  }
+
+  @if $prototype {
+    @include foundation-prototype-classes;
+  }
 }
 
-@include foundation-everything($flex: true);
+@include foundation-everything();
 
 // ===== Import some Bourbon helpers. Proceed with caution.
 // Use with font-face
+
 @import "../../node_modules/bourbon/app/assets/stylesheets/functions/contains";
 @import "../../node_modules/bourbon/app/assets/stylesheets/helpers/font-source-declaration";
 
@@ -148,6 +164,12 @@
 @import "partials/layout";
 @import "partials/header";
 @import "partials/footer";
+
 @import "partials/content";
+@import "partials/archives";
+@import "partials/comments";
+
 @import "partials/offcanvas";
+@import "partials/sidebar";
+
 @import "partials/breadcrumbs";

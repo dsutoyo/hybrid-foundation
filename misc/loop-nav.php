@@ -8,7 +8,8 @@
 <?php elseif ( is_home() || is_archive() || is_search() ) : // If viewing the blog, an archive, or search results. ?>
 
 	<?php the_posts_pagination(
-		array( 
+		array(
+			'type' => 'list',
 			'prev_text' => esc_html_x( '&larr; Previous', 'posts navigation', 'hybrid-base' ), 
 			'next_text' => esc_html_x( 'Next &rarr;',     'posts navigation', 'hybrid-base' )
 		) 

@@ -13,7 +13,7 @@
  *
  * @package    HybridFoundation
  * @subpackage Functions
- * @version    3.1.3
+ * @version    3.2.0
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2013 - 2015, David Sutoyo
  * @link       https://github.com/dsutoyo/hybrid-foundation
@@ -40,10 +40,10 @@ new Hybrid();
 
 /* Define Constants. */
 // Theme Version
-define( 'THEME_VERSION', '3.1.3' );
+define( 'THEME_VERSION', '3.2.0' );
 
 // Specify our Foundation version
-define( 'FOUNDATION_VERSION', '6.3.1');
+define( 'FOUNDATION_VERSION', '6.4.1');
 
 // Do theme setup on the 'after_setup_theme' hook.
 add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );

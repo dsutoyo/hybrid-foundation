@@ -26,8 +26,6 @@
 
 	</div><!-- .off-canvas-content -->
 
-	</div><!-- .off-canvas-wrapper-inner -->
-
 </div><!-- #container.off-canvas-wrapper -->
 
 <?php wp_footer(); // WordPress hook for loading JavaScript, toolbar, and other things in the footer. ?>
