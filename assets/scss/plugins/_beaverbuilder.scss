@@ -1,13 +1,20 @@
 /* # Beaver Builder ===== */
-body .fl-row {
-	margin-left: -$grid-column-gutter/2;
-	margin-right: -$grid-column-gutter/2;
+body .fl-row-fixed-width {
+	.fl-row-content-wrap {
+		@include xy-gutters;
+	}
+}
+
+body .fl-row-full-width {
+	.fl-row-content {
+		@include xy-gutters($gutter-type:padding);
+	}
 }
 
 /* # Restore styles for Beaver Builder settings ===== */
 .fl-builder-lightbox {
 	select {
-		-webkit-appearance: menulist;
+		-webkit-appearance: menulist !important;
 	}
 }
 
