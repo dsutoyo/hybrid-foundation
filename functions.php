@@ -34,13 +34,9 @@ require_once( $hybrid_base_dir . 'inc/class-tgm-plugin-activation.php');
 // require_once( 'titan-framework/titan-framework-embedder.php' );
 // require_once( $hybrid_base_dir . 'inc/titan-options.php' );
 
-
-// Launch the Hybrid Core framework.
-new Hybrid();
-
 /* Define Constants. */
 // Theme Version
-define( 'THEME_VERSION', '3.2.0' );
+define( 'THEME_VERSION', '4.0.0' );
 
 // Specify our Foundation version
 define( 'FOUNDATION_VERSION', '6.4.1');
