@@ -15,18 +15,15 @@ jQuery('.popup-navigation-close').on('click', function(e) {
 });
 
 jQuery(document).ready(function($) {
-	console.log('hi');
 	$('iframe[src*="youtube.com"], iframe[src*="vimeo.com"]').each(function() {
 		var parent_class = $(this).parent().attr('class');
 
-		console.log('youtube');
-			if ( $(this).innerWidth() / $(this).innerHeight() > 1.5 ) {
-				$(this).wrap("<div class='widescreen responsive-embed'/>");
-			}
+		if ( $(this).innerWidth() / $(this).innerHeight() > 1.5 ) {
+			$(this).wrap("<div class='widescreen responsive-embed'/>");
+		}
 
-			else {
-				$(this).wrap("<div class='responsive-embed'/>");
-			}
-		
+		else {
+			$(this).wrap("<div class='responsive-embed'/>");
+		}
 	});
 });
