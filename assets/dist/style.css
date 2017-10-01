@@ -6565,27 +6565,10 @@ a.button:hover, a.button:focus {
       transform: translateX(-250px);
 }
 
-@media print, screen and (min-width: 40em) {
-  /* line 463, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .position-left {
-    width: 250px;
-    -ms-transform: translateX(-250px);
-        transform: translateX(-250px);
-  }
-}
-
 /* line 208, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
 .off-canvas-content .off-canvas.position-left {
   -ms-transform: translateX(-250px);
       transform: translateX(-250px);
-}
-
-@media print, screen and (min-width: 40em) {
-  /* line 208, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .off-canvas-content .off-canvas.position-left {
-    -ms-transform: translateX(-250px);
-        transform: translateX(-250px);
-  }
 }
 
 /* line 215, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
@@ -6598,14 +6581,6 @@ a.button:hover, a.button:focus {
 .off-canvas-content.is-open-left.has-transition-push {
   -ms-transform: translateX(250px);
       transform: translateX(250px);
-}
-
-@media print, screen and (min-width: 40em) {
-  /* line 222, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .off-canvas-content.is-open-left.has-transition-push {
-    -ms-transform: translateX(250px);
-        transform: translateX(250px);
-  }
 }
 
 /* line 344, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
@@ -6624,27 +6599,10 @@ a.button:hover, a.button:focus {
       transform: translateX(250px);
 }
 
-@media print, screen and (min-width: 40em) {
-  /* line 464, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .position-right {
-    width: 250px;
-    -ms-transform: translateX(250px);
-        transform: translateX(250px);
-  }
-}
-
 /* line 245, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
 .off-canvas-content .off-canvas.position-right {
   -ms-transform: translateX(250px);
       transform: translateX(250px);
-}
-
-@media print, screen and (min-width: 40em) {
-  /* line 245, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .off-canvas-content .off-canvas.position-right {
-    -ms-transform: translateX(250px);
-        transform: translateX(250px);
-  }
 }
 
 /* line 252, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
@@ -6657,14 +6615,6 @@ a.button:hover, a.button:focus {
 .off-canvas-content.is-open-right.has-transition-push {
   -ms-transform: translateX(-250px);
       transform: translateX(-250px);
-}
-
-@media print, screen and (min-width: 40em) {
-  /* line 259, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .off-canvas-content.is-open-right.has-transition-push {
-    -ms-transform: translateX(-250px);
-        transform: translateX(-250px);
-  }
 }
 
 /* line 344, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
@@ -6683,27 +6633,10 @@ a.button:hover, a.button:focus {
       transform: translateY(-250px);
 }
 
-@media print, screen and (min-width: 40em) {
-  /* line 465, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .position-top {
-    height: 250px;
-    -ms-transform: translateY(-250px);
-        transform: translateY(-250px);
-  }
-}
-
 /* line 282, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
 .off-canvas-content .off-canvas.position-top {
   -ms-transform: translateY(-250px);
       transform: translateY(-250px);
-}
-
-@media print, screen and (min-width: 40em) {
-  /* line 282, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .off-canvas-content .off-canvas.position-top {
-    -ms-transform: translateY(-250px);
-        transform: translateY(-250px);
-  }
 }
 
 /* line 288, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
@@ -6716,14 +6649,6 @@ a.button:hover, a.button:focus {
 .off-canvas-content.is-open-top.has-transition-push {
   -ms-transform: translateY(250px);
       transform: translateY(250px);
-}
-
-@media print, screen and (min-width: 40em) {
-  /* line 295, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .off-canvas-content.is-open-top.has-transition-push {
-    -ms-transform: translateY(250px);
-        transform: translateY(250px);
-  }
 }
 
 /* line 344, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
@@ -6742,27 +6667,10 @@ a.button:hover, a.button:focus {
       transform: translateY(250px);
 }
 
-@media print, screen and (min-width: 40em) {
-  /* line 466, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .position-bottom {
-    height: 250px;
-    -ms-transform: translateY(250px);
-        transform: translateY(250px);
-  }
-}
-
 /* line 318, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
 .off-canvas-content .off-canvas.position-bottom {
   -ms-transform: translateY(250px);
       transform: translateY(250px);
-}
-
-@media print, screen and (min-width: 40em) {
-  /* line 318, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .off-canvas-content .off-canvas.position-bottom {
-    -ms-transform: translateY(250px);
-        transform: translateY(250px);
-  }
 }
 
 /* line 324, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
@@ -6775,14 +6683,6 @@ a.button:hover, a.button:focus {
 .off-canvas-content.is-open-bottom.has-transition-push {
   -ms-transform: translateY(-250px);
       transform: translateY(-250px);
-}
-
-@media print, screen and (min-width: 40em) {
-  /* line 331, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */
-  .off-canvas-content.is-open-bottom.has-transition-push {
-    -ms-transform: translateY(-250px);
-        transform: translateY(-250px);
-  }
 }
 
 /* line 344, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/components/_off-canvas.scss */

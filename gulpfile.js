@@ -58,7 +58,7 @@ gulp.task('styles', function() {
 
 // Compile our scripts
 // =========================================================
-gulp.task('scripts', function() {
+gulp.task('scripts', ['foundation-js'], function() {
 	return gulp.src('assets/javascripts/**/*.js')
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest('./assets/dist/'))
