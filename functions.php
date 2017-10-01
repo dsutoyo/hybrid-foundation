@@ -13,7 +13,7 @@
  *
  * @package    HybridFoundation
  * @subpackage Functions
- * @version    3.2.0
+ * @version    4.0.0
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2013 - 2015, David Sutoyo
  * @link       https://github.com/dsutoyo/hybrid-foundation
@@ -39,7 +39,7 @@ require_once( $hybrid_base_dir . 'inc/class-tgm-plugin-activation.php');
 define( 'THEME_VERSION', '4.0.0' );
 
 // Specify our Foundation version
-define( 'FOUNDATION_VERSION', '6.4.1');
+define( 'FOUNDATION_VERSION', '6.4.3');
 
 // Do theme setup on the 'after_setup_theme' hook.
 add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );
