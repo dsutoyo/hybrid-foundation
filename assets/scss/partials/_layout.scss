@@ -5,12 +5,12 @@
 	}
 
 	.layout-1c & {
-		#content {
+		main.content {
 			@include small-column(12);
 			@include medium-column(12);
 			@include large-column(12);
 		}
-		#sidebar-primary {
+		.sidebar-primary {
 			@include small-column(12);
 			@include medium-column(12);
 			@include large-column(12);
@@ -18,12 +18,12 @@
 	}
 
 	.layout-2c-l & {
-		#content {
+		main.content {
 			@include small-column(12);
 			@include medium-column(8);
 			@include large-column(8);
 		}
-		#sidebar-primary {
+		.sidebar-primary {
 			@include small-column(4);
 			@include medium-column(4);
 			@include large-column(4);
@@ -31,12 +31,12 @@
 	}
 
 	.layout-2c-r & {
-		#content {
+		main.content {
 			@include small-column(12);
 			@include medium-column(8,2);
 			@include large-column(8,2);
 		}
-		#sidebar-primary {
+		.sidebar-primary {
 			@include small-column(12);
 			@include medium-column(4,1);
 			@include large-column(4,1);
@@ -49,19 +49,19 @@
 			max-width: none;
 		}
 
-		#content {
+		main.content {
 			width: 100%;
 		}
 
-		#sidebar-primary,
-		#sidebar-secondary {
+		.sidebar-primary,
+		.sidebar-secondary {
 			display: none;
 		}
 	}
 }
 
-#sidebar-subsidiary,
-#footer {
+.sidebar-subsidiary,
+footer.footer {
 	@include small-column(12);
 	@include medium-column(12);
 	@include large-column(12);

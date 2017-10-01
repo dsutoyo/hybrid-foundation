@@ -20,12 +20,5 @@
 	dl {
 		list-style-type: none;
 		margin-left: 0;
-
-		li,
-		dd {
-			margin-bottom: rem-calc(5);
-			padding-bottom: rem-calc(5);
-			border-bottom: 1px solid $light-gray;
-		}
 	}
 }

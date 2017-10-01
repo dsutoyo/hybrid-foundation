@@ -9208,7 +9208,7 @@ figcaption {
 
 @media only screen {
   /* line 8, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #content {
+  .layout-1c #main main.content {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9219,7 +9219,7 @@ figcaption {
 
 @media only screen and (min-width: 40em) {
   /* line 8, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #content {
+  .layout-1c #main main.content {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9227,7 +9227,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) {
   /* line 8, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #content {
+  .layout-1c #main main.content {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9238,7 +9238,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) and (min-width: 40em) {
   /* line 8, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #content {
+  .layout-1c #main main.content {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9246,7 +9246,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) {
   /* line 8, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #content {
+  .layout-1c #main main.content {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9257,7 +9257,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) and (min-width: 40em) {
   /* line 8, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #content {
+  .layout-1c #main main.content {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9265,7 +9265,7 @@ figcaption {
 
 @media only screen {
   /* line 13, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #sidebar-primary {
+  .layout-1c #main .sidebar-primary {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9276,7 +9276,7 @@ figcaption {
 
 @media only screen and (min-width: 40em) {
   /* line 13, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #sidebar-primary {
+  .layout-1c #main .sidebar-primary {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9284,7 +9284,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) {
   /* line 13, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #sidebar-primary {
+  .layout-1c #main .sidebar-primary {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9295,7 +9295,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) and (min-width: 40em) {
   /* line 13, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #sidebar-primary {
+  .layout-1c #main .sidebar-primary {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9303,7 +9303,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) {
   /* line 13, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #sidebar-primary {
+  .layout-1c #main .sidebar-primary {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9314,7 +9314,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) and (min-width: 40em) {
   /* line 13, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-1c #main #sidebar-primary {
+  .layout-1c #main .sidebar-primary {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9322,7 +9322,7 @@ figcaption {
 
 @media only screen {
   /* line 21, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #content {
+  .layout-2c-l #main main.content {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9333,7 +9333,7 @@ figcaption {
 
 @media only screen and (min-width: 40em) {
   /* line 21, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #content {
+  .layout-2c-l #main main.content {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9341,7 +9341,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) {
   /* line 21, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #content {
+  .layout-2c-l #main main.content {
     -ms-flex: 0 0 66.66667%;
         flex: 0 0 66.66667%;
     max-width: 66.66667%;
@@ -9352,7 +9352,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) and (min-width: 40em) {
   /* line 21, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #content {
+  .layout-2c-l #main main.content {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9360,7 +9360,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) {
   /* line 21, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #content {
+  .layout-2c-l #main main.content {
     -ms-flex: 0 0 66.66667%;
         flex: 0 0 66.66667%;
     max-width: 66.66667%;
@@ -9371,7 +9371,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) and (min-width: 40em) {
   /* line 21, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #content {
+  .layout-2c-l #main main.content {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9379,7 +9379,7 @@ figcaption {
 
 @media only screen {
   /* line 26, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #sidebar-primary {
+  .layout-2c-l #main .sidebar-primary {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
@@ -9390,7 +9390,7 @@ figcaption {
 
 @media only screen and (min-width: 40em) {
   /* line 26, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #sidebar-primary {
+  .layout-2c-l #main .sidebar-primary {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9398,7 +9398,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) {
   /* line 26, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #sidebar-primary {
+  .layout-2c-l #main .sidebar-primary {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
@@ -9409,7 +9409,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) and (min-width: 40em) {
   /* line 26, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #sidebar-primary {
+  .layout-2c-l #main .sidebar-primary {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9417,7 +9417,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) {
   /* line 26, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #sidebar-primary {
+  .layout-2c-l #main .sidebar-primary {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
@@ -9428,7 +9428,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) and (min-width: 40em) {
   /* line 26, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-l #main #sidebar-primary {
+  .layout-2c-l #main .sidebar-primary {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9436,7 +9436,7 @@ figcaption {
 
 @media only screen {
   /* line 34, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #content {
+  .layout-2c-r #main main.content {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9447,7 +9447,7 @@ figcaption {
 
 @media only screen and (min-width: 40em) {
   /* line 34, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #content {
+  .layout-2c-r #main main.content {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9455,7 +9455,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) {
   /* line 34, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #content {
+  .layout-2c-r #main main.content {
     -ms-flex: 0 0 66.66667%;
         flex: 0 0 66.66667%;
     max-width: 66.66667%;
@@ -9468,7 +9468,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) and (min-width: 40em) {
   /* line 34, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #content {
+  .layout-2c-r #main main.content {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9476,7 +9476,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) {
   /* line 34, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #content {
+  .layout-2c-r #main main.content {
     -ms-flex: 0 0 66.66667%;
         flex: 0 0 66.66667%;
     max-width: 66.66667%;
@@ -9489,7 +9489,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) and (min-width: 40em) {
   /* line 34, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #content {
+  .layout-2c-r #main main.content {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9497,7 +9497,7 @@ figcaption {
 
 @media only screen {
   /* line 39, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #sidebar-primary {
+  .layout-2c-r #main .sidebar-primary {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9508,7 +9508,7 @@ figcaption {
 
 @media only screen and (min-width: 40em) {
   /* line 39, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #sidebar-primary {
+  .layout-2c-r #main .sidebar-primary {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9516,7 +9516,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) {
   /* line 39, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #sidebar-primary {
+  .layout-2c-r #main .sidebar-primary {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
@@ -9529,7 +9529,7 @@ figcaption {
 
 @media print, screen and (min-width: 40em) and (min-width: 40em) {
   /* line 39, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #sidebar-primary {
+  .layout-2c-r #main .sidebar-primary {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9537,7 +9537,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) {
   /* line 39, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #sidebar-primary {
+  .layout-2c-r #main .sidebar-primary {
     -ms-flex: 0 0 33.33333%;
         flex: 0 0 33.33333%;
     max-width: 33.33333%;
@@ -9550,7 +9550,7 @@ figcaption {
 
 @media print, screen and (min-width: 64em) and (min-width: 40em) {
   /* line 39, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  .layout-2c-r #main #sidebar-primary {
+  .layout-2c-r #main .sidebar-primary {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9563,20 +9563,20 @@ figcaption {
 }
 
 /* line 52, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-.layout-1c-f #main #content {
+.layout-1c-f #main main.content {
   width: 100%;
 }
 
 /* line 56, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-.layout-1c-f #main #sidebar-primary,
-.layout-1c-f #main #sidebar-secondary {
+.layout-1c-f #main .sidebar-primary,
+.layout-1c-f #main .sidebar-secondary {
   display: none;
 }
 
 @media only screen {
   /* line 63, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  #sidebar-subsidiary,
-  #footer {
+  .sidebar-subsidiary,
+  footer.footer {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9587,8 +9587,8 @@ figcaption {
 
 @media only screen and (min-width: 40em) {
   /* line 63, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  #sidebar-subsidiary,
-  #footer {
+  .sidebar-subsidiary,
+  footer.footer {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9596,8 +9596,8 @@ figcaption {
 
 @media print, screen and (min-width: 40em) {
   /* line 63, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  #sidebar-subsidiary,
-  #footer {
+  .sidebar-subsidiary,
+  footer.footer {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9608,8 +9608,8 @@ figcaption {
 
 @media print, screen and (min-width: 40em) and (min-width: 40em) {
   /* line 63, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  #sidebar-subsidiary,
-  #footer {
+  .sidebar-subsidiary,
+  footer.footer {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9617,8 +9617,8 @@ figcaption {
 
 @media print, screen and (min-width: 64em) {
   /* line 63, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  #sidebar-subsidiary,
-  #footer {
+  .sidebar-subsidiary,
+  footer.footer {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     max-width: 100%;
@@ -9629,8 +9629,8 @@ figcaption {
 
 @media print, screen and (min-width: 64em) and (min-width: 40em) {
   /* line 63, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_layout.scss */
-  #sidebar-subsidiary,
-  #footer {
+  .sidebar-subsidiary,
+  footer.footer {
     padding-right: 0.9375rem;
     padding-left: 0.9375rem;
   }
@@ -9922,18 +9922,16 @@ li.bypostauthor article {
 /* line 7, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_offcanvas.scss */
 .off-canvas-menu a {
   text-decoration: none;
-  border-bottom: 1px solid #333;
 }
 
-/* line 12, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_offcanvas.scss */
+/* line 11, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_offcanvas.scss */
 .off-canvas-menu .nested {
   margin-left: 0;
 }
 
-/* line 15, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_offcanvas.scss */
+/* line 14, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_offcanvas.scss */
 .off-canvas-menu .nested a {
   padding-left: 2rem;
-  border-bottom: 1px solid #222;
 }
 
 /* # Sidebars and Widgets ===== */
@@ -9963,18 +9961,6 @@ li.bypostauthor article {
 .widget dl {
   list-style-type: none;
   margin-left: 0;
-}
-
-/* line 24, /Users/dsutoyo/Dev/wordpress.dev/wp-content/themes/hybrid-foundation/assets/scss/partials/_sidebar.scss */
-.widget ul li,
-.widget ul dd,
-.widget ol li,
-.widget ol dd,
-.widget dl li,
-.widget dl dd {
-  margin-bottom: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 /* # Breadcrumbs ===== */
