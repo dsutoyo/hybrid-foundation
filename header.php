@@ -9,7 +9,7 @@
 
 <div id="container" class="off-canvas-wrapper">
 
-	<div class="off-canvas position-left" id="offCanvas" data-off-canvas data-transition="push">
+	<div class="off-canvas position-left" id="offCanvas" data-off-canvas data-transition="<?php echo current_theme_supports( 'offcanvas-overlap' ) ? 'overlap' : 'push' ?>">
 		<?php hybrid_get_menu( 'mobile' ); ?>
 	</div>
 
@@ -21,16 +21,12 @@
 
 		<header <?php hybrid_attr( 'header' ); ?>>
 
-			<?php if ( !current_theme_supports( 'popup-navigation' ) ) : ?>
-
-			<nav class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
+			<nav class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
 				<button type="button" class="menu-icon" data-toggle="offCanvas"></button>
 				<div class="title-bar-title">
 					<?php bloginfo( 'name' ); ?>
 				</div>
 			</nav>
-
-			<?php endif; ?>
 
 			<div class="top-bar" data-topbar>
 
@@ -54,15 +50,9 @@
 					</ul><!-- #branding -->
 				</div>
 
-			<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
+				<?php hybrid_get_menu( 'primary' ); // Loads the menu/primary.php template. ?>
 
 			</div>
-
-			<?php if ( current_theme_supports( 'popup-navigation' ) ) : ?>
-
-			<a class="popup-navigation-trigger" href="#">Menu</a>
-
-			<?php endif; ?>
 
 		</header><!-- #header -->
 

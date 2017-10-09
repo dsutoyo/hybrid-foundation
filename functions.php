@@ -81,14 +81,16 @@ function hybrid_base_theme_setup() {
 		array( 'aside', 'audio', 'chat', 'image', 'gallery', 'link', 'quote', 'status', 'video' )
 	);
 
-	// Popup menu navigation.
-	//add_theme_support( 'popup-navigation' );
-
 	// Editor styles.
 	add_editor_style( hybrid_base_get_editor_styles() );
 
 	// Handle content width for embeds and images.
 	hybrid_set_content_width( 1280 );
+
+	/* Hybrid Foundation Features */
+
+	// Off-canvas Transition - Overlap
+	// add_theme_support( 'offcanvas-overlap' );
 }
 
 /**
