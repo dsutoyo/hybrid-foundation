@@ -43,6 +43,17 @@
 	}
 }
 
+.fixed-width-header {
+	header.header {
+		background-color: $topbar-background;
+	}
+	
+	.top-bar {
+		max-width: $global-width;
+		margin: 0 auto;
+	}
+}
+
 /* Custom Top Bar Styles */
 
 // Center the title and menu

@@ -89,4 +89,10 @@ function hybrid_base_theme_setup() {
 
 	// Off-canvas Transition - Overlap
 	// add_theme_support( 'offcanvas-overlap' );
+
+	// Fixed-width header
+	// add_theme_support( 'fixed-width-header' );
+
+	// Fixed-width footer
+	// add_theme_support( 'fixed-width-footer' );
 }

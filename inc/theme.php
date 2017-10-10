@@ -146,13 +146,14 @@ function hybrid_base_enqueue_styles() {
 function hybrid_base_attr_body( $attr ) {
 	$attr['class'] .= ' no-js';
 
-	if ( current_theme_supports( 'popup-navigation' ) ) {
-		$attr['class'] .= ' popup-navigation';
+	if ( current_theme_supports( 'fixed-width-header' ) ) {
+		$attr['class'] .= ' fixed-width-header';
 	}
 
-	else {
-		$attr['class'] .= ' offcanvas-navigation';
+	if ( current_theme_supports( 'fixed-width-footer' ) ) {
+		$attr['class'] .= ' fixed-width-footer';
 	}
+
 	return $attr;
 }
 

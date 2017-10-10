@@ -32,21 +32,8 @@
 
 				<div class="top-bar-title">
 					<ul <?php hybrid_attr( 'branding' ); ?>>
-					<?php if ( display_header_text() ) : // If user chooses to display header text. ?>
-
 						<li class="name"><?php hybrid_site_title(); ?></li>
 						<li class="description"><?php hybrid_site_description(); ?></li>
-
-					<?php elseif ( get_header_image() && !display_header_text() ) : // If there's a header image but no header text. ?>
-
-						<li class="name"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="" /></a></li>
-
-					<?php elseif ( get_header_image() ) : // If there's a header image. ?>
-
-						<li class="name"><img class="header-image" src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></li>
-
-					<?php endif; // End check for header image. ?>
-
 					</ul><!-- #branding -->
 				</div>
 
