@@ -29,9 +29,6 @@ require_once( $hybrid_base_dir . 'library/hybrid.php' );
 require_once( $hybrid_base_dir . 'inc/theme.php' );
 require_once( $hybrid_base_dir . 'inc/walker.php' );
 
-// require_once( 'titan-framework/titan-framework-embedder.php' );
-// require_once( $hybrid_base_dir . 'inc/titan-options.php' );
-
 /* Define Constants. */
 // Theme Version
 define( 'THEME_VERSION', '4.0.0' );
