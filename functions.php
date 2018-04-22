@@ -26,15 +26,25 @@ $hybrid_base_dir = trailingslashit( get_template_directory() );
 // Load the Hybrid Core framework and theme files.
 require_once( $hybrid_base_dir . 'library/hybrid.php' );
 
-require_once( $hybrid_base_dir . 'inc/theme.php' );
-require_once( $hybrid_base_dir . 'inc/walker.php' );
-
 /* Define Constants. */
 // Theme Version
-define( 'THEME_VERSION', '4.0.0' );
+define( 'HYBRID_FOUNDATION_THEME_VERSION', '4.0.0' );
+
+// Settings
+define( 'HYBRID_FOUNDATION_THEME_SETTINGS', 'hybrid-foundation-settings' );
+
+// Theme Directory
+define( 'HYBRID_FOUNDATION_THEME_DIR', trailingslashit( get_template_directory() ) );
 
 // Specify our Foundation version
 define( 'FOUNDATION_VERSION', '6.4.3');
+
+require_once( $hybrid_base_dir . 'inc/theme.php' );
+require_once( $hybrid_base_dir . 'inc/walker.php' );
+require_once( $hybrid_base_dir . 'inc/core/functions.php' );
+require_once( $hybrid_base_dir . 'inc/core/class-theme-options.php' );
+require_once( $hybrid_base_dir . 'inc/customizer/class-customizer.php' );
+require_once( $hybrid_base_dir . 'inc/customizer/class-custom-css.php' );
 
 // Do theme setup on the 'after_setup_theme' hook.
 add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );
