@@ -21,7 +21,7 @@ gulp.task('browser-sync', function() {
 	];
 
 	browserSync.init(files, {
-		proxy: 'wordpress.dev/'
+		proxy: 'themes.dev.cc/'
 	});
 });
 
