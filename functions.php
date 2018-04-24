@@ -62,6 +62,15 @@ add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );
  */
 function hybrid_base_theme_setup() {
 
+	// Custom logo
+	add_theme_support( 'custom-logo', array(
+		'height'      => 100,
+		'width'       => 400,
+		'flex-height' => true,
+		'flex-width'  => true,
+		'header-text' => array( 'site-title', 'site-description' ),
+    ) );
+
 	// Theme layouts.
 	add_theme_support( 'theme-layouts', array( 'default' => is_rtl() ? '2c-r' :'2c-l' ) );
 

@@ -3,6 +3,20 @@
 	display: none;
 }
 
+// Custom logo
+.wp-custom-logo {
+	.top-bar-title {
+		h1 {
+			a {
+				display: block;
+				text-indent: 101%;
+				overflow: hidden;
+				background-size: contain;
+			}
+		}
+	}
+}
+
 // Show/hide nav elements
 .offcanvas-navigation {
 	.top-bar {
