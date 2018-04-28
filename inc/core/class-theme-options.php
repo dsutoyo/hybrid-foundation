@@ -71,7 +71,10 @@ if ( ! class_exists( 'Hybrid_Foundation_Theme_Options' ) ) {
 				'hybrid_foundation_defaults',
 				array(
 					'color_primary' => '#ff0000',
-					'color_secondary' => '#00ff00'
+					'color_secondary' => '#00ff00',
+					'layout_container' => 'contained',
+					'layout_container_header' => 'contained',
+					'layout_container_footer' => 'contained',
 				)
 			);
 		}

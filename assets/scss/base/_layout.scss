@@ -1,16 +1,108 @@
-/* # Layout Structure ===== */
- #main {
+#main {
 	> .wrap {
 		@include flex-grid-row();
 	}
+}
 
+/* # Container Layout Structure ===== */
+.container-body-boxed {
+
+}
+
+.container-body-full-width {
+	#main {
+		> .wrap {
+			max-width: none;
+		}
+	}
+}
+
+.container-header-boxed {
+	header.header {
+		background-color: $topbar-background;
+	}
+	
+	.top-bar {
+		max-width: $global-width;
+		margin: 0 auto;
+	}
+}
+
+.container-header-contained {
+	header.header {
+		background-color: $topbar-background;
+	}
+	
+	.top-bar {
+		max-width: $global-width;
+		margin: 0 auto;
+	}
+}
+
+.container-header-full-width {
+
+}
+
+.container-footer-boxed {
+	footer.footer {
+		> .wrap {
+			@include flex-grid-row();
+		}
+	}
+}
+
+.container-footer-contained {
+	footer.footer {
+		> .wrap {
+			@include flex-grid-row();
+		}
+	}
+}
+
+.container-footer-full-width {
+
+}
+
+.container-archive-boxed,
+.container-page-boxed,
+.container-post-boxed {
+	#main {
+		> .wrap {
+			@include flex-grid-row();
+		}
+	}
+}
+
+.container-archive-contained,
+.container-post-contained,
+.container-page-contained {
+	#main {
+		> .wrap {
+			@include flex-grid-row();
+		}
+	}
+}
+
+.container-archive-full-width,
+.container-post-full-width,
+.container-page-full-width {
+	#main {
+		> .wrap {
+			max-width: none;
+		}
+	}
+}
+
+/* # Layout Structure ===== */
+#main {
 	.layout-1c & {
 		main.content {
 			@include small-column(12);
 			@include medium-column(12);
 			@include large-column(12);
 		}
-		.sidebar-primary {
+		.sidebar-primary,
+		.sidebar-secondary {
 			@include small-column(12);
 			@include medium-column(12);
 			@include large-column(12);
@@ -23,7 +115,8 @@
 			@include medium-column(8);
 			@include large-column(8);
 		}
-		.sidebar-primary {
+		.sidebar-primary,
+		.sidebar-secondary {
 			@include small-column(4);
 			@include medium-column(4);
 			@include large-column(4);
@@ -36,33 +129,11 @@
 			@include medium-column(8,2);
 			@include large-column(8,2);
 		}
-		.sidebar-primary {
+		.sidebar-primary,
+		.sidebar-secondary {
 			@include small-column(12);
 			@include medium-column(4,1);
 			@include large-column(4,1);
 		}
 	}
-
-	.layout-1c-f & {
-		> .wrap {
-			width: 100%;
-			max-width: none;
-		}
-
-		main.content {
-			width: 100%;
-		}
-
-		.sidebar-primary,
-		.sidebar-secondary {
-			display: none;
-		}
-	}
-}
-
-.sidebar-subsidiary,
-footer.footer {
-	@include small-column(12);
-	@include medium-column(12);
-	@include large-column(12);
 }

@@ -1,12 +1,5 @@
 /* # Footer ===== */
 footer.footer {
-
-	.fixed-width-footer & {
-		.wrap {
-			@include grid-row;
-		}
-	}
-
 	.colophon {
 		@include small-column(12);
 		@include medium-column(12);

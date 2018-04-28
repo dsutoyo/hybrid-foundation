@@ -67,11 +67,9 @@ function hybrid_base_register_menus() {
  */
 function hybrid_base_register_layouts() {
 
-
 	hybrid_register_layout( '1c',   array( 'label' => esc_html__( '1 Column',                     'hybrid-base' ), 'image' => '%s/assets/images/layouts/1c.png'   ) );
 	hybrid_register_layout( '2c-l', array( 'label' => esc_html__( '2 Columns: Content / Sidebar', 'hybrid-base' ), 'image' => '%s/assets/images/layouts/2c-l.png' ) );
 	hybrid_register_layout( '2c-r', array( 'label' => esc_html__( '2 Columns: Sidebar / Content', 'hybrid-base' ), 'image' => '%s/assets/images/layouts/2c-r.png' ) );
-	hybrid_register_layout( '1c-f',   array( 'label' => esc_html__( '1 Column Full-Width',                     'hybrid-base' ), 'image' => '%s/assets/images/layouts/1c-f.png'   ) );
 }
 
 /**
@@ -86,16 +84,16 @@ function hybrid_base_register_sidebars() {
 	hybrid_register_sidebar(
 		array(
 			'id'          => 'primary',
-			'name'        => esc_html_x( 'Primary', 'sidebar', 'hybrid-base' ),
-			'description' => esc_html__( 'Add sidebar description.', 'hybrid-base' )
+			'name'        => esc_html_x( 'Page Sidebar', 'sidebar', 'hybrid-base' ),
+			'description' => esc_html__( 'Sidebar for pages.', 'hybrid-base' )
 		)
 	);
 
 	hybrid_register_sidebar(
 		array(
-			'id'          => 'subsidiary',
-			'name'        => esc_html_x( 'Subsidiary', 'sidebar', 'hybrid-base' ),
-			'description' => esc_html__( 'Add sidebar description.', 'hybrid-base' )
+			'id'          => 'secondary',
+			'name'        => esc_html_x( 'Blog Sidebar', 'sidebar', 'hybrid-base' ),
+			'description' => esc_html__( 'Sidebar for posts and archives.', 'hybrid-base' )
 		)
 	);
 }
@@ -154,6 +152,30 @@ function hybrid_base_attr_body( $attr ) {
 		$attr['class'] .= ' fixed-width-footer';
 	}
 
+	if ( hybrid_foundation_get_option( 'layout_container' ) ) {
+		$attr['class'] .= ' container-body-' . hybrid_foundation_get_option( 'layout_container' );
+	}
+
+	if ( is_page() && hybrid_foundation_get_option( 'layout_container_page' ) ) {
+		$attr['class'] .= ' container-page-' . hybrid_foundation_get_option( 'layout_container_page' );
+	}
+
+	else if ( is_single() && hybrid_foundation_get_option( 'layout_container_post' ) ) {
+		$attr['class'] .= ' container-post-' . hybrid_foundation_get_option( 'layout_container_post' );
+	}
+
+	else if ( is_archive() && hybrid_foundation_get_option( 'layout_container_archive' ) ) {
+		$attr['class'] .= ' container-archive-' . hybrid_foundation_get_option( 'layout_container_archive' );
+	}
+
+	if ( hybrid_foundation_get_option( 'layout_container_header' ) ) {
+		$attr['class'] .= ' container-header-' . hybrid_foundation_get_option( 'layout_container_header' );
+	}
+
+	if ( hybrid_foundation_get_option( 'layout_container_footer' ) ) {
+		$attr['class'] .= ' container-footer-' . hybrid_foundation_get_option( 'layout_container_footer' );
+	}
+
 	return $attr;
 }
 
@@ -193,8 +215,16 @@ function hybrid_base_theme_layout( $theme_layout ) {
 	}
 
 	else {
-		if ( is_front_page() ) {
-			$theme_layout = '1c';
+		if ( is_page() ) {
+			$theme_layout = hybrid_foundation_get_option( 'layout_content_page' );
+		}
+
+		elseif ( is_single() ) {
+			$theme_layout = hybrid_foundation_get_option( 'layout_content_post' );
+		}
+
+		elseif ( is_archive() ) {
+			$theme_layout = hybrid_foundation_get_option( 'layout_content_archive' );
 		}
 	}
 

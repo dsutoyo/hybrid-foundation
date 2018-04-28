@@ -36,6 +36,9 @@ define( 'HYBRID_FOUNDATION_THEME_SETTINGS', 'hybrid-foundation-settings' );
 // Theme Directory
 define( 'HYBRID_FOUNDATION_THEME_DIR', trailingslashit( get_template_directory() ) );
 
+// Theme Directory
+define( 'HYBRID_FOUNDATION_THEME_URI', trailingslashit( get_template_directory_uri() ) );
+
 // Specify our Foundation version
 define( 'FOUNDATION_VERSION', '6.4.3');
 
