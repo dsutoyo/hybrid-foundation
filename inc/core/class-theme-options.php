@@ -70,11 +70,15 @@ if ( ! class_exists( 'Hybrid_Foundation_Theme_Options' ) ) {
 			return apply_filters(
 				'hybrid_foundation_defaults',
 				array(
+					'custom_logo_height' => 60,
 					'color_primary' => '#ff0000',
 					'color_secondary' => '#00ff00',
 					'layout_container' => 'contained',
 					'layout_container_header' => 'contained',
 					'layout_container_footer' => 'contained',
+					'layout_container_page' => 'default',
+					'layout_container_post' => 'default',
+					'layout_container_archive' => 'default',
 				)
 			);
 		}

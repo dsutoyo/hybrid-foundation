@@ -76,7 +76,7 @@ final class Hybrid_Foundation_Admin_Post_Layout {
 		if ( post_type_supports( $post_type, 'theme-layouts' ) && current_user_can( 'edit_theme_options' ) ) {
 
 			// Add meta box.
-			add_meta_box( 'hybrid-container-post-layout', esc_html__( 'Body Container Layout', 'hybrid-foundation' ), array( $this, 'meta_box' ), $post_type, 'side', 'default' );
+			add_meta_box( 'hybrid-foundation-container-post-layout', esc_html__( 'Body Container Layout', 'hybrid-foundation' ), array( $this, 'meta_box' ), $post_type, 'side', 'default' );
 
 			// Enqueue scripts/styles.
 			add_action( 'admin_enqueue_scripts', array( $this, 'enqueue' ) );

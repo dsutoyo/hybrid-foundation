@@ -1,6 +1,6 @@
 # Hybrid Foundation
 
-A starter theme based on <a href="http://http://themehybrid.com/hybrid-core/">Hybrid Core</a> and Foundation 6.4.3.
+A starter theme based on <a href="http://themehybrid.com/hybrid-core/">Hybrid Core</a> and Foundation 6.4.3.
 
 ## Getting Started
 ### Prerequisites
