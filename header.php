@@ -28,7 +28,7 @@
 				</div>
 			</nav>
 
-			<div class="top-bar" data-topbar>
+			<div class="top-bar show-for-medium" data-topbar>
 
 				<div class="top-bar-title <?php echo has_custom_logo() ? 'has-image' : 'has-text'; ?>">
 					<ul <?php hybrid_attr( 'branding' ); ?>>

@@ -209,7 +209,9 @@ final class Hybrid_Foundation_Theme {
 		// Fixed-width footer
 		// add_theme_support( 'fixed-width-footer' );
 
-		require_once( $this->dir . 'inc/admin/class-post-layout.php' );
+		if ( is_admin() && current_theme_supports( 'theme-layouts' ) ) {
+			require_once( $this->dir . 'inc/admin/class-post-layout.php' );
+		}
 	}
 
 	/**

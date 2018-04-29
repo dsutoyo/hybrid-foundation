@@ -11,12 +11,7 @@
 				'menu_id'         => 'menu-primary-items',
 				'menu_class'      => 'menu-items',
 				'fallback_cb'     => '',
-				'items_wrap'      => '<ul class="dropdown menu" data-dropdown-menu>%3$s</ul>',
-				'walker' => new Foundationalize_Walker( array(
-					'in_top_bar' => true,
-					'item_type' => 'li',
-					'has_dropdown_marker' => true
-				)),
+				'items_wrap'      => '<ul class="dropdown menu" data-dropdown-menu>%3$s</ul>'
 			)
 		); ?>
 
