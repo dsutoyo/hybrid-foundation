@@ -98,4 +98,4 @@ if ( ! class_exists( 'Hybrid_Foundation_Customizer' ) ) {
 	}
 }
 
-$hybrid_foundation_customer = Hybrid_Foundation_Customizer::get_instance();
+$hybrid_foundation_customizer = Hybrid_Foundation_Customizer::get_instance();

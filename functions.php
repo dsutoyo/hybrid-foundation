@@ -36,7 +36,7 @@ define( 'HYBRID_FOUNDATION_THEME_SETTINGS', 'hybrid-foundation-settings' );
 // Theme Directory
 define( 'HYBRID_FOUNDATION_THEME_DIR', trailingslashit( get_template_directory() ) );
 
-// Theme Directory
+// Theme Directory URI
 define( 'HYBRID_FOUNDATION_THEME_URI', trailingslashit( get_template_directory_uri() ) );
 
 // Specify our Foundation version
@@ -44,10 +44,6 @@ define( 'FOUNDATION_VERSION', '6.4.3');
 
 require_once( $hybrid_base_dir . 'inc/theme.php' );
 require_once( $hybrid_base_dir . 'inc/walker.php' );
-require_once( $hybrid_base_dir . 'inc/core/functions.php' );
-require_once( $hybrid_base_dir . 'inc/core/class-theme-options.php' );
-require_once( $hybrid_base_dir . 'inc/customizer/class-customizer.php' );
-require_once( $hybrid_base_dir . 'inc/customizer/class-custom-css.php' );
 
 // Do theme setup on the 'after_setup_theme' hook.
 add_action( 'after_setup_theme', 'hybrid_base_theme_setup', 5 );
@@ -114,4 +110,10 @@ function hybrid_base_theme_setup() {
 
 	// Fixed-width footer
 	// add_theme_support( 'fixed-width-footer' );
+
+	require_once( $hybrid_base_dir . 'inc/admin/class-post-layout.php' );
+	require_once( $hybrid_base_dir . 'inc/core/functions.php' );
+	require_once( $hybrid_base_dir . 'inc/core/class-theme-options.php' );
+	require_once( $hybrid_base_dir . 'inc/customizer/class-customizer.php' );
+	require_once( $hybrid_base_dir . 'inc/customizer/class-custom-css.php' );
 }

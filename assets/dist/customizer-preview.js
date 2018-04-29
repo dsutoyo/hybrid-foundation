@@ -1,5 +1,13 @@
 (function($) {
 
+	wp.customize('custom_logo_height', function(value) {
+		value.bind( function(newval) {
+			var ratio = ($('.site-title a').outerWidth()) / ($('.site-title a').outerHeight());
+			$('.site-title a').css({'height': newval+'px', 'width': ratio*newval+'px'});
+			console.log(ratio*newval+'px');
+		});
+	});
+
 	wp.customize('layout_container', function(value) {
 		value.bind( function(newval) {
 			$('body').removeClass('container-body-contained container-body-full-width container-body-boxed').addClass('container-body-' + newval);

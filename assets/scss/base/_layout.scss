@@ -65,7 +65,8 @@
 
 .container-archive-boxed,
 .container-page-boxed,
-.container-post-boxed {
+.container-post-boxed,
+.container-singular-boxed {
 	#main {
 		> .wrap {
 			@include flex-grid-row();
@@ -75,7 +76,8 @@
 
 .container-archive-contained,
 .container-post-contained,
-.container-page-contained {
+.container-page-contained,
+.container-singular-contained {
 	#main {
 		> .wrap {
 			@include flex-grid-row();
@@ -85,7 +87,8 @@
 
 .container-archive-full-width,
 .container-post-full-width,
-.container-page-full-width {
+.container-page-full-width,
+.container-singular-full-width {
 	#main {
 		> .wrap {
 			max-width: none;

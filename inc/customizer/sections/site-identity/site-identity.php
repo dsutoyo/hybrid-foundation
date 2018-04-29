@@ -14,6 +14,7 @@ $wp_customize->add_setting(
 	'custom_logo_height',
 	array(
 		'default' => 70,
+		'transport' => 'postMessage'
 	)
 );
 

@@ -142,6 +142,8 @@ function hybrid_base_enqueue_styles() {
  * @return array
  */
 function hybrid_base_attr_body( $attr ) {
+	global $post;
+
 	$attr['class'] .= ' no-js';
 
 	if ( current_theme_supports( 'fixed-width-header' ) ) {
@@ -156,7 +158,11 @@ function hybrid_base_attr_body( $attr ) {
 		$attr['class'] .= ' container-body-' . hybrid_foundation_get_option( 'layout_container' );
 	}
 
-	if ( is_page() && hybrid_foundation_get_option( 'layout_container_page' ) ) {
+	if ( $singular_layout = get_post_meta( $post->ID, 'hybrid-foundation-container-post-layout', true ) ) {
+		$attr['class'] .= ' container-singular-' . $singular_layout;
+	}
+
+	else if ( is_page() && hybrid_foundation_get_option( 'layout_container_page' ) ) {
 		$attr['class'] .= ' container-page-' . hybrid_foundation_get_option( 'layout_container_page' );
 	}
 
