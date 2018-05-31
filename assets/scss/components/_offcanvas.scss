@@ -16,3 +16,44 @@
 		}
 	}
 }
+
+
+// Show/hide nav elements
+.offcanvas-navigation {
+	.top-bar {
+		display: none;
+	}
+
+	@include breakpoint(medium up) {
+		.top-bar {
+			display: flex;
+		}
+	}
+}
+
+.popup-navigation {
+	.off-canvas-menu {
+		transform: none;
+		opacity: 0;
+		width: 100vw;
+		height: 0;
+		transition: opacity 0.25s ease-in-out;
+	}
+}
+
+.popup-active {
+	height: 100vh;
+	overflow: hidden;
+
+	.off-canvas-menu {
+		position: absolute;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+		background: #000;
+		opacity: 0.9;
+		transition: opacity 0.25s ease-in-out;
+		overflow: auto;
+		transform: none;
+	}
+}

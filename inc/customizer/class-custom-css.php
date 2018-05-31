@@ -92,21 +92,15 @@ if ( ! class_exists( 'Hybrid_Foundation_Custom_CSS' ) ) {
 		public function get_custom_styles() {
 			$theme_options = get_option( 'theme_mods_' . get_stylesheet() );
 
-			//print_r($theme_options);
-
 			$style = '';
 
 			if ( has_custom_logo() ) {
 				$style .= '.site-title a { background: url(' . Hybrid_Foundation_Custom_CSS::get_custom_logo_src() . ') center center no-repeat; }';
+
+				$logo_size = Hybrid_Foundation_Custom_CSS::get_custom_logo_ratio( $theme_options['custom_logo'], $theme_options['custom_logo_height'] );
+
+				$style .= '.site-title a { width: ' . $logo_size['width'] . 'px; height: ' . $logo_size['height'] . 'px; }';
 			}
-
-			$logo_size = Hybrid_Foundation_Custom_CSS::get_custom_logo_ratio( $theme_options['custom_logo'], $theme_options['custom_logo_height'] );
-
-			$style .= '.site-title a { width: ' . $logo_size['width'] . 'px; height: ' . $logo_size['height'] . 'px; }';
-
-
-
-			//$style .= $primary_color;
 
 			return $style;
 		}
@@ -132,9 +126,17 @@ if ( ! class_exists( 'Hybrid_Foundation_Custom_CSS' ) ) {
 		 * @return array
 		 */
 		public function get_custom_logo_ratio( $attachment_id, $custom_logo_height ) {
-			$image = wp_get_attachment_metadata( $attachment_id );
-			$size['height'] = $custom_logo_height;
-			$size['width'] = $image['width'] / $image['height'] * $custom_logo_height;
+			$size = array(
+				'width' => 0,
+				'height' => 0
+			);
+
+			if ( has_custom_logo() ) {
+				$image = wp_get_attachment_metadata( $attachment_id );
+				$size['height'] = $custom_logo_height;
+				$size['width'] = $image['width'] / $image['height'] * $custom_logo_height;
+			}
+
 			return $size;
 		}
 	}

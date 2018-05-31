@@ -110,16 +110,18 @@ function hybrid_base_theme_layout( $theme_layout ) {
 
 	else {
 		if ( is_page() ) {
-			$theme_layout = hybrid_foundation_get_option( 'layout_content_page' );
+			$layout = evoke_get_option( 'layout_content_page' );
 		}
 
 		elseif ( is_single() ) {
-			$theme_layout = hybrid_foundation_get_option( 'layout_content_post' );
+			$layout = evoke_get_option( 'layout_content_post' );
 		}
 
 		elseif ( is_archive() ) {
-			$theme_layout = hybrid_foundation_get_option( 'layout_content_archive' );
+			$layout = evoke_get_option( 'layout_content_archive' );
 		}
+
+		if ( ! empty( $layout ) ) $theme_layout = $layout;
 	}
 
 	return $theme_layout;

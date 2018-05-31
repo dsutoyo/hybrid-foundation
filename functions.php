@@ -119,10 +119,9 @@ final class Hybrid_Foundation_Theme {
 		require_once( $this->dir . 'library/hybrid.php' );
 
 		// Load theme includes.
-		require_once( $this->dir . 'inc/walker.php' );
-		require_once( $this->dir . 'inc/functions-scripts.php' );
-		require_once( $this->dir . 'inc/functions-filters.php' );
 		require_once( $this->dir . 'inc/core/functions.php' );
+		require_once( $this->dir . 'inc/core/functions-scripts.php' );
+		require_once( $this->dir . 'inc/core/functions-filters.php' );
 		require_once( $this->dir . 'inc/core/class-theme-options.php' );
 		require_once( $this->dir . 'inc/customizer/class-customizer.php' );
 		require_once( $this->dir . 'inc/customizer/class-custom-css.php' );

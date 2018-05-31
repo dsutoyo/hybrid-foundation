@@ -3,6 +3,14 @@
 	display: none;
 }
 
+.top-bar-title {
+	h1 {
+		a {
+			padding: 0;
+		}
+	}
+}
+
 // Custom logo
 .wp-custom-logo {
 	.top-bar-title {
@@ -17,58 +25,24 @@
 	}
 }
 
-// Show/hide nav elements
-.offcanvas-navigation {
-	.top-bar {
-		display: none;
-	}
+// Line up the logo/header text to the rest of the site
+.top-bar {
+	@include grid-column-gutter($gutters: $grid-column-gutter);
 
-	@include breakpoint(medium up) {
-		.top-bar {
-			display: flex;
+	.site-title {
+		margin: 0;
+		font-size: rem-calc(21);
+		font-weight: bold;
+
+		a {
+			padding-left: 0;
 		}
 	}
-}
 
-.popup-navigation {
-	.off-canvas-menu {
-		transform: none;
-		opacity: 0;
-		width: 100vw;
-		height: 0;
-		transition: opacity 0.25s ease-in-out;
+	a {
+		color: $black;
 	}
 }
-
-.popup-active {
-	height: 100vh;
-	overflow: hidden;
-
-	.off-canvas-menu {
-		position: absolute;
-		top: 0;
-		width: 100vw;
-		height: 100vh;
-		background: #000;
-		opacity: 0.9;
-		transition: opacity 0.25s ease-in-out;
-		overflow: auto;
-		transform: none;
-	}
-}
-
-/* Custom Top Bar Styles */
-
-// Center the title and menu
-/*.top-bar {
-	display: flex;
-
-	.menu-primary {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-}*/
 
 li.description {
 	display: none;

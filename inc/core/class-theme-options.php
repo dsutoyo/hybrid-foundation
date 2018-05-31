@@ -66,7 +66,7 @@ if ( ! class_exists( 'Hybrid_Foundation_Theme_Options' ) ) {
 		 * @access private
 		 * @return array
 		 */
-		public function get_defaults() {
+		public static function get_defaults() {
 			return apply_filters(
 				'hybrid_foundation_defaults',
 				array(
