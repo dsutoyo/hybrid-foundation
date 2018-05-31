@@ -21,7 +21,7 @@ gulp.task('browser-sync', function() {
 	];
 
 	browserSync.init(files, {
-		proxy: 'themes.dev.cc/'
+		proxy: 'https://themes.dev.cc/'
 	});
 });
 

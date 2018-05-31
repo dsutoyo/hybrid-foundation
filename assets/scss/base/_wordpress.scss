@@ -13,6 +13,10 @@
 	@for $i from 1 through 4 {
 		.col-#{$i} {
 			@include grid-column($grid-column-count/$i);
+
+			&:last-child:not(:first-child) {
+				float: left;
+			}
 		}
 	}
 
@@ -51,53 +55,55 @@
 }
 
 /* ## Image Alignment ===== */
+$grid-column-gutter-medium: map-get($grid-column-gutter, medium);
+
 .alignnone {
-	margin: $grid-column-gutter/2 $grid-column-gutter/2 $grid-column-gutter/2 0;
+	margin: $grid-column-gutter-medium/2 $grid-column-gutter-medium/2 $grid-column-gutter-medium/2 0;
 }
 
 .aligncenter, div.aligncenter {
 	display: block;
-	margin: 0 auto $grid-column-gutter/2 auto;
+	margin: 0 auto $grid-column-gutter-medium/2 auto;
 }
 
 .alignright {
-	margin: 0 0 $grid-column-gutter/2 0;
+	margin: 0 0 $grid-column-gutter-medium/2 0;
 
 	@include breakpoint(medium up) {
 		float: right;
-		margin: 0 0 $grid-column-gutter/2 $grid-column-gutter/2;
+		margin: 0 0 $grid-column-gutter-medium/2 $grid-column-gutter-medium/2;
 	}
 }
 
 .alignleft {
-	margin: 0 0 $grid-column-gutter/2 0;
+	margin: 0 0 $grid-column-gutter-medium/2 0;
 
 	@include breakpoint(medium up) {
 		float: left;
-		margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
+		margin: 0 $grid-column-gutter-medium/2 $grid-column-gutter-medium/2 0;
 	}
 }
 
 a img.alignright {
-	margin: 0 0 $grid-column-gutter/2 0;
+	margin: 0 0 $grid-column-gutter-medium/2 0;
 
 	@include breakpoint(medium up) {
 		float: right;
-		margin: 0 0 $grid-column-gutter/2 $grid-column-gutter/2;
+		margin: 0 0 $grid-column-gutter-medium/2 $grid-column-gutter-medium/2;
 	}
 }
 
 a img.alignleft {
-	margin: 0 0 $grid-column-gutter/2 0;
+	margin: 0 0 $grid-column-gutter-medium/2 0;
 
 	@include breakpoint(medium up) {
 		float: left;
-		margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
+		margin: 0 $grid-column-gutter-medium/2 $grid-column-gutter-medium/2 0;
 	}
 }
 
 a img.alignnone {
-	margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
+	margin: 0 $grid-column-gutter-medium/2 $grid-column-gutter-medium/2 0;
 }
 
 a img.aligncenter {
@@ -125,29 +131,29 @@ img.aligncenter {
 .wp-caption {
 	background: #fff;
 	max-width: 96%; /* Image does not overflow the content area */
-	padding: $grid-column-gutter/2;
+	padding: $grid-column-gutter-medium/2;
 	text-align: center;
 }
 
 .wp-caption.alignnone {
-	margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
+	margin: 0 $grid-column-gutter-medium/2 $grid-column-gutter-medium/2 0;
 	padding: 0;
 }
 
 .wp-caption.alignleft {
-	margin: 0 0 $grid-column-gutter/2 0;
+	margin: 0 0 $grid-column-gutter-medium/2 0;
 
 	@include breakpoint(medium up) {
-		margin: 0 $grid-column-gutter/2 $grid-column-gutter/2 0;
+		margin: 0 $grid-column-gutter-medium/2 $grid-column-gutter-medium/2 0;
 		padding: 0;
 	}
 }
 
 .wp-caption.alignright {
-	margin: 0 0 $grid-column-gutter/2 0;
+	margin: 0 0 $grid-column-gutter-medium/2 0;
 
 	@include breakpoint(medium up) {
-		margin: 0 0 $grid-column-gutter/2 $grid-column-gutter/2;
+		margin: 0 0 $grid-column-gutter-medium/2 $grid-column-gutter-medium/2;
 		padding: 0;
 	}
 }
@@ -164,7 +170,7 @@ img.aligncenter {
 .wp-caption p.wp-caption-text {
 	font-size: 85%;
 	margin: 0;
-	padding: 0 $grid-column-gutter/2;
+	padding: 0 $grid-column-gutter-medium/2;
 }
 
 figcaption {

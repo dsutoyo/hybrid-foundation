@@ -79,6 +79,9 @@ if ( ! class_exists( 'Hybrid_Foundation_Theme_Options' ) ) {
 					'layout_container_page' => 'default',
 					'layout_container_post' => 'default',
 					'layout_container_archive' => 'default',
+					'layout_content_page' => '1c',
+					'layout_content_post' => '1c',
+					'layout_content_archive' => '2c-l',
 				)
 			);
 		}

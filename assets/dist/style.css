@@ -7358,6 +7358,11 @@ pre {
   float: right;
 }
 
+/* line 17, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+.gallery .col-1:last-child:not(:first-child) {
+  float: left;
+}
+
 /* line 14, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery .col-2 {
   width: 50%;
@@ -7377,6 +7382,11 @@ pre {
 /* line 68, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/node_modules/foundation-sites/scss/grid/_column.scss */
 .gallery .col-2:last-child:not(:first-child) {
   float: right;
+}
+
+/* line 17, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+.gallery .col-2:last-child:not(:first-child) {
+  float: left;
 }
 
 /* line 14, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
@@ -7400,6 +7410,11 @@ pre {
   float: right;
 }
 
+/* line 17, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+.gallery .col-3:last-child:not(:first-child) {
+  float: left;
+}
+
 /* line 14, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery .col-4 {
   width: 25%;
@@ -7421,162 +7436,167 @@ pre {
   float: right;
 }
 
-/* line 19, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 17, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+.gallery .col-4:last-child:not(:first-child) {
+  float: left;
+}
+
+/* line 23, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery .gallery-item {
   float: left;
   margin: 0;
 }
 
-/* line 23, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 27, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery .gallery-item .gallery-icon {
   padding: 0.9375rem;
   text-align: center;
 }
 
-/* line 28, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 32, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery .gallery-item .gallery-caption {
   font-style: italic;
 }
 
-/* line 38, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 42, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery-columns-1 .gallery-item {
   width: 100%;
 }
 
-/* line 38, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 42, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery-columns-2 .gallery-item {
   width: 50%;
 }
 
-/* line 38, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 42, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery-columns-3 .gallery-item {
   width: 33.33333%;
 }
 
-/* line 38, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 42, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery-columns-4 .gallery-item {
   width: 25%;
 }
 
-/* line 38, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 42, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery-columns-5 .gallery-item {
   width: 20%;
 }
 
-/* line 38, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 42, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery-columns-6 .gallery-item {
   width: 16.66667%;
 }
 
-/* line 38, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 42, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery-columns-7 .gallery-item {
   width: 14.28571%;
 }
 
-/* line 38, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 42, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery-columns-8 .gallery-item {
   width: 12.5%;
 }
 
-/* line 38, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 42, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .gallery-columns-9 .gallery-item {
   width: 11.11111%;
 }
 
 /* ## Comments ===== */
-/* line 45, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 49, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .comment-list {
   margin-left: 0;
   list-style-type: none;
 }
 
-/* line 48, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 52, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .comment-list .children {
   list-style-type: none;
 }
 
 /* ## Image Alignment ===== */
-/* line 54, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 60, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .alignnone {
-  margin: (small: 20px, medium: 30px)/2 (small: 20px, medium: 30px)/2 (small: 20px, medium: 30px)/2 0;
+  margin: 15px 15px 15px 0;
 }
 
-/* line 58, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 64, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .aligncenter, div.aligncenter {
   display: block;
-  margin: 0 auto (small: 20px, medium: 30px)/2 auto;
+  margin: 0 auto 15px auto;
 }
 
-/* line 63, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 69, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .alignright {
-  margin: 0 0 (small: 20px, medium: 30px)/2 0;
+  margin: 0 0 15px 0;
 }
 
 @media screen and (min-width: 40em) {
-  /* line 63, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+  /* line 69, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
   .alignright {
     float: right;
-    margin: 0 0 (small: 20px, medium: 30px)/2 (small: 20px, medium: 30px)/2;
+    margin: 0 0 15px 15px;
   }
 }
 
-/* line 72, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 78, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .alignleft {
-  margin: 0 0 (small: 20px, medium: 30px)/2 0;
+  margin: 0 0 15px 0;
 }
 
 @media screen and (min-width: 40em) {
-  /* line 72, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+  /* line 78, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
   .alignleft {
     float: left;
-    margin: 0 (small: 20px, medium: 30px)/2 (small: 20px, medium: 30px)/2 0;
+    margin: 0 15px 15px 0;
   }
 }
 
-/* line 81, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 87, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 a img.alignright {
-  margin: 0 0 (small: 20px, medium: 30px)/2 0;
+  margin: 0 0 15px 0;
 }
 
 @media screen and (min-width: 40em) {
-  /* line 81, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+  /* line 87, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
   a img.alignright {
     float: right;
-    margin: 0 0 (small: 20px, medium: 30px)/2 (small: 20px, medium: 30px)/2;
+    margin: 0 0 15px 15px;
   }
 }
 
-/* line 90, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 96, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 a img.alignleft {
-  margin: 0 0 (small: 20px, medium: 30px)/2 0;
+  margin: 0 0 15px 0;
 }
 
 @media screen and (min-width: 40em) {
-  /* line 90, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+  /* line 96, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
   a img.alignleft {
     float: left;
-    margin: 0 (small: 20px, medium: 30px)/2 (small: 20px, medium: 30px)/2 0;
+    margin: 0 15px 15px 0;
   }
 }
 
-/* line 99, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 105, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 a img.alignnone {
-  margin: 0 (small: 20px, medium: 30px)/2 (small: 20px, medium: 30px)/2 0;
+  margin: 0 15px 15px 0;
 }
 
-/* line 103, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 109, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 a img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 109, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 115, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .bypostauthor {
   visibility: inherit;
 }
 
-/* line 113, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 119, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 img.alignnone,
 img.alignright,
 img.alignleft,
@@ -7585,53 +7605,53 @@ img.aligncenter {
   height: auto;
 }
 
-/* line 121, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 127, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .sticky {
   visibility: inherit;
 }
 
-/* line 125, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 131, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .wp-caption {
   background: #fff;
   max-width: 96%;
   /* Image does not overflow the content area */
-  padding: (small: 20px, medium: 30px)/2;
+  padding: 15px;
   text-align: center;
 }
 
-/* line 132, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 138, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .wp-caption.alignnone {
-  margin: 0 (small: 20px, medium: 30px)/2 (small: 20px, medium: 30px)/2 0;
+  margin: 0 15px 15px 0;
   padding: 0;
 }
 
-/* line 137, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 143, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .wp-caption.alignleft {
-  margin: 0 0 (small: 20px, medium: 30px)/2 0;
+  margin: 0 0 15px 0;
 }
 
 @media screen and (min-width: 40em) {
-  /* line 137, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+  /* line 143, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
   .wp-caption.alignleft {
-    margin: 0 (small: 20px, medium: 30px)/2 (small: 20px, medium: 30px)/2 0;
+    margin: 0 15px 15px 0;
     padding: 0;
   }
 }
 
-/* line 146, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 152, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .wp-caption.alignright {
-  margin: 0 0 (small: 20px, medium: 30px)/2 0;
+  margin: 0 0 15px 0;
 }
 
 @media screen and (min-width: 40em) {
-  /* line 146, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+  /* line 152, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
   .wp-caption.alignright {
-    margin: 0 0 (small: 20px, medium: 30px)/2 (small: 20px, medium: 30px)/2;
+    margin: 0 0 15px 15px;
     padding: 0;
   }
 }
 
-/* line 155, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 161, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .wp-caption img {
   border: 0 none;
   height: auto;
@@ -7641,14 +7661,14 @@ img.aligncenter {
   width: auto;
 }
 
-/* line 164, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 170, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 .wp-caption p.wp-caption-text {
   font-size: 85%;
   margin: 0;
-  padding: 0 (small: 20px, medium: 30px)/2;
+  padding: 0 15px;
 }
 
-/* line 170, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+/* line 176, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
 figcaption {
   margin-top: 0.3125rem;
   font-size: 0.75rem;
@@ -7657,7 +7677,7 @@ figcaption {
 
 /* ## Admin Bar ===== */
 @media screen and (max-width: 600px) {
-  /* line 178, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
+  /* line 184, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/base/_wordpress.scss */
   #wpadminbar {
     position: fixed;
   }
@@ -8299,6 +8319,54 @@ figcaption {
   padding-left: 2rem;
 }
 
+/* line 23, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/components/_offcanvas.scss */
+.offcanvas-navigation .top-bar {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  /* line 28, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/components/_offcanvas.scss */
+  .offcanvas-navigation .top-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+/* line 35, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/components/_offcanvas.scss */
+.popup-navigation .off-canvas-menu {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  opacity: 0;
+  width: 100vw;
+  height: 0;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+/* line 44, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/components/_offcanvas.scss */
+.popup-active {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* line 48, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/components/_offcanvas.scss */
+.popup-active .off-canvas-menu {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  opacity: 0.9;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+  overflow: auto;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
 /* # Header ===== */
 /* line 2, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
 .no-js [data-responsive-toggle] {
@@ -8318,55 +8386,38 @@ figcaption {
   background-size: contain;
 }
 
-/* line 30, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
-.offcanvas-navigation .top-bar {
-  display: none;
+/* line 29, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
+.top-bar {
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
 }
 
-@media screen and (min-width: 40em) {
-  /* line 35, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
-  .offcanvas-navigation .top-bar {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+@media print, screen and (min-width: 40em) {
+  /* line 29, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
+  .top-bar {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
 }
 
+/* line 32, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
+.top-bar .site-title {
+  margin: 0;
+  font-size: 1.3125rem;
+  font-weight: bold;
+}
+
+/* line 37, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
+.top-bar .site-title a {
+  padding-left: 0;
+}
+
 /* line 42, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
-.popup-navigation .off-canvas-menu {
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
-  opacity: 0;
-  width: 100vw;
-  height: 0;
-  -webkit-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
+.top-bar a {
+  color: #0a0a0a;
 }
 
-/* line 51, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
-.popup-active {
-  height: 100vh;
-  overflow: hidden;
-}
-
-/* line 55, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
-.popup-active .off-canvas-menu {
-  position: absolute;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background: #000;
-  opacity: 0.9;
-  -webkit-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
-  overflow: auto;
-  -webkit-transform: none;
-      -ms-transform: none;
-          transform: none;
-}
-
-/* line 68, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
+/* line 47, /Users/dsutoyo/Dev/themes.dev.cc/wp-content/themes/hybrid-foundation/assets/scss/sections/_header.scss */
 li.description {
   display: none;
 }

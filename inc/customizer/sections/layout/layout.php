@@ -40,7 +40,7 @@ $wp_customize->add_setting(
 	array(
 		'capability' => 'edit_theme_options',
 		//'sanitize_callback' => 'hybrid_foundation_sanitize_select',
-		'default' => 'full-width',
+		'default' => hybrid_foundation_get_option( 'layout_container' ),
 		'transport' => 'postMessage'
 	)
 );
@@ -87,7 +87,7 @@ $wp_customize->add_setting(
 	array(
 		'capability' => 'edit_theme_options',
 		//'sanitize_callback' => 'hybrid_foundation_sanitize_select',
-		'default' => 'contained',
+		'default' => hybrid_foundation_get_option( 'layout_container_header' ),
 		'transport' => 'postMessage'
 	)
 );
@@ -114,7 +114,7 @@ $wp_customize->add_setting(
 	array(
 		'capability' => 'edit_theme_options',
 		//'sanitize_callback' => 'hybrid_foundation_sanitize_select',
-		'default' => 'contained',
+		'default' => hybrid_foundation_get_option( 'layout_container_footer' ),
 		'transport' => 'postMessage'
 	)
 );
@@ -162,7 +162,7 @@ $wp_customize->add_setting(
 	array(
 		'capability' => 'edit_theme_options',
 		//'sanitize_callback' => 'hybrid_foundation_sanitize_select',
-		'default' => 'default',
+		'default' => hybrid_foundation_get_option( 'layout_container_page' ),
 		'transport' => 'postMessage'
 	)
 );
@@ -187,7 +187,7 @@ $wp_customize->add_setting(
 	array(
 		'capability' => 'edit_theme_options',
 		//'sanitize_callback' => 'hybrid_foundation_sanitize_select',
-		'default' => 'default',
+		'default' => hybrid_foundation_get_option( 'layout_container_post' ),
 		'transport' => 'postMessage'
 	)
 );
@@ -212,7 +212,7 @@ $wp_customize->add_setting(
 	array(
 		'capability' => 'edit_theme_options',
 		//'sanitize_callback' => 'hybrid_foundation_sanitize_select',
-		'default' => 'default',
+		'default' => hybrid_foundation_get_option( 'layout_container_archive' ),
 		'transport' => 'postMessage'
 	)
 );
@@ -251,7 +251,7 @@ $wp_customize->add_section(
 $wp_customize->add_setting(
 	'layout_content_page',
 	array(
-		'default'           => hybrid_get_default_layout(),
+		'default'           => hybrid_foundation_get_option( 'layout_content_page' ),
 		'sanitize_callback' => 'sanitize_key',
 		'transport'         => 'postMessage'
 	)
@@ -274,7 +274,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'layout_content_post',
 	array(
-		'default'           => hybrid_get_default_layout(),
+		'default'           => hybrid_foundation_get_option( 'layout_content_post' ),
 		'sanitize_callback' => 'sanitize_key',
 		'transport'         => 'postMessage'
 	)
@@ -297,7 +297,7 @@ $wp_customize->add_control(
 $wp_customize->add_setting(
 	'layout_content_archive',
 	array(
-		'default'           => hybrid_get_default_layout(),
+		'default'           => hybrid_foundation_get_option( 'layout_content_archive' ),
 		'sanitize_callback' => 'sanitize_key',
 		'transport'         => 'postMessage'
 	)

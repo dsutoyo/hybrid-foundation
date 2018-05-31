@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 $wp_customize->add_setting(
 	'custom_logo_height',
 	array(
-		'default' => 70,
+		'default' => hybrid_foundation_get_option( 'custom_logo_height' ),
 		'transport' => 'postMessage'
 	)
 );
