@@ -149,7 +149,7 @@ final class Hybrid_Foundation_Admin_Post_Layout {
 				<option value="<?php echo $key; ?>" <?php echo $post_layout == $key ? 'selected' : ''; ?>><?php echo $layout; ?></option>
 			<?php endforeach; ?>
 		</select>
-		<?
+		<?php
 	}
 
 	/**
