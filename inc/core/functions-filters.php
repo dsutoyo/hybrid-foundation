@@ -110,15 +110,15 @@ function hybrid_base_theme_layout( $theme_layout ) {
 
 	else {
 		if ( is_page() ) {
-			$layout = evoke_get_option( 'layout_content_page' );
+			$layout = hybrid_foundation_get_option( 'layout_content_page' );
 		}
 
 		elseif ( is_single() ) {
-			$layout = evoke_get_option( 'layout_content_post' );
+			$layout = hybrid_foundation_get_option( 'layout_content_post' );
 		}
 
 		elseif ( is_archive() ) {
-			$layout = evoke_get_option( 'layout_content_archive' );
+			$layout = hybrid_foundation_get_option( 'layout_content_archive' );
 		}
 
 		if ( ! empty( $layout ) ) $theme_layout = $layout;
