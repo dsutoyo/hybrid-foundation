@@ -13,7 +13,7 @@
  *
  * @package    Hybrid Foundation
  * @subpackage Functions
- * @version    4.1.0
+ * @version    4.1.1
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2013 - 2015, David Sutoyo
  * @link       https://github.com/dsutoyo/hybrid-foundation
@@ -91,7 +91,7 @@ final class Hybrid_Foundation_Theme {
 
 		/* Define Constants. */
 		// Theme Version
-		define( 'HYBRID_FOUNDATION_THEME_VERSION', '4.0.0' );
+		define( 'HYBRID_FOUNDATION_THEME_VERSION', '4.1.1' );
 
 		// Settings
 		define( 'HYBRID_FOUNDATION_THEME_SETTINGS', 'hybrid-foundation-settings' );
@@ -103,7 +103,7 @@ final class Hybrid_Foundation_Theme {
 		define( 'HYBRID_FOUNDATION_THEME_URI', trailingslashit( get_template_directory_uri() ) );
 
 		// Specify our Foundation version
-		define( 'FOUNDATION_VERSION', '6.4.3');
+		define( 'FOUNDATION_VERSION', '6.5.0');
 	}
 
 	/**
