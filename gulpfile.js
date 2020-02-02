@@ -1,6 +1,5 @@
 var gulp          = require('gulp');
 var autoprefixer  = require('gulp-autoprefixer');
-var babel         = require('gulp-babel');
 var cleanCSS      = require('gulp-clean-css');
 var concat        = require('gulp-concat');
 var header        = require('gulp-header');
@@ -61,9 +60,6 @@ gulp.task('styles', function() {
 		}).on('error', notify.onError(function(error) {
 			return "Error: " + error.message;
 		})))
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions', 'ie >= 9']
-		}))
 		.pipe(gulp.dest('./assets/dist/'))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(cleanCSS({
