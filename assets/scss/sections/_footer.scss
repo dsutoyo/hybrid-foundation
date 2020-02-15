@@ -1,8 +1,7 @@
 /* # Footer ===== */
 footer.footer {
 	.colophon {
-		@include small-column(12);
-		@include medium-column(12);
-		@include large-column(12);
+		@include xy-cell-size(12, $gutter-type: none);
+		@include xy-gutters($gutters: $grid-padding-gutters, $gutter-type: padding);
 	}
 }

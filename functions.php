@@ -13,7 +13,7 @@
  *
  * @package    Hybrid Foundation
  * @subpackage Functions
- * @version    4.1.2
+ * @version    4.2.0
  * @author     David Sutoyo <david@smallharbor.com>
  * @copyright  Copyright (c) 2013 - 2015, David Sutoyo
  * @link       https://github.com/dsutoyo/hybrid-foundation
@@ -91,7 +91,7 @@ final class Hybrid_Foundation_Theme {
 
 		/* Define Constants. */
 		// Theme Version
-		define( 'HYBRID_FOUNDATION_THEME_VERSION', '4.1.1' );
+		define( 'HYBRID_FOUNDATION_THEME_VERSION', '4.2.0' );
 
 		// Settings
 		define( 'HYBRID_FOUNDATION_THEME_SETTINGS', 'hybrid-foundation-settings' );
@@ -137,7 +137,7 @@ final class Hybrid_Foundation_Theme {
 	private function setup_actions() {
 
 		// Theme setup.
-		add_action( 'after_setup_theme', array( $this, 'theme_setup'             ),  5 );
+		add_action( 'after_setup_theme', array( $this, 'theme_setup' ),  5 );
 
 		// Register menus.
 		add_action( 'init', array( $this, 'register_menus' ) );
@@ -200,13 +200,7 @@ final class Hybrid_Foundation_Theme {
 		/* Hybrid Foundation Features */
 
 		// Off-canvas Transition - Overlap
-		// add_theme_support( 'offcanvas-overlap' );
-
-		// Fixed-width header
-		// add_theme_support( 'fixed-width-header' );
-
-		// Fixed-width footer
-		// add_theme_support( 'fixed-width-footer' );
+		add_theme_support( 'offcanvas-overlap' );
 
 		if ( is_admin() && current_theme_supports( 'theme-layouts' ) ) {
 			require_once( $this->dir . 'inc/admin/class-post-layout.php' );
@@ -275,9 +269,9 @@ final class Hybrid_Foundation_Theme {
 	 */
 	public function register_layouts() {
 
-		hybrid_register_layout( '1c',        array( 'label' => __( '1 Column Wide',                'hybrid-foundation' ), 'image' => '%s/images/layouts/1c.png' ) );
-		hybrid_register_layout( '2c-l',      array( 'label' => __( '2 Columns: Content / Sidebar', 'hybrid-foundation' ), 'image' => '%s/images/layouts/2c-l.png' ) );
-		hybrid_register_layout( '2c-r',      array( 'label' => __( '2 Columns: Sidebar / Content', 'hybrid-foundation' ), 'image' => '%s/images/layouts/2c-r.png' ) );
+		hybrid_register_layout( '1c',        array( 'label' => __( '1 Column Wide',                'hybrid-foundation' ), 'image' => '%s/assets/images/layouts/1c.png' ) );
+		hybrid_register_layout( '2c-l',      array( 'label' => __( '2 Columns: Content / Sidebar', 'hybrid-foundation' ), 'image' => '%s/assets/images/layouts/2c-l.png' ) );
+		hybrid_register_layout( '2c-r',      array( 'label' => __( '2 Columns: Sidebar / Content', 'hybrid-foundation' ), 'image' => '%s/assets/images/layouts/2c-r.png' ) );
 	}
 }
 

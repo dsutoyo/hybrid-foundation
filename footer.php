@@ -10,7 +10,7 @@
 
 		<footer <?php hybrid_attr( 'footer' ); ?>>
 
-			<div class="wrap">
+			<div class="footer-wrap">
 
 				<div class="colophon">
 

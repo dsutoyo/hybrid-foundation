@@ -1,20 +1,9 @@
 /* # Beaver Builder ===== */
-body .fl-row-fixed-width {
-	.fl-row-content-wrap {
-		@include xy-gutters;
-	}
-}
-
-body .fl-row-full-width {
-	.fl-row-content {
-		@include xy-gutters($gutter-type:padding);
-	}
-}
 
 /* # Restore styles for Beaver Builder settings ===== */
 .fl-builder-lightbox {
-	select {
-		-webkit-appearance: menulist !important;
+	.fl-form-table tbody {
+		background-color: transparent !important;
 	}
 }
 

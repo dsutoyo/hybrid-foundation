@@ -1,0 +1,42 @@
+/* # Foundation Normalization ===== */
+address {
+	margin-bottom: rem-calc(16);
+	font-style: normal;
+}
+
+/* Undo styles for vcard */
+.vcard {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	border: transparent none;
+	a, .fn {
+		font-size: 100%;
+		font-weight: normal;
+	}
+	cite {
+		font-style: normal;
+	}
+}
+
+/* Inputs should be like buttons */
+input[type="submit"] {
+	@include button;
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+/* # General Styles ===== */
+pre {
+	margin-bottom: rem-calc(16);
+	padding: rem-calc(20);
+	background: $light-gray;
+}
+
+/* # Menus ===== */
+.sub-menu {
+	list-style-type: none;
+	margin-left: 0;
+}

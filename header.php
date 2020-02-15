@@ -47,6 +47,6 @@
 
 		<div id="main" class="main">
 
-			<div class="wrap">
+			<div class="main-wrap">
 
 			<?php hybrid_get_menu( 'breadcrumbs' ); // Loads the menu/breadcrumbs.php template. ?>
