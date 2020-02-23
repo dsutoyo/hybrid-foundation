@@ -144,13 +144,13 @@ gulp.task('version', function() {
 // =========================================================
 gulp.task('replace', function() {
 	return gulp.src(['**', '!./node_modules/**', '!./gulpfile.js', '!./library/'], { base: './' })
-		.pipe(replace('hybrid-foundation', 'new-theme'))
-		.pipe(replace('hybrid_foundation', 'new_theme'))
-		.pipe(replace('hybrid-base', 'new-theme'))
-		.pipe(replace('hybrid_base', 'new_theme'))
-		.pipe(replace('Hybrid_Foundation', 'New_Theme'))
-		.pipe(replace('Hybrid Foundation', 'New Theme'))
-		.pipe(replace('HYBRID_FOUNDATION', 'NEW_THEME'))
+		.pipe(replace('hybrid-foundation', 'new-theme')) // text domains, variables
+		.pipe(replace('hybrid_foundation', 'new_theme')) // function prefixes
+		.pipe(replace('hybrid-base', 'new-theme')) // text domains
+		.pipe(replace('hybrid_base', 'new_theme')) // function prefixes
+		.pipe(replace('Hybrid_Foundation', 'New_Theme')) // class names
+		.pipe(replace('Hybrid Foundation', 'New Theme')) // text
+		.pipe(replace('HYBRID_FOUNDATION', 'NEW_THEME')) // constants
 		.pipe(gulp.dest('./'));
 });
 
