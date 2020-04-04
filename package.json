@@ -26,6 +26,6 @@
 		"gulp-sourcemaps": "^2.6.0",
 		"gulp-uglify": "^2.0.0",
 		"gulp-zip": "^5.0.0",
-		"minimist": "1.2.0"
+		"minimist": "1.2.3"
 	}
 }
